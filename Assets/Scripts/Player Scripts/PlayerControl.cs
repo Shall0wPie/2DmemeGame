@@ -5,8 +5,8 @@ public class PlayerControl : MonoBehaviour
 
     public float horizontalMove { get; private set; }
     public bool attack { get; private set; }
-    public Movement movement;
-    public Combat combat;
+    public PlayerMovement movement;
+    public PlayerCombat combat;
 
     private bool jump = false;
     private float timeStamp = 0;

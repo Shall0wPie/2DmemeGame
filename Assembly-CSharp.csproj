@@ -60,13 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyAnimationControl.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\EnemyCombat.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyFollow.cs" />
-    <Compile Include="Assets\Scripts\EnemyScripts\MobAnimationControl.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
-    <Compile Include="Assets\Scripts\Player Scripts\AnimationControl.cs" />
-    <Compile Include="Assets\Scripts\Player Scripts\Combat.cs" />
-    <Compile Include="Assets\Scripts\Player Scripts\Movement.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerAnimationControl.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerCombat.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerMovement.cs" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity Projects/2DmemeGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
