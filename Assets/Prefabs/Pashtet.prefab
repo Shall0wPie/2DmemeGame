@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8224550254852356177}
   - component: {fileID: 8735393309590223288}
   - component: {fileID: 3447237109211144892}
-  - component: {fileID: 8480549939080863898}
   - component: {fileID: 261295329278739474}
   - component: {fileID: 8971002687757422611}
   m_Layer: 10
@@ -71,9 +70,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e43a1413565ffb438303302ca7003fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {x: 0, y: 0}
+  allowRespawn: 1
+  bodyCollider: {fileID: 261295329278739474}
   maxHP: 100
   dmgResistance: 0
-  forceResistance: 0.278
+  forceResistance: 0.504
+  aggroRange: 18
   deathDuration: 2
   speed: 5
 --- !u!114 &3447237109211144892
@@ -90,23 +93,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3575780044286879519}
   stopCollider: {fileID: 8971002687757422611}
-  agroArea: {fileID: 8480549939080863898}
---- !u!58 &8480549939080863898
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335629947481452073}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 18
 --- !u!70 &261295329278739474
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

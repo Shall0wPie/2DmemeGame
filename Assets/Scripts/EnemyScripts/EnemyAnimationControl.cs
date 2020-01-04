@@ -33,6 +33,11 @@ public class EnemyAnimationControl : MonoBehaviour
         anim.SetBool("IsDead", true);
     }
 
+    public void PlayRespawn()
+    {
+        anim.SetBool("IsDead", false);
+    }
+
     public void FacingRight(bool isFacingRight)
     {
         Vector2 scale = rb.transform.localScale;

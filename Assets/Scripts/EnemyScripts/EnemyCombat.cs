@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class EnemyCombat : MonoBehaviour
 {
-
     private Rigidbody2D rb;
     private EnemyStats stats;
     public EnemyAnimationControl anim;
@@ -45,22 +44,35 @@ public class EnemyCombat : MonoBehaviour
         // Plays anim
         anim.PlayDeth();
 
+        // Sets body collider as Triggers to avoid any collisions
+        stats.bodyCollider.isTrigger = true;
         // Disables Follow script
         GetComponentInParent<EnemyFollow>().enabled = false;
 
-        // Rotate model by 90 degrees
+        // Rotates model by 90 degrees
         transform.parent.Rotate(0, 0, -90 * transform.parent.lossyScale.x);
-        // Set all colliders as Triggers to avoid any collisions
-        var colliders = GetComponentsInParent<Collider2D>();
-        foreach(Collider2D single in colliders)
-        {
-            single.isTrigger = true;
-        }
 
         // The rest of function will continue as deathDuration passes
         yield return new WaitForSeconds(stats.deathDuration);
-        
+
+        // Respawns Enemy in its Spawn Point
+        if (stats.allowRespawn)
+            Respawn();
         // Destroys parent object (the entire Enemy object)
-        Destroy(transform.parent.gameObject);
+        else
+            Destroy(transform.parent.gameObject);
+    }
+
+    public void Respawn()
+    {
+        // Revert Kill effects
+        anim.PlayRespawn();
+        hp = stats.maxHP;
+        rb.velocity = Vector2.zero;
+        stats.bodyCollider.isTrigger = false;
+        GetComponentInParent<EnemyFollow>().enabled = true;
+        transform.parent.Rotate(0, 0, 90 * transform.parent.lossyScale.x);
+
+        transform.parent.position = stats.spawnPoint;
     }
 }
