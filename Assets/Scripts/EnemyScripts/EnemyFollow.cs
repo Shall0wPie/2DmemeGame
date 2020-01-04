@@ -10,7 +10,6 @@ public class EnemyFollow : MonoBehaviour
     public EnemyAnimationControl anim;
 
     [SerializeField] private Collider2D stopCollider = null;
-    [SerializeField] private Collider2D agroArea = null;
 
     void Start()
     {
@@ -21,7 +20,8 @@ public class EnemyFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (agroArea.OverlapPoint(target.position) && !stopCollider.OverlapPoint(target.position))
+        float distance = Vector2.Distance(target.position, transform.position);
+        if (distance < stats.aggroRange && !stopCollider.OverlapPoint(target.position))
         {
             Vector2 xNormolized = new Vector2(target.position.x, transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, xNormolized, stats.speed * Time.deltaTime);
