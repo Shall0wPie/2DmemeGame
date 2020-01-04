@@ -6,6 +6,8 @@ public class EnemyFollow : MonoBehaviour
     private Transform target;
     private new Rigidbody2D rigidbody;
 
+    public EnemyAnimationControl anim;
+
     [SerializeField] public float speed = 40f;
     [SerializeField] private Collider2D stopCollider = null;
     [SerializeField] private Collider2D agroArea = null;
@@ -22,20 +24,18 @@ public class EnemyFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.DrawRay(transform.position, Vector2.right * stopRadius);
         if (agroArea.OverlapPoint(target.position) && !stopCollider.OverlapPoint(target.position))
         {
-            float x;
-            if (target.position.x - stopRadius > transform.position.x)
-                x = 1f;
-            else if (target.position.x + stopRadius < transform.position.x)
-                x = -1f;
-            else
-                x = 0;
+            Vector2 xNormolized = new Vector2(target.position.x, transform.position.y);
+            transform.position = Vector2.MoveTowards(transform.position, xNormolized, speed * Time.deltaTime);
 
-            rigidbody.velocity = new Vector2(x * speed * Time.deltaTime, rigidbody.velocity.y);
+            anim.PlayMove();
+            if (target.position.x > transform.position.x)
+                anim.FacingRight(true);
+            else
+                anim.FacingRight(false);
         }
         else
-            rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
+            anim.PlayStand();
     }
 }

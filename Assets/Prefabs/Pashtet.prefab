@@ -53,7 +53,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.5
   m_GravityScale: 10
-  m_Material: {fileID: 6200000, guid: ade038f7e495ee648a2824a4e499ad3d, type: 2}
+  m_Material: {fileID: 6200000, guid: 295eb7c744b67544db22446aaeb385d5, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -70,7 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55ad5e8aff089043b3eb2970be6598e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 250
+  anim: {fileID: 3575780044286879519}
+  speed: 10
   stopCollider: {fileID: 8971002687757422611}
   agroArea: {fileID: 8480549939080863898}
   stopRadius: 0.5
@@ -315,3 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb63e2cec2ebe7c4e836160c058eb75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHp: 200
+  dmgResistance: 0
+  forceResistance: 0
+  anim: {fileID: 0}
