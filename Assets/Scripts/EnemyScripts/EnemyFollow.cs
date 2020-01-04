@@ -18,6 +18,8 @@ public class EnemyFollow : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
+   
+
     void FixedUpdate()
     {
         float distance = Vector2.Distance(target.position, transform.position);
@@ -27,6 +29,7 @@ public class EnemyFollow : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, xNormolized, stats.speed * Time.deltaTime);
 
             anim.PlayMove();
+            
             if (target.position.x > transform.position.x)
                 anim.FacingRight(true);
             else
@@ -34,5 +37,14 @@ public class EnemyFollow : MonoBehaviour
         }
         else
             anim.PlayStand();
+
+        //Hit player
+            if (distance < stats.attackRange)
+        {
+            anim.PlayAttack();
+        }
+
+
+
     }
 }

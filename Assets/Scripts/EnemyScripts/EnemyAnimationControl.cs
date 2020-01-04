@@ -38,6 +38,11 @@ public class EnemyAnimationControl : MonoBehaviour
         anim.SetBool("IsDead", false);
     }
 
+    public void PlayAttack()
+    {
+        anim.SetBool("Attack", true);
+    }
+
     public void FacingRight(bool isFacingRight)
     {
         Vector2 scale = rb.transform.localScale;

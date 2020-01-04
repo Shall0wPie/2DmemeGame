@@ -4,9 +4,13 @@ using UnityEngine;
 public class EnemyCombat : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Transform target;
     private EnemyStats stats;
     public EnemyAnimationControl anim;
+    public PlayerStats playerStats;
     public float hp { get; private set; }
+
+    [SerializeField] private Collider2D stopCollider = null;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +18,11 @@ public class EnemyCombat : MonoBehaviour
         stats = GetComponentInParent<EnemyStats>();
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
+        playerStats = GetComponentInParent<PlayerStats>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
+
+    
 
     // Applis Force and Damage to this Enemy
     public void ApplyHit(float dmg, Vector2 force)
