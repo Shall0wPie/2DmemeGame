@@ -24,13 +24,17 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     public void Punch()
     {
+        // Quantity of collides overlaped by Player Hit collider
         int quantity = punchArea.OverlapCollider(contactFilter, colliders);
 
+        // If there are any colliders Applies Force and Damage to collider Owner
         if (quantity != 0)
         {
+            // Creates Force depending on character punchForce on the X axis only
             Vector2 force = new Vector2(transform.lossyScale.x * punchForce, 0);
             for (int i = 0; i < quantity; i++)
             {
+                // Applies Damage and Force to every overlaped enemy collider
                 colliders[i].GetComponentInChildren<EnemyCombat>().ApplyHit(punchDmg, force);
             }
         }

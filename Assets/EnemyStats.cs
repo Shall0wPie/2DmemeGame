@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
+    // List of Enemy stats
     [Header("Combat stats")]
     public float maxHP = 10f;
     [Range(0f, 1f)] public float dmgResistance = 0f;

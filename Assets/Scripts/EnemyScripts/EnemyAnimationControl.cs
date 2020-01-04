@@ -13,10 +13,6 @@ public class EnemyAnimationControl : MonoBehaviour
         enemyFollow = GetComponentInParent<EnemyFollow>();
     }
 
-    private void FixedUpdate()
-    {
-    }
-
     public void PlayMove()
     {
         anim.SetFloat("Speed", 1f);
