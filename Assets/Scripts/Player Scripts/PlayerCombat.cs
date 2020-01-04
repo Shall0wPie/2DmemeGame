@@ -5,6 +5,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private BoxCollider2D punchArea;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private float punchForce = 10f;
+    [SerializeField] private float punchDmg = 10f;
     [Range(0f, 2f)] public float punchCooldown;
 
     private ContactFilter2D contactFilter;
@@ -30,7 +31,7 @@ public class PlayerCombat : MonoBehaviour
             Vector2 force = new Vector2(transform.lossyScale.x * punchForce, 0);
             for (int i = 0; i < quantity; i++)
             {
-                colliders[i].attachedRigidbody.AddForce(force);
+                colliders[i].GetComponentInChildren<EnemyCombat>().ApplyHit(punchDmg, force);
             }
         }
     }
