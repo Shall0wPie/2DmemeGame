@@ -17,7 +17,6 @@ public class EnemyAnimationControl : MonoBehaviour
     {
     }
 
-    // Update is called once per frame
     public void PlayMove()
     {
         anim.SetFloat("Speed", 1f);
@@ -26,6 +25,16 @@ public class EnemyAnimationControl : MonoBehaviour
     public void PlayStand()
     {
         anim.SetFloat("Speed", 0f);
+    }
+
+    public void PlayHit()
+    {
+        anim.SetTrigger("Hit");
+    }
+
+    public void PlayDeth()
+    {
+        anim.SetBool("IsDead", true);
     }
 
     public void FacingRight(bool isFacingRight)

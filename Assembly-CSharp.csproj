@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyAnimationControl.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyCombat.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyFollow.cs" />
