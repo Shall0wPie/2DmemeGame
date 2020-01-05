@@ -2,9 +2,8 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float downRayLength = 1.8f;
-    private Vector2 currentVelocity = Vector2.zero;
     private new Rigidbody2D rigidbody;
+    [SerializeField] private float downRayLength = 1.8f;
 
     [SerializeField] private float runSpeed = 0f;
     [SerializeField] private float jumpForce = 0f;

@@ -6,7 +6,6 @@ public class EnemyCombat : MonoBehaviour
     private Rigidbody2D rb;
     private Transform target;
     private EnemyStats stats;
-    public PlayerMovement targetmov;
     public EnemyAnimationControl anim;
     public float hp { get; private set; }
 
