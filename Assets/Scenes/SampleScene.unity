@@ -233,7 +233,37 @@ Transform:
   m_Children:
   - {fileID: 1461332333}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &455383064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 455383065}
+  m_Layer: 0
+  m_Name: Aggro Points
+  m_TagString: AggroPoints
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &455383065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455383064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.699993, y: 19.058584, z: -0.0871972}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -302,7 +332,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20.64161
+  orthographic size: 28.326164
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -344,7 +374,7 @@ PrefabInstance:
         type: 3}
       propertyPath: stopCollider
       value: 
-      objectReference: {fileID: 1762411132}
+      objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452073, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Name
@@ -353,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 1335629947481452084, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452084, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
@@ -4208,12 +4238,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
---- !u!61 &1762411132 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 3543434629119482408, guid: eefa64718390fd64e896d529e7c93cfc,
-    type: 3}
-  m_PrefabInstance: {fileID: 922831857}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1335629947618419910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4289,7 +4313,7 @@ PrefabInstance:
     - target: {fileID: 1335629947481452084, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452084, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}
