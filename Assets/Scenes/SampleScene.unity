@@ -416,15 +416,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3447237109211144892, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: punchForce
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447237109211144892, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: punchForceForY
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8224550254852356177, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8224550254852356177, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224550254852356177, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: forceResistance
       value: 0.504
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: attackCooldown
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eefa64718390fd64e896d529e7c93cfc, type: 3}

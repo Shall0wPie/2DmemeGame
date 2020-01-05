@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnemyCombat : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Rigidbody2D playerRb;
     private Transform target;
     private EnemyStats stats;
     public EnemyAnimationControl anim;
@@ -20,10 +21,17 @@ public class EnemyCombat : MonoBehaviour
         rb = GetComponentInParent<Rigidbody2D>();
         playerStats = GetComponentInParent<PlayerStats>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        playerRb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
-    public void Attack()
+    public void Attack(float dmg, Vector2 force)
     {
+        //dmg *= (1 - playerStats.dmgResistance);
+        //force *= (1 - playerStats.forceResistance);
+        //rb for player
+
+        playerRb.velocity += force;
+        //zdes hz kak hp
         anim.PlayAttack();
     }
 
