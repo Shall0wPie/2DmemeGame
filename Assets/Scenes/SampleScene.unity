@@ -191,6 +191,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &241590997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1335629947481452073, guid: 0ce8b516cd808b346b0abfe557eed63c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1335629947618419910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &241590998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241590997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3370f5f087160394ca09e2433bd911a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {x: 0, y: 0}
+  allowRespawn: 0
+  bodyCollider: {fileID: 0}
+  maxHP: 10
+  dmgResistance: 0
+  forceResistance: 0
+  deathDuration: 2
+  speed: 40
 --- !u!1 &338656438
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,10 +366,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+=======
+    - target: {fileID: 261295329278739474, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 271657252976213162, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: stopCollider
+      value: 
+      objectReference: {fileID: 1762411132}
+>>>>>>> 604aae6af3ad2266c367df22a292cbc2c1e243cd
     - target: {fileID: 1335629947481452073, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Name
@@ -4197,6 +4236,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
+--- !u!61 &1762411132 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3543434629119482408, guid: eefa64718390fd64e896d529e7c93cfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 922831857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1335629947618419910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4320,5 +4365,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ca50b3d2acf48004c82e8038b334d132,
         type: 3}
+    - target: {fileID: 6028142268381500554, guid: 0ce8b516cd808b346b0abfe557eed63c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce8b516cd808b346b0abfe557eed63c, type: 3}

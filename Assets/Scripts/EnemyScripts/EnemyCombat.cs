@@ -4,9 +4,13 @@ using UnityEngine;
 public class EnemyCombat : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Transform target;
     private EnemyStats stats;
     public EnemyAnimationControl anim;
+    private PlayerStats playerStats;
     public float hp { get; private set; }
+
+    [SerializeField] private Collider2D stopCollider = null;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +18,13 @@ public class EnemyCombat : MonoBehaviour
         stats = GetComponentInParent<EnemyStats>();
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
+        playerStats = GetComponentInParent<PlayerStats>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
+    public void Attack()
+    {
+        anim.PlayAttack();
     }
 
     // Applis Force and Damage to this Enemy
@@ -47,7 +58,7 @@ public class EnemyCombat : MonoBehaviour
         // Sets body collider as Triggers to avoid any collisions
         stats.bodyCollider.isTrigger = true;
         // Disables Follow script
-        GetComponentInParent<EnemyFollow>().enabled = false;
+        GetComponentInParent<EnemyControl>().enabled = false;
 
         // Rotates model by 90 degrees
         transform.parent.Rotate(0, 0, -90 * transform.parent.lossyScale.x);
@@ -70,7 +81,7 @@ public class EnemyCombat : MonoBehaviour
         hp = stats.maxHP;
         rb.velocity = Vector2.zero;
         stats.bodyCollider.isTrigger = false;
-        GetComponentInParent<EnemyFollow>().enabled = true;
+        GetComponentInParent<EnemyControl>().enabled = true;
         transform.parent.Rotate(0, 0, 90 * transform.parent.lossyScale.x);
 
         transform.parent.position = stats.spawnPoint;

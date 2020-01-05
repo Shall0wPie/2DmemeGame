@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStats : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
     // List of Enemy stats
     [Header("World stats")]
@@ -15,10 +15,7 @@ public class EnemyStats : MonoBehaviour
     public float maxHP = 10f;
     [Range(0f, 1f)] public float dmgResistance = 0f;
     [Range(0f, 1f)] public float forceResistance = 0f;
-    [Range(0f, 25f)] public float aggroRange = 10f;
-    [Range(0f, 25f)] public float attackRange = 10f;
     public float deathDuration = 2f;
-    public float attackCooldown = 1f;
 
     [Space]
     [Header("Move stats")]
@@ -29,12 +26,5 @@ public class EnemyStats : MonoBehaviour
         spawnPoint = transform.position;
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, aggroRange);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
-    }
+    
 }
