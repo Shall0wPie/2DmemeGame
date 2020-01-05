@@ -6,7 +6,6 @@ public class EnemyCombat : MonoBehaviour
     private Rigidbody2D rb;
     private Transform target;
     private EnemyStats stats;
-    private EnemyControl ec;
     public PlayerMovement targetmov;
     public EnemyAnimationControl anim;
     private PlayerStats playerStats;
@@ -19,7 +18,6 @@ public class EnemyCombat : MonoBehaviour
     {
         stats = GetComponentInParent<EnemyStats>();
         hp = stats.maxHP;
-        ec = GetComponentInParent<EnemyControl>();
         rb = GetComponentInParent<Rigidbody2D>();
         playerStats = GetComponentInParent<PlayerStats>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -31,7 +29,8 @@ public class EnemyCombat : MonoBehaviour
         //force *= (1 - playerStats.forceResistance);
         //rb for player
         //targetmov.GetComponentInChildren<PlayerMovement>().smoothTime = 5f;
-        target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force, ec.punchForce);
+        force = new Vector2(force.x * -transform.lossyScale.x, force.y);
+        target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
         //targetmov.GetComponentInChildren<PlayerMovement>().smoothTime = 0.05f;
         //zdes hz kak hp
         anim.PlayAttack();

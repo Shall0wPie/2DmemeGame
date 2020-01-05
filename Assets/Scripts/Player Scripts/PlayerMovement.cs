@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
     private new Rigidbody2D rigidbody;
     public Rigidbody2D rigidbody1;
 
-    [SerializeField] private float runSpeed = 900f;
-    [SerializeField] private float jumpForce = 40f;
+    [SerializeField] private float runSpeed = 0f;
+    [SerializeField] private float jumpForce = 0f;
     [Range(0, 0.3f)] [SerializeField] public float smoothTime = 0.05f;
     [SerializeField] private LayerMask groundLayer;
     public bool isOnGround = false;
@@ -25,9 +25,8 @@ public class PlayerMovement : MonoBehaviour
         isOnGround = GroundCheck();
 
         // Handles horizontal move
-        Vector2 targetVelocity = new Vector2(horizontalMove * runSpeed, rigidbody.velocity.y);
-        rigidbody.velocity = Vector2.SmoothDamp(rigidbody.velocity, targetVelocity, ref currentVelocity, smoothTime);
-        
+        Vector2 targetVelocity = new Vector2(horizontalMove * runSpeed, 0);
+        transform.position += (Vector3)targetVelocity;
         // Handles jump move
         if (jump && isOnGround)
         {

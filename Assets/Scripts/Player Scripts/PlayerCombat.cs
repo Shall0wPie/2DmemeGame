@@ -46,16 +46,13 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    public void ApplyHit(float dmg, Vector2 force, float punchForceX)
+    public void ApplyHit(float dmg, Vector2 force)
     {
         // Calculates dmg and force according to resistance
         dmg *= (1 - stats.dmgResistance);
         force *= (1 - stats.forceResistance);
         // Applies effects
-        double time1 = Time.time;
-        double time2 = time1 + 0.3;
-        while(time1<time2)
-        pm.Move(punchForceX, true);
+       
         rb.velocity += force;
         hp -= dmg;
         Debug.Log("Hp: " + hp + " Dmg: " + dmg);

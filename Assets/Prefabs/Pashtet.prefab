@@ -77,7 +77,10 @@ MonoBehaviour:
   dmgResistance: 0
   forceResistance: 0.504
   aggroRange: 18
+  attackRange: 5.1
+  punchForce: {x: 20, y: 10}
   deathDuration: 2
+  attackCooldown: 1.5
   speed: 5
 --- !u!114 &3447237109211144892
 MonoBehaviour:
@@ -93,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3575780044286879519}
   stopCollider: {fileID: 8971002687757422611}
+  punchDmg: 25
 --- !u!70 &261295329278739474
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -318,4 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb63e2cec2ebe7c4e836160c058eb75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetmov: {fileID: 0}
   anim: {fileID: 3575780044286879519}
+  stopCollider: {fileID: 0}

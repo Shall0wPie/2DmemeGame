@@ -12,8 +12,6 @@ public class EnemyControl : MonoBehaviour
     public EnemyAnimationControl anim;
 
     [SerializeField] private Collider2D stopCollider = null;
-    [SerializeField] public float punchForce = 15f;
-    [SerializeField] public float punchForceForY = 10f;
     [SerializeField] private float punchDmg = 25f;
 
     void Start()
@@ -47,8 +45,7 @@ public class EnemyControl : MonoBehaviour
         //Hit player
         if (timeStamp <= Time.time && distance < stats.attackRange)
         {
-            Vector2 force = new Vector2(target.lossyScale.x * punchForce, target.lossyScale.y * punchForceForY);
-            combat.Attack(punchDmg, force);
+            combat.Attack(punchDmg, stats.punchForce);
             timeStamp = Time.time + stats.attackCooldown;
         }
     }
