@@ -8,7 +8,6 @@ public class EnemyCombat : MonoBehaviour
     private EnemyStats stats;
     public PlayerMovement targetmov;
     public EnemyAnimationControl anim;
-    private PlayerStats playerStats;
     public float hp { get; private set; }
 
     [SerializeField] private Collider2D stopCollider = null;
@@ -19,20 +18,14 @@ public class EnemyCombat : MonoBehaviour
         stats = GetComponentInParent<EnemyStats>();
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
-        playerStats = GetComponentInParent<PlayerStats>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     public void Attack(float dmg, Vector2 force)
     {
-        //dmg *= (1 - playerStats.dmgResistance);
-        //force *= (1 - playerStats.forceResistance);
-        //rb for player
-        //targetmov.GetComponentInChildren<PlayerMovement>().smoothTime = 5f;
+        //force for enemy punch
         force = new Vector2(force.x * -transform.lossyScale.x, force.y);
         target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
-        //targetmov.GetComponentInChildren<PlayerMovement>().smoothTime = 0.05f;
-        //zdes hz kak hp
         anim.PlayAttack();
     }
 
@@ -45,11 +38,8 @@ public class EnemyCombat : MonoBehaviour
         // Applies effects
         rb.velocity += force;
         hp -= dmg;
-        //Debug.Log("Hp: " + hp + " Dmg: " + dmg);
-
         // Plays hit animation
         anim.PlayHit();
-
         // If hp bellow or equal to zero Kills this Enemy
         if (hp <= 0)
         {

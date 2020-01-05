@@ -26,5 +26,5 @@ public class PlayerStats : MonoBehaviour
         spawnPoint = transform.position;
     }
 
-    
+
 }

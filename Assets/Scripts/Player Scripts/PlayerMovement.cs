@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float downRayLength = 1.8f;
     private Vector2 currentVelocity = Vector2.zero;
     private new Rigidbody2D rigidbody;
-    public Rigidbody2D rigidbody1;
 
     [SerializeField] private float runSpeed = 0f;
     [SerializeField] private float jumpForce = 0f;
@@ -16,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     protected void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody1 = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -34,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
             rigidbody.velocity = targetVelocity;
 
             isOnGround = false;
-        }        
+        }
     }
 
     // Checks if player is on ground
@@ -42,8 +40,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.DrawRay(transform.position, Vector2.down * downRayLength, Color.green);
         RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, Vector2.down, downRayLength, groundLayer);
-        
-        foreach(RaycastHit2D single in hit)
+
+        foreach (RaycastHit2D single in hit)
         {
             if (!single.collider.isTrigger)
                 return true;
