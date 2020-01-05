@@ -191,32 +191,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &241590997 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1335629947481452073, guid: 0ce8b516cd808b346b0abfe557eed63c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1335629947618419910}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &241590998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241590997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3370f5f087160394ca09e2433bd911a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {x: 0, y: 0}
-  allowRespawn: 0
-  bodyCollider: {fileID: 0}
-  maxHP: 10
-  dmgResistance: 0
-  forceResistance: 0
-  deathDuration: 2
-  speed: 40
 --- !u!1 &338656438
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,11 +340,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 261295329278739474, guid: eefa64718390fd64e896d529e7c93cfc,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 271657252976213162, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: stopCollider
@@ -404,27 +373,32 @@ PrefabInstance:
     - target: {fileID: 1335629947481452084, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.86
+      value: 28.4
       objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452084, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.72
+      value: 24.5
       objectReference: {fileID: 0}
     - target: {fileID: 1838924059816872595, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3447237109211144892, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: punchForce
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447237109211144892, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: punchForceForY
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8224550254852356177, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Constraints
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
-        type: 3}
-      propertyPath: forceResistance
-      value: 0.504
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eefa64718390fd64e896d529e7c93cfc, type: 3}
@@ -4280,12 +4254,12 @@ PrefabInstance:
     - target: {fileID: 1335629947481452084, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.21
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452084, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.13
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452084, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}

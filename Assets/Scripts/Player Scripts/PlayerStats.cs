@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -25,6 +23,4 @@ public class PlayerStats : MonoBehaviour
     {
         spawnPoint = transform.position;
     }
-
-    
 }

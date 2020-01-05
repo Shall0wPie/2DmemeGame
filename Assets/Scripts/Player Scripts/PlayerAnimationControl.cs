@@ -3,14 +3,12 @@
 public class PlayerAnimationControl : MonoBehaviour
 {
     public Animator anim;
-    private Rigidbody2D rb;
     private PlayerControl pc;
     private bool facingRight = true;
     private bool firstAttack = true;
 
     private void Start()
     {
-        rb = GetComponentInParent<Rigidbody2D>();
         pc = GetComponentInParent<PlayerControl>();
     }
 

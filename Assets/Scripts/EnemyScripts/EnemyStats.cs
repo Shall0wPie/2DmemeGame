@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -17,6 +15,7 @@ public class EnemyStats : MonoBehaviour
     [Range(0f, 1f)] public float forceResistance = 0f;
     [Range(0f, 25f)] public float aggroRange = 10f;
     [Range(0f, 25f)] public float attackRange = 10f;
+    public Vector2 punchForce;
     public float deathDuration = 2f;
     public float attackCooldown = 1f;
 
