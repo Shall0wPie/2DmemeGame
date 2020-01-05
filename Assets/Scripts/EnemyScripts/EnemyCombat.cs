@@ -9,8 +9,6 @@ public class EnemyCombat : MonoBehaviour
     public EnemyAnimationControl anim;
     public float hp { get; private set; }
 
-    [SerializeField] private Collider2D stopCollider = null;
-
     // Start is called before the first frame update
     void Start()
     {
