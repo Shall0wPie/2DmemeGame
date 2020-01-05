@@ -45,11 +45,11 @@ public class EnemyControl : MonoBehaviour
             anim.PlayStand();
 
         //Hit player
-            if (timeStamp <= Time.time && distance < stats.attackRange)
-            {
+        if (timeStamp <= Time.time && distance < stats.attackRange)
+        {
             Vector2 force = new Vector2(target.lossyScale.x * punchForce, target.lossyScale.y * punchForceForY);
             combat.Attack(punchDmg, force);
-                timeStamp = Time.time + stats.attackCooldown;
-            }
+            timeStamp = Time.time + stats.attackCooldown;
+        }
     }
 }
