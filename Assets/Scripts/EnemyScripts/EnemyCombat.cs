@@ -6,6 +6,7 @@ public class EnemyCombat : MonoBehaviour
     private Rigidbody2D rb;
     private Transform target;
     private EnemyStats stats;
+    //public SpriteRenderer PashtetAnim;
     public EnemyAnimationControl anim;
     public float hp { get; private set; }
 
@@ -18,14 +19,17 @@ public class EnemyCombat : MonoBehaviour
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        // PashtetAnim = GameObject.FindGameObjectWithTag("PashtetAnimation").GetComponent<SpriteRenderer>();
     }
 
     public void Attack(float dmg, Vector2 force)
     {
         //force for enemy punch
+        anim.PlayAttack();
+        //Debug.Log(PashtetAnim.sprite.name);
         force = new Vector2(force.x * -transform.lossyScale.x, force.y);
         target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
-        anim.PlayAttack();
+
     }
 
     // Applis Force and Damage to this Enemy
