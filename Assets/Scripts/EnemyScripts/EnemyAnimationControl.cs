@@ -4,13 +4,13 @@ public class EnemyAnimationControl : MonoBehaviour
 {
     public Animator anim;
     private Rigidbody2D rb;
-    private EnemyFollow enemyFollow;
+    private EnemyControl enemyFollow;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponentInParent<Rigidbody2D>();
-        enemyFollow = GetComponentInParent<EnemyFollow>();
+        enemyFollow = GetComponentInParent<EnemyControl>();
     }
 
     public void PlayMove()
@@ -40,7 +40,7 @@ public class EnemyAnimationControl : MonoBehaviour
 
     public void PlayAttack()
     {
-        anim.SetBool("Attack", true);
+        anim.SetTrigger("Attack");
     }
 
     public void FacingRight(bool isFacingRight)

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
+public class EnemyControl : MonoBehaviour
 {
     private Transform target;
     private EnemyStats stats;
     private new Rigidbody2D rigidbody;
+    private EnemyCombat combat;
+    private float timeStamp = 0;
 
     public EnemyAnimationControl anim;
 
@@ -16,6 +18,7 @@ public class EnemyFollow : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         stats = GetComponent<EnemyStats>();
         rigidbody = GetComponent<Rigidbody2D>();
+        combat = GetComponentInChildren<EnemyCombat>();
     }
 
    
@@ -39,12 +42,10 @@ public class EnemyFollow : MonoBehaviour
             anim.PlayStand();
 
         //Hit player
-            if (distance < stats.attackRange)
-        {
-            anim.PlayAttack();
-        }
-
-
-
+            if (timeStamp <= Time.time && distance < stats.attackRange)
+            {
+                combat.Attack();
+                timeStamp = Time.time + stats.attackCooldown;
+            }
     }
 }

@@ -371,6 +371,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 271657252976213162, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: stopCollider
+      value: 
+      objectReference: {fileID: 1762411132}
     - target: {fileID: 1335629947481452073, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Name
@@ -4229,6 +4234,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
+--- !u!61 &1762411132 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3543434629119482408, guid: eefa64718390fd64e896d529e7c93cfc,
+    type: 3}
+  m_PrefabInstance: {fileID: 922831857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1335629947618419910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4352,5 +4363,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ca50b3d2acf48004c82e8038b334d132,
         type: 3}
+    - target: {fileID: 6028142268381500554, guid: 0ce8b516cd808b346b0abfe557eed63c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce8b516cd808b346b0abfe557eed63c, type: 3}

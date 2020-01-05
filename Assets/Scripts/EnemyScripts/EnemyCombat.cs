@@ -7,7 +7,7 @@ public class EnemyCombat : MonoBehaviour
     private Transform target;
     private EnemyStats stats;
     public EnemyAnimationControl anim;
-    public PlayerStats playerStats;
+    private PlayerStats playerStats;
     public float hp { get; private set; }
 
     [SerializeField] private Collider2D stopCollider = null;
@@ -22,7 +22,10 @@ public class EnemyCombat : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    
+    public void Attack()
+    {
+        anim.PlayAttack();
+    }
 
     // Applis Force and Damage to this Enemy
     public void ApplyHit(float dmg, Vector2 force)
@@ -55,7 +58,7 @@ public class EnemyCombat : MonoBehaviour
         // Sets body collider as Triggers to avoid any collisions
         stats.bodyCollider.isTrigger = true;
         // Disables Follow script
-        GetComponentInParent<EnemyFollow>().enabled = false;
+        GetComponentInParent<EnemyControl>().enabled = false;
 
         // Rotates model by 90 degrees
         transform.parent.Rotate(0, 0, -90 * transform.parent.lossyScale.x);
@@ -78,7 +81,7 @@ public class EnemyCombat : MonoBehaviour
         hp = stats.maxHP;
         rb.velocity = Vector2.zero;
         stats.bodyCollider.isTrigger = false;
-        GetComponentInParent<EnemyFollow>().enabled = true;
+        GetComponentInParent<EnemyControl>().enabled = true;
         transform.parent.Rotate(0, 0, 90 * transform.parent.lossyScale.x);
 
         transform.parent.position = stats.spawnPoint;
