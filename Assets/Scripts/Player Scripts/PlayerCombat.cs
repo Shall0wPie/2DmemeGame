@@ -10,6 +10,7 @@ public class PlayerCombat : MonoBehaviour
 
     public float hp { get; private set; }
     private Rigidbody2D rb;
+    private PlayerMovement pm;
     private PlayerStats stats;
     private ContactFilter2D contactFilter;
     private Collider2D[] colliders;
@@ -23,6 +24,7 @@ public class PlayerCombat : MonoBehaviour
         stats = GetComponentInParent<PlayerStats>();
         colliders = new Collider2D[100];
         rb = GetComponentInParent<Rigidbody2D>();
+        pm = GetComponentInParent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -44,12 +46,16 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    public void ApplyHit(float dmg, Vector2 force)
+    public void ApplyHit(float dmg, Vector2 force, float punchForceX)
     {
         // Calculates dmg and force according to resistance
         dmg *= (1 - stats.dmgResistance);
         force *= (1 - stats.forceResistance);
         // Applies effects
+        double time1 = Time.time;
+        double time2 = time1 + 0.3;
+        while(time1<time2)
+        pm.Move(punchForceX, true);
         rb.velocity += force;
         hp -= dmg;
         Debug.Log("Hp: " + hp + " Dmg: " + dmg);

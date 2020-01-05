@@ -12,8 +12,8 @@ public class EnemyControl : MonoBehaviour
     public EnemyAnimationControl anim;
 
     [SerializeField] private Collider2D stopCollider = null;
-    [SerializeField] private float punchForce = 15f;
-    [SerializeField] private float punchForceForY = 10f;
+    [SerializeField] public float punchForce = 15f;
+    [SerializeField] public float punchForceForY = 10f;
     [SerializeField] private float punchDmg = 25f;
 
     void Start()
