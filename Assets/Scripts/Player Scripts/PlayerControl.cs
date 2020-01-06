@@ -9,7 +9,7 @@ public class PlayerControl : MonoBehaviour
     public PlayerCombat combat;
 
     private bool jump = false;
-    private float timeStamp = 0;
+    private float punchTimeStamp = 0;
 
     void FixedUpdate()
     {
@@ -19,11 +19,11 @@ public class PlayerControl : MonoBehaviour
 
         movement.Move(horizontalMove * Time.fixedDeltaTime, jump);
 
-        if (timeStamp <= Time.time && Input.GetButton("Fire1"))
+        if (punchTimeStamp <= Time.time && Input.GetButton("Fire1"))
         {
             attack = true;
             combat.Punch();
-            timeStamp = Time.time + combat.punchCooldown;
+            punchTimeStamp = Time.time + combat.punchCooldown;
         }
     }
 }

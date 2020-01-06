@@ -7,10 +7,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float runSpeed = 0f;
     [SerializeField] private float jumpForce = 0f;
+    [SerializeField] private float jumpCooldown = 0f;
     [Range(0, 0.3f)] [SerializeField] public float smoothTime = 0.05f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Collider2D groundCollider;
     public bool isOnGround = false;
+
+    private float jumpTimeStamp;
 
     protected void Awake()
     {
@@ -24,13 +27,14 @@ public class PlayerMovement : MonoBehaviour
 
         // Handles horizontal move
         Vector2 targetVelocity = new Vector2(horizontalMove * runSpeed, 0);
-        transform.position += (Vector3)targetVelocity;
+        rigidbody.position += targetVelocity;
         // Handles jump move
-        if (jump && isOnGround)
+        if (jump && isOnGround && jumpTimeStamp <= Time.time)
         {
             targetVelocity = new Vector2(rigidbody.velocity.x, jumpForce);
             rigidbody.velocity = targetVelocity;
 
+            jumpTimeStamp = Time.time + jumpCooldown;
             isOnGround = false;
         }
     }
