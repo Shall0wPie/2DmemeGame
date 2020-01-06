@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 0f;
     [Range(0, 0.3f)] [SerializeField] public float smoothTime = 0.05f;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Collider2D groundCollider;
     public bool isOnGround = false;
 
     protected void Awake()
@@ -37,15 +38,6 @@ public class PlayerMovement : MonoBehaviour
     // Checks if player is on ground
     bool GroundCheck()
     {
-        Debug.DrawRay(transform.position, Vector2.down * downRayLength, Color.green);
-        RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, Vector2.down, downRayLength, groundLayer);
-
-        foreach (RaycastHit2D single in hit)
-        {
-            if (!single.collider.isTrigger)
-                return true;
-        }
-
-        return false;
+        return groundCollider.IsTouchingLayers(groundLayer);
     }
 }
