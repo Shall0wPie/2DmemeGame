@@ -415,6 +415,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2366673670002270563, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 19da5208530af9f4d85dcc6a2b6a5d7b,
+        type: 3}
     - target: {fileID: 3447237109211144892, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: punchForce
@@ -424,6 +430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: punchForceForY
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298860350542716948, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_TagString
+      value: PashtetAnimation
       objectReference: {fileID: 0}
     - target: {fileID: 8224550254852356177, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
