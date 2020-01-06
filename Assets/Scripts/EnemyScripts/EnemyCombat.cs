@@ -17,23 +17,23 @@ public class EnemyCombat : MonoBehaviour
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-         PashtetAnim = GameObject.FindGameObjectWithTag("PashtetAnimation").GetComponent<SpriteRenderer>();
+        PashtetAnim = GameObject.FindGameObjectWithTag("PashtetAnimation").GetComponent<SpriteRenderer>();
     }
-
     //COROUTINE ATTACK
     public IEnumerator Attack(float dmg, Vector2 force)
     {
-            anim.PlayAttack();
+        float distance;
+        anim.PlayAttack();
         while (true)
         {
             //force for enemy punch
             yield return null;
-            bool booler = false;
+            distance = Vector2.Distance(target.position, transform.position);
             //Debug.Log(PashtetAnim.sprite.name);       
-            if (PashtetAnim.sprite.name.Equals("PashtetAttack3"))
+            if ((PashtetAnim.sprite.name.Equals("PashtetAttack3")) && (distance < stats.attackRange))
             {
-            force = new Vector2(force.x * -transform.lossyScale.x, force.y);
-            target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
+                force = new Vector2(force.x * -transform.lossyScale.x, force.y);
+                target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
                 break;
             }
         }
@@ -48,8 +48,8 @@ public class EnemyCombat : MonoBehaviour
         // Applies effects
         rb.velocity += force;
         hp -= dmg;
-        // Plays hit animation
-        anim.PlayHit();
+        // Sprites
+        StartCoroutine(anim.Hitted(PashtetAnim));
         // If hp bellow or equal to zero Kills this Enemy
         if (hp <= 0)
         {
