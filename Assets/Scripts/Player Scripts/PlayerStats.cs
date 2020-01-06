@@ -10,10 +10,11 @@ public class PlayerStats : MonoBehaviour
 
     [Space]
     [Header("Combat stats")]
-    public float maxHP = 10f;
+    public float maxHP = 100f;
     [Range(0f, 1f)] public float dmgResistance = 0f;
     [Range(0f, 1f)] public float forceResistance = 0f;
     public float deathDuration = 2f;
+    public bool IsAlive = true;
 
     [Space]
     [Header("Move stats")]

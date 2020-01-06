@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerCombat : MonoBehaviour
     public float hp { get; private set; }
     private Rigidbody2D rb;
     private PlayerStats stats;
+    public PlayerAnimationControl PlayerAnim;
     private ContactFilter2D contactFilter;
     private Collider2D[] colliders;
 
@@ -21,8 +23,9 @@ public class PlayerCombat : MonoBehaviour
         contactFilter.layerMask = enemyLayer;
         contactFilter.useLayerMask = true;
         stats = GetComponentInParent<PlayerStats>();
-        colliders = new Collider2D[100];
+        colliders = new Collider2D[100];    
         rb = GetComponentInParent<Rigidbody2D>();
+        hp = stats.maxHP;
     }
 
     // Update is called once per frame
@@ -56,10 +59,43 @@ public class PlayerCombat : MonoBehaviour
         Debug.Log("Hp: " + hp + " Dmg: " + dmg);
 
         // If hp bellow or equal to zero Kills this Enemy
-        //if (hp <= 0)
+        if ((hp <= 0)&&(stats.IsAlive==true))
         {
             // Coriutine is function that lasts for some time (not only one Game circle)
-            //StartCoroutine(Kill());
+            //PlayerAnim.PlayRespawn();
+            
+             IEnumerator Kill()
+            {
+                // Plays anim
+                GetComponentInParent<PlayerControl>().enabled = false;
+                stats.IsAlive = false;
+                GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                PlayerAnim.PlayDeath();
+
+                // Sets body collider as Triggers to avoid any collisions
+                //stats.bodyCollider.isTrigger = true;
+                // Disables Follow script
+                // Rotates model by 90 degrees
+
+
+                // The rest of function will continue as deathDuration passes
+                yield return new WaitForSeconds(stats.deathDuration);
+
+                //gameObject.
+                // Respawns Enemy in its Spawn Point
+                if (stats.allowRespawn)
+                {
+                    PlayerAnim.PlayRespawn();
+                    GetComponentInParent<PlayerControl>().enabled = true;
+                    GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                    transform.parent.position = stats.spawnPoint;
+                    hp = stats.maxHP;
+                    stats.IsAlive = true;
+                }
+                
+                    
+            }
+            StartCoroutine(Kill());
         }
     }
 }
