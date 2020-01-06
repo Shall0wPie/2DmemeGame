@@ -306,7 +306,7 @@ MonoBehaviour:
   punchArea: {fileID: 6987354769803948042}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 512
   punchForce: 40
   punchDmg: 20
   punchCooldown: 0.35
