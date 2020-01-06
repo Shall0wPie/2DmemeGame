@@ -6,8 +6,7 @@ public class EnemyCombat : MonoBehaviour
     private Rigidbody2D rb;
     private Transform target;
     private EnemyStats stats;
-    public SpriteRenderer PashtetAnim;
-    public EnemyAnimationControl anim;
+    public EnemyAnimationControl animControl;
     public float hp { get; private set; }
 
     // Start is called before the first frame update
@@ -17,25 +16,27 @@ public class EnemyCombat : MonoBehaviour
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        PashtetAnim = GameObject.FindGameObjectWithTag("PashtetAnimation").GetComponent<SpriteRenderer>();
     }
     //COROUTINE ATTACK
     public IEnumerator Attack(float dmg, Vector2 force)
     {
         float distance;
-        anim.PlayAttack();
+        animControl.PlayAttack();
+
         while (true)
         {
             //force for enemy punch
             yield return null;
             distance = Vector2.Distance(target.position, transform.position);
-            //Debug.Log(PashtetAnim.sprite.name);       
-            if ((PashtetAnim.sprite.name.Equals("PashtetAttack3")) && (distance < stats.attackRange))
+            if ((animControl.renderer.sprite.name.Equals("PashtetAttack3")) && (distance < stats.attackRange))
             {
                 force = new Vector2(force.x * -transform.lossyScale.x, force.y);
                 target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
                 break;
             }
+
+            if (!animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("PashtetAttacking"))
+                break;
         }
     }
 
@@ -49,7 +50,7 @@ public class EnemyCombat : MonoBehaviour
         rb.velocity += force;
         hp -= dmg;
         // Sprites
-        StartCoroutine(anim.Hitted(PashtetAnim));
+        StartCoroutine(animControl.Hitted(animControl.renderer));
         // If hp bellow or equal to zero Kills this Enemy
         if (hp <= 0)
         {
@@ -62,7 +63,7 @@ public class EnemyCombat : MonoBehaviour
     public IEnumerator Kill()
     {
         // Plays anim
-        anim.PlayDeth();
+        animControl.PlayDeth();
 
         // Sets body collider as Triggers to avoid any collisions
         stats.bodyCollider.isTrigger = true;
@@ -86,7 +87,7 @@ public class EnemyCombat : MonoBehaviour
     public void Respawn()
     {
         // Revert Kill effects
-        anim.PlayRespawn();
+        animControl.PlayRespawn();
         hp = stats.maxHP;
         rb.velocity = Vector2.zero;
         stats.bodyCollider.isTrigger = false;
