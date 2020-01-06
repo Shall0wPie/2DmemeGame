@@ -77,7 +77,7 @@ MonoBehaviour:
   smoothTime: 0.05
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 768
   groundCollider: {fileID: 2971227762327985297}
   isOnGround: 0
 --- !u!114 &1335629947481452081
