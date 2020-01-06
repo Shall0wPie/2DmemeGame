@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {x: 0, y: 0}
-  allowRespawn: 1
+  allowRespawn: 0
   bodyCollider: {fileID: 261295329278739474}
   maxHP: 100
   dmgResistance: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   aggroRange: 25
   attackRange: 6
   punchForce: {x: 30, y: 20}
-  deathDuration: 2
+  deathDuration: 1
   attackCooldown: 1.5
   speed: 6
 --- !u!114 &3447237109211144892
