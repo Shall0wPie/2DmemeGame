@@ -60,4 +60,17 @@ public class PlayerAnimationControl : MonoBehaviour
             anim.SetTrigger("Attack2");
         }
     }
+
+    public void PlayDeath()
+    {
+        
+        anim.SetBool("IsDead", true);
+    }
+
+    public void PlayRespawn()
+    {
+        anim.SetBool("IsDead", false);
+
+        //anim.SetBool("IsDead", false);
+    }
 }

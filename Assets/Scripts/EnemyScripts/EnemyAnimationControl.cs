@@ -44,6 +44,7 @@ public class EnemyAnimationControl : MonoBehaviour
         anim.SetTrigger("Attack"); 
     }
 
+
     public IEnumerator Hitted(SpriteRenderer Anim)
     {
         Anim.color = new Color(0.95f, 0.76f, 0.79f);
