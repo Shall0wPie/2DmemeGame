@@ -23,7 +23,6 @@ public class PlayerCombat : MonoBehaviour
         stats = GetComponentInParent<PlayerStats>();
         colliders = new Collider2D[100];
         rb = GetComponentInParent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
@@ -55,9 +54,6 @@ public class PlayerCombat : MonoBehaviour
         rb.velocity += force;
         hp -= dmg;
         Debug.Log("Hp: " + hp + " Dmg: " + dmg);
-
-        // Plays hit animation
-        //anim.PlayHit();
 
         // If hp bellow or equal to zero Kills this Enemy
         //if (hp <= 0)

@@ -3,17 +3,20 @@ using UnityEngine;
 
 public class EnemyAnimationControl : MonoBehaviour
 {
-    public Animator anim;
-    public SpriteRenderer PashtetAnim;
     private Rigidbody2D rb;
     private EnemyControl enemyFollow;
+    public Animator anim;
+    public SpriteRenderer renderer;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponentInParent<Rigidbody2D>();
         enemyFollow = GetComponentInParent<EnemyControl>();
-        PashtetAnim = GameObject.FindGameObjectWithTag("PashtetAnimation").GetComponent<SpriteRenderer>();
+        if (anim == null)
+            anim = GetComponent<Animator>();
+        if (renderer == null)
+            renderer = GetComponent<SpriteRenderer>();
     }
 
     public void PlayMove()
