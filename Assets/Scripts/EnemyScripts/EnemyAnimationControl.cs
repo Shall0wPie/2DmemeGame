@@ -45,7 +45,7 @@ public class EnemyAnimationControl : MonoBehaviour
     {
 
         Anim.color = new Color(0.95f, 0.76f, 0.79f);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
         Anim.color = new Color(1, 1, 1);      
     }
 
