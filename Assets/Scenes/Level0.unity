@@ -281,6 +281,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4298860350542716948, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6050621723607342512, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -290,6 +295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619511337243117466, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
@@ -35240,7 +35250,7 @@ GameObject:
   - component: {fileID: 2079201004}
   - component: {fileID: 2079201003}
   - component: {fileID: 2079201002}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60995,7 +61005,7 @@ GameObject:
   - component: {fileID: 2098044770}
   - component: {fileID: 2098044769}
   - component: {fileID: 2098044768}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
