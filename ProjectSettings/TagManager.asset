@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - PashtetAnimation
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -14,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - BackGround
-  - Ground
-  - Enemy
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -39,9 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 3327936525
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

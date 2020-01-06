@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class EnemyAnimationControl : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class EnemyAnimationControl : MonoBehaviour
     void Start()
     {
         rb = GetComponentInParent<Rigidbody2D>();
-        enemyFollow = GetComponentInParent<EnemyControl>();
+        enemyFollow = GetComponentInParent<EnemyControl>();       
     }
 
     public void PlayMove()
@@ -40,8 +41,10 @@ public class EnemyAnimationControl : MonoBehaviour
 
     public void PlayAttack()
     {
-        anim.SetTrigger("Attack");
+        anim.SetTrigger("Attack"); 
     }
+
+    
 
     public void FacingRight(bool isFacingRight)
     {

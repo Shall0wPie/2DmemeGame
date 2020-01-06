@@ -6,11 +6,9 @@ public class EnemyCombat : MonoBehaviour
     private Rigidbody2D rb;
     private Transform target;
     private EnemyStats stats;
-    //public SpriteRenderer PashtetAnim;
+    public SpriteRenderer PashtetAnim;
     public EnemyAnimationControl anim;
     public float hp { get; private set; }
-
-    [SerializeField] private Collider2D stopCollider = null;
 
     // Start is called before the first frame update
     void Start()
@@ -19,17 +17,26 @@ public class EnemyCombat : MonoBehaviour
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        // PashtetAnim = GameObject.FindGameObjectWithTag("PashtetAnimation").GetComponent<SpriteRenderer>();
+         PashtetAnim = GameObject.FindGameObjectWithTag("PashtetAnimation").GetComponent<SpriteRenderer>();
     }
 
-    public void Attack(float dmg, Vector2 force)
+    //COROUTINE ATTACK
+    public IEnumerator Attack(float dmg, Vector2 force)
     {
-        //force for enemy punch
-        anim.PlayAttack();
-        //Debug.Log(PashtetAnim.sprite.name);
-        force = new Vector2(force.x * -transform.lossyScale.x, force.y);
-        target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
-
+            anim.PlayAttack();
+        while (true)
+        {
+            //force for enemy punch
+            yield return null;
+            bool booler = false;
+            //Debug.Log(PashtetAnim.sprite.name);       
+            if (PashtetAnim.sprite.name.Equals("PashtetAttack3"))
+            {
+            force = new Vector2(force.x * -transform.lossyScale.x, force.y);
+            target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
+                break;
+            }
+        }
     }
 
     // Applis Force and Damage to this Enemy
