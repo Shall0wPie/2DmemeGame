@@ -11,14 +11,8 @@ public class PlayerControl : MonoBehaviour
     private bool jump = false;
     private float punchTimeStamp = 0;
 
-    void FixedUpdate()
+    private void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal");
-        jump = Input.GetButton("Jump");
-        attack = false;
-
-        movement.Move(horizontalMove * Time.fixedDeltaTime, jump);
-
         if (punchTimeStamp <= Time.time && Input.GetButton("Fire1"))
         {
             attack = true;
@@ -27,6 +21,24 @@ public class PlayerControl : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.G))
-            Inventory.instance.DropItem(0);
+            Inventory.instance.DropItem();
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            Inventory.instance.SelectItem(0);
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            Inventory.instance.SelectItem(1);
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+            Inventory.instance.SelectItem(2);
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+            Inventory.instance.SelectItem(3);
+    }
+
+    void FixedUpdate()
+    {
+        horizontalMove = Input.GetAxisRaw("Horizontal");
+        jump = Input.GetButton("Jump");
+        attack = false;
+
+        movement.Move(horizontalMove * Time.fixedDeltaTime, jump);
     }
 }

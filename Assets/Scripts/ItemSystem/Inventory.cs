@@ -16,19 +16,23 @@ public class Inventory : MonoBehaviour
     #endregion
 
     public List<Item> itemList;
-    private uint inventorySzie = 4;
+    public int selectedSlot { get; private set; }
+    private int inventorySzie = 4;
 
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallBack;
 
+    public delegate void OnSelectorChanged();
+    public OnSelectorChanged OnSelectorChangedCallBack;
+
     void Start()
     {
-        itemList = new List<Item>();
+        itemList = new List<Item>(4);
     }
 
     public bool AddItem(Item item)
     {
-        if (itemList.Count < 4)
+        if (itemList.Count < inventorySzie)
         {
             itemList.Add(item);
             if (onItemChangedCallBack != null)
@@ -38,17 +42,29 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    public void DropItem(int itemIndex)
+    public void DropItem()
     {
-        if (itemIndex < itemList.Count)
+        if (itemList[selectedSlot] != null)
         {
             Transform player = GameObject.FindGameObjectWithTag("Player").transform;
             Vector2 position = new Vector2(player.position.x + 5f * player.lossyScale.x, player.position.y);
             
-            Item.SpawnItem(itemList[itemIndex], position);
-            itemList.RemoveAt(itemIndex);
+            Item.SpawnItem(itemList[selectedSlot], position);
+            itemList.RemoveAt(selectedSlot);
             if (onItemChangedCallBack != null)
                 onItemChangedCallBack.Invoke();
         }
+    }
+
+    public void SelectItem(int slotIndex)
+    {
+        selectedSlot = slotIndex;
+        if (selectedSlot >= inventorySzie)
+        {
+            selectedSlot = inventorySzie - 1;
+        }
+
+        if (OnSelectorChangedCallBack != null)
+            OnSelectorChangedCallBack.Invoke();
     }
 }

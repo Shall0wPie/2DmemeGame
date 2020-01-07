@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -7,13 +8,13 @@ public class InventoryUI : MonoBehaviour
     void Start()
     {
         inventory = Inventory.instance;
-        inventory.onItemChangedCallBack += UpdateUI;
+        inventory.onItemChangedCallBack += UpdateSlots;
+        inventory.OnSelectorChangedCallBack += UpdateSelector;
 
         slots = GetComponentsInChildren<SlotUI>();
     }
 
-    // Update is called once per frame
-    void UpdateUI()
+    void UpdateSlots()
     {
         for (int i = 0; i < slots.Length; i++)
         {
@@ -24,5 +25,14 @@ public class InventoryUI : MonoBehaviour
                 slots[i].ClearSlot();
             }
         }
+    }
+
+    private void UpdateSelector()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].GetComponent<Image>().color = Color.white;
+        }
+        slots[inventory.selectedSlot].GetComponent<Image>().color = Color.green;
     }
 }

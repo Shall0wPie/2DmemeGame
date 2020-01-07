@@ -73,10 +73,26 @@ PrefabInstance:
       propertyPath: itemType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3802972731841279910, guid: e85dae0489237e1408ad66d4f4986c33,
+        type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: bdce2a9cb3d0242958c2593a3b8d8742,
+        type: 3}
     - target: {fileID: 3802972731841279911, guid: e85dae0489237e1408ad66d4f4986c33,
         type: 3}
       propertyPath: m_Name
       value: itemHealth1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760434414359229264, guid: e85dae0489237e1408ad66d4f4986c33,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760434414359229264, guid: e85dae0489237e1408ad66d4f4986c33,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.625
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85dae0489237e1408ad66d4f4986c33, type: 3}
