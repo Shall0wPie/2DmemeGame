@@ -70,8 +70,7 @@ public class PlayerCombat : MonoBehaviour
                 GetComponentInParent<PlayerControl>().enabled = false;
                 stats.IsAlive = false;
                 GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-                PlayerAnim.PlayDeath();
-                
+                PlayerAnim.PlayDeath();              
 
                 // Sets body collider as Triggers to avoid any collisions
                 //stats.bodyCollider.isTrigger = true;
