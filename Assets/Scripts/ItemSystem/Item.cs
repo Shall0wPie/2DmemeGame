@@ -9,20 +9,22 @@ public class Item : MonoBehaviour
         HealthPotion3
     }
 
+    [SerializeField] private IEffect effect;
+
     public ItemType itemType;
     public Sprite icon;
+
 
     public static void SpawnItem(Item item, Vector2 position)
     {
         Transform newTransform = Instantiate(Prefabs.instance.itemPrefab, position, Quaternion.identity);
         newTransform.GetComponent<Item>().SetItem(item);
-
-        newTransform.GetComponent<SpriteRenderer>().sprite = item.icon;
     }
 
     void Start()
     {
-        icon = GetComponent<SpriteRenderer>().sprite;
+        if (icon != null)
+            GetComponent<SpriteRenderer>().sprite = icon;
     }
 
     public void SetItem(Item item)

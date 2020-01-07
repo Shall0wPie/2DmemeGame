@@ -62,15 +62,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3802972731841279909, guid: e85dae0489237e1408ad66d4f4986c33,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd59bf2e866ed4529ae645637eb9c11d,
+        type: 3}
     - target: {fileID: 3802972731841279910, guid: e85dae0489237e1408ad66d4f4986c33,
         type: 3}
       propertyPath: itemType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3802972731841279910, guid: e85dae0489237e1408ad66d4f4986c33,
+        type: 3}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 21300000, guid: bd59bf2e866ed4529ae645637eb9c11d,
+        type: 3}
     - target: {fileID: 3802972731841279911, guid: e85dae0489237e1408ad66d4f4986c33,
         type: 3}
       propertyPath: m_Name
       value: itemHealth2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760434414359229264, guid: e85dae0489237e1408ad66d4f4986c33,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760434414359229264, guid: e85dae0489237e1408ad66d4f4986c33,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.1666667
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85dae0489237e1408ad66d4f4986c33, type: 3}
