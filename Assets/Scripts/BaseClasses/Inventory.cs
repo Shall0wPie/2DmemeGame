@@ -38,10 +38,11 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    public void RemoveItem()
+    public void RemoveItem(int itemIndex)
     {
+        if (itemIndex < (itemList.Count - 1))
+            itemList.RemoveAt(itemIndex);
         if (onItemChangedCallBack != null)
             onItemChangedCallBack.Invoke();
-
     }
 }
