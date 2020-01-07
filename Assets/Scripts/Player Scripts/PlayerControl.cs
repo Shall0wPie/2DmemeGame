@@ -25,5 +25,8 @@ public class PlayerControl : MonoBehaviour
             combat.Punch();
             punchTimeStamp = Time.time + combat.punchCooldown;
         }
+
+        if (Input.GetKeyDown(KeyCode.G))
+            Inventory.instance.DropItem(0);
     }
 }
