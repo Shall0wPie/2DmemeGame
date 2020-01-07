@@ -14,6 +14,7 @@ public class Item : MonoBehaviour
     public ItemType itemType;
     public Sprite icon;
 
+
     public static void SpawnItem(Item item, Vector2 position)
     {
         Transform newTransform = Instantiate(Prefabs.instance.itemPrefab, position, Quaternion.identity);

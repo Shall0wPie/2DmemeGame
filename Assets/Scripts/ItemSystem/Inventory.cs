@@ -15,9 +15,9 @@ public class Inventory : MonoBehaviour
     }
     #endregion
 
-    public List<Item> itemList;
+    public List<Item> items { get; private set; }
     public int selectedSlot { get; private set; }
-    private int inventorySzie = 4;
+    private int inventorySize = 4;
 
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallBack;
@@ -27,30 +27,33 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-        itemList = new List<Item>(4);
+        items = new List<Item>(inventorySize);
     }
 
     public bool AddItem(Item item)
     {
-        if (itemList.Count < inventorySzie)
+        for (int i = 0; i < inventorySize; i++)
         {
-            itemList.Add(item);
-            if (onItemChangedCallBack != null)
-                onItemChangedCallBack.Invoke();
-            return true;
+            if (items.Count < inventorySize)
+            {
+                items.Add(item);
+                if (onItemChangedCallBack != null)
+                    onItemChangedCallBack.Invoke();
+                return true;
+            }
         }
         return false;
     }
 
     public void DropItem()
     {
-        if (itemList[selectedSlot] != null)
+        if (items.Count > selectedSlot)
         {
             Transform player = GameObject.FindGameObjectWithTag("Player").transform;
             Vector2 position = new Vector2(player.position.x + 5f * player.lossyScale.x, player.position.y);
             
-            Item.SpawnItem(itemList[selectedSlot], position);
-            itemList.RemoveAt(selectedSlot);
+            Item.SpawnItem(items[selectedSlot], position);
+            items.RemoveAt(selectedSlot);
             if (onItemChangedCallBack != null)
                 onItemChangedCallBack.Invoke();
         }
@@ -59,9 +62,9 @@ public class Inventory : MonoBehaviour
     public void SelectItem(int slotIndex)
     {
         selectedSlot = slotIndex;
-        if (selectedSlot >= inventorySzie)
+        if (selectedSlot >= inventorySize)
         {
-            selectedSlot = inventorySzie - 1;
+            selectedSlot = inventorySize - 1;
         }
 
         if (OnSelectorChangedCallBack != null)

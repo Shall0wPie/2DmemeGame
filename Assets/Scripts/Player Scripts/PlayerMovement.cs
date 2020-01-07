@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Handles horizontal move
         Vector2 targetVelocity = new Vector2(horizontalMove * runSpeed, 0);
-        rigidbody.position += targetVelocity;
+        rigidbody.velocity = targetVelocity;
         // Handles jump move
         if (jump && isOnGround && jumpTimeStamp <= Time.time)
         {
