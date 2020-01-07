@@ -59,43 +59,33 @@ public class PlayerCombat : MonoBehaviour
         Debug.Log("Hp: " + hp + " Dmg: " + dmg);
 
         // If hp bellow or equal to zero Kills this Enemy
-        if ((hp <= 0)&&(stats.IsAlive==true))
+        if (hp <= 0 && stats.isAlive)
         {
-            // Coriutine is function that lasts for some time (not only one Game circle)
-            //PlayerAnim.PlayRespawn();
-            
-             IEnumerator Kill()
-            {
-                // Plays anim
-                GetComponentInParent<PlayerControl>().enabled = false;
-                stats.IsAlive = false;
-                GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-                PlayerAnim.PlayDeath();              
 
-                // Sets body collider as Triggers to avoid any collisions
-                //stats.bodyCollider.isTrigger = true;
-                // Disables Follow script
-                // Rotates model by 90 degrees
-
-
-                // The rest of function will continue as deathDuration passes
-                yield return new WaitForSeconds(stats.deathDuration);
-
-                //gameObject.
-                // Respawns Enemy in its Spawn Point
-                if (stats.allowRespawn)
-                {
-                    PlayerAnim.PlayRespawn();
-                    GetComponentInParent<PlayerControl>().enabled = true;
-                    GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-                    transform.parent.position = stats.spawnPoint;
-                    hp = stats.maxHP;
-                    stats.IsAlive = true;
-                }
-                
-                    
-            }
             StartCoroutine(Kill());
+        }
+    }
+
+
+    IEnumerator Kill()
+    {
+        // Plays anim
+        GetComponentInParent<PlayerControl>().enabled = false;
+        stats.isAlive = false;
+        GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        PlayerAnim.PlayDeath();
+
+        // The rest of function will continue as deathDuration passes
+        yield return new WaitForSeconds(stats.deathDuration);
+
+        if (stats.allowRespawn)
+        {
+            PlayerAnim.PlayRespawn();
+            GetComponentInParent<PlayerControl>().enabled = true;
+            GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            transform.parent.position = stats.spawnPoint;
+            hp = stats.maxHP;
+            stats.isAlive = true;
         }
     }
 }

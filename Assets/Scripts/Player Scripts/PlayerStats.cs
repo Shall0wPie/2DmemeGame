@@ -14,11 +14,7 @@ public class PlayerStats : MonoBehaviour
     [Range(0f, 1f)] public float dmgResistance = 0f;
     [Range(0f, 1f)] public float forceResistance = 0f;
     public float deathDuration = 2f;
-    public bool IsAlive = true;
-
-    [Space]
-    [Header("Move stats")]
-    public float speed = 40f;
+    public bool isAlive = true;
 
     private void Start()
     {
