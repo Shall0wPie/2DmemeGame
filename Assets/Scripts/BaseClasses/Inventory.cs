@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     #region Singleton
-    public static Inventory instance;
+    public static Inventory instance { get; private set; }
     private void Awake()
     {
         if (instance != null)
@@ -38,11 +38,17 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    public void RemoveItem(int itemIndex)
+    public void DropItem(int itemIndex)
     {
-        if (itemIndex < (itemList.Count - 1))
+        if (itemIndex < itemList.Count)
+        {
+            Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+            Vector2 position = new Vector2(player.position.x + 5f * player.lossyScale.x, player.position.y);
+            
+            Item.SpawnItem(itemList[itemIndex], position);
             itemList.RemoveAt(itemIndex);
-        if (onItemChangedCallBack != null)
-            onItemChangedCallBack.Invoke();
+            if (onItemChangedCallBack != null)
+                onItemChangedCallBack.Invoke();
+        }
     }
 }
