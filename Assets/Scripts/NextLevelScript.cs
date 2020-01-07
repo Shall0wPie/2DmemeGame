@@ -21,7 +21,7 @@ public class NextLevelScript : MonoBehaviour
     IEnumerator NextLevelCor()
     {       
         
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(15f);
         lvlload.LoadLevel(1);
     }
 }
