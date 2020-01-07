@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class NextLevelScript : MonoBehaviour
 {
-    public LevelLoader lvlload;
+    private LevelLoader lvlload;
     // Start is called before the first frame update
     void Start()
     {
+        lvlload = GetComponent<LevelLoader>();
         StartCoroutine(NextLevelCor());
     }
 
