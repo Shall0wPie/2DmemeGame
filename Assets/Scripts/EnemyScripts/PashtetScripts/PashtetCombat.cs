@@ -2,28 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class MaximCombat : EnemyCombat
+public class PashtetCombat : EnemyCombat
 {
     public override IEnumerator Attack(float dmg, Vector2 force)
     {
         float distance;
-       // animControl.PlayMove();
+        animControl.PlayAttack();
 
         while (true)
         {
             //force for enemy punch
             yield return null;
             distance = Vector2.Distance(target.position, transform.position);
-            
-            if ((animControl.renderer.sprite.name.Equals("walking3")) && (distance < stats.attackRange))
+
+            if ((animControl.renderer.sprite.name.Equals("PashtetAttack3")) && (distance < stats.attackRange))
             {
                 force = new Vector2(force.x * -transform.lossyScale.x, force.y);
                 target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
-                Debug.Log("popa");
                 break;
             }
 
-            if (animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("MaximWalking"))
+            if (!animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("PashtetAttacking"))
                 break;
         }
     }
@@ -31,7 +30,7 @@ class MaximCombat : EnemyCombat
     public override IEnumerator Kill()
     {
         // Plays anim
-        //animControl.PlayDeath();
+        animControl.PlayDeath();
 
         // Sets body collider as Triggers to avoid any collisions
         stats.bodyCollider.isTrigger = true;
@@ -73,7 +72,7 @@ class MaximCombat : EnemyCombat
     public override void Respawn()
     {
         // Revert Kill effects
-        //animControl.PlayRespawn();
+        animControl.PlayRespawn();
         hp = stats.maxHP;
         rb.velocity = Vector2.zero;
         stats.bodyCollider.isTrigger = false;
