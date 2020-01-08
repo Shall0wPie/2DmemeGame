@@ -70,4 +70,9 @@ public class Inventory : MonoBehaviour
         if (OnSelectorChangedCallBack != null)
             OnSelectorChangedCallBack.Invoke();
     }
+
+    public void UseItem()
+    {
+        items[selectedSlot].effect.Apply();
+    }
 }
