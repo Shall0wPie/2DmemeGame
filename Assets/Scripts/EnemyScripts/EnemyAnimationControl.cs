@@ -29,7 +29,7 @@ public class EnemyAnimationControl : MonoBehaviour
         anim.SetFloat("Speed", 0f);
     }
 
-    public void PlayDeth()
+    public void PlayDeath()
     {
         anim.SetBool("IsDead", true);
     }
