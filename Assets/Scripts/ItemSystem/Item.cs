@@ -17,7 +17,7 @@ public class Item : MonoBehaviour
 
     public static void SpawnItem(Item item, Vector2 position)
     {
-        Transform newTransform = Instantiate(Prefabs.instance.itemPrefab, position, Quaternion.identity);
+        Transform newTransform = Instantiate(Prefabs.instance.item, position, Quaternion.identity);
         newTransform.GetComponent<Item>().SetItem(item);
     }
 

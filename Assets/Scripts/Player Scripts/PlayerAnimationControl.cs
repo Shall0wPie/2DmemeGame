@@ -3,58 +3,38 @@
 public class PlayerAnimationControl : MonoBehaviour
 {
     public Animator anim;
-    private PlayerControl pc;
+    private Rigidbody2D rb;
     private bool facingRight = true;
     private bool firstAttack = true;
 
     private void Start()
     {
-        pc = GetComponentInParent<PlayerControl>();
+        rb = GetComponentInParent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    public void PlayMove()
     {
-        if (Mathf.Abs(pc.horizontalMove) >= 0.01f)
-            anim.SetFloat("Horizontal Speed", 1f);
-        else
-            anim.SetFloat("Horizontal Speed", 0f);
-
-        if (/*Mathf.Abs(rb.velocity.y) > 0.1f &&*/ !pc.movement.isOnGround)
-            anim.SetFloat("Vertical Speed", 1f);
-        else
-            anim.SetFloat("Vertical Speed", 0f);
-
-        // Model Flip (depends on move direction)
-        if (pc.horizontalMove < 0 && facingRight)
-        {
-            Flip();
-        }
-        else if (pc.horizontalMove > 0 && !facingRight)
-        {
-            Flip();
-        }
-
-        PlayAttack();
+        anim.SetFloat("Horizontal Speed", 1f);
     }
 
-    // Flips the model
-    void Flip()
+    public void PlayStand()
     {
-        facingRight = !facingRight;
-
-        Vector2 scale = pc.transform.localScale;
-        scale.x *= -1;
-        pc.transform.localScale = scale;
+        anim.SetFloat("Horizontal Speed", 0f);
     }
 
-    void PlayAttack()
+    public void PlayJump(bool jump)
     {
-        if (pc.attack && firstAttack)
+        anim.SetBool("Jump", jump);
+    }
+
+    public void PlayAttack()
+    {
+        if (firstAttack)
         {
             firstAttack = !firstAttack;
             anim.SetTrigger("Attack");
         }
-        else if (pc.attack && !firstAttack)
+        else if (!firstAttack)
         {
             firstAttack = !firstAttack;
             anim.SetTrigger("Attack2");
@@ -70,7 +50,17 @@ public class PlayerAnimationControl : MonoBehaviour
     public void PlayRespawn()
     {
         anim.SetBool("IsDead", false);
+    }
 
-        //anim.SetBool("IsDead", false);
+    public void FacingRight(bool isFacingRight)
+    {
+        Vector2 scale = rb.transform.localScale;
+
+        if (isFacingRight)
+            scale.x = -1;
+        else
+            scale.x = 1;
+
+        rb.transform.localScale = scale;
     }
 }
