@@ -1,28 +1,13 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EnemyControl : MonoBehaviour
+public class MaximControl : EnemyControl
+
 {
-    protected Transform target;
-    protected EnemyStats stats;
-    protected EnemyCombat combat;
-    protected float timeStamp = 0;
-
-    public EnemyAnimationControl anim;
-
-    [SerializeField] protected float punchDmg = 25f;
-
-    void Start()
-    {
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        stats = GetComponent<EnemyStats>();
-        combat = GetComponentInChildren<EnemyCombat>();
-    }
-
-
-
     void FixedUpdate()
     {
+
         float distanceFormSpot = Vector2.Distance(target.position, stats.aggroPoint.position);
 
         if (distanceFormSpot < stats.aggroRange)
@@ -51,7 +36,7 @@ public abstract class EnemyControl : MonoBehaviour
         }
     }
 
-    public virtual void AnimateMove(Vector2 targetPos)
+    public override void AnimateMove(Vector2 targetPos)
     {
         anim.PlayMove();
 

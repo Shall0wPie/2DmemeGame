@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class EnemyCombat : MonoBehaviour
+public abstract class EnemyCombat : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private Transform target;
-    private EnemyStats stats;
+    protected Rigidbody2D rb;
+    protected Transform target;
+    protected EnemyStats stats;
     public EnemyAnimationControl animControl;
-    public float hp { get; private set; }
+    public float hp { get; protected set; }
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class EnemyCombat : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
     //COROUTINE ATTACK
-    public IEnumerator Attack(float dmg, Vector2 force)
+    public virtual IEnumerator Attack(float dmg, Vector2 force)
     {
         float distance;
         animControl.PlayAttack();
@@ -41,7 +41,7 @@ public class EnemyCombat : MonoBehaviour
     }
 
     // Applis Force and Damage to this Enemy
-    public void ApplyHit(float dmg, Vector2 force)
+    public virtual void ApplyHit(float dmg, Vector2 force)
     {
         // Calculates dmg and force according to resistance
         dmg *= (1 - stats.dmgResistance);
@@ -60,7 +60,7 @@ public class EnemyCombat : MonoBehaviour
     }
 
     // Kill function plays Death anim and disable stuff lol
-    public IEnumerator Kill()
+    public virtual IEnumerator Kill()
     {
         // Plays anim
         animControl.PlayDeath();
@@ -84,7 +84,7 @@ public class EnemyCombat : MonoBehaviour
             Destroy(transform.parent.gameObject);
     }
 
-    public void Respawn()
+    public virtual void Respawn()
     {
         // Revert Kill effects
         animControl.PlayRespawn();
