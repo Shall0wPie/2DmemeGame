@@ -11,6 +11,7 @@ public class Prefabs : MonoBehaviour
         instance = this;
     }
 
-    public Transform itemPrefab;
+    public Transform item;
     public Transform point;
+    public Transform projectile;
 }

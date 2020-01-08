@@ -8,6 +8,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float punchForce = 10f;
     [SerializeField] private float punchDmg = 10f;
     [Range(0f, 2f)] public float punchCooldown;
+    [Range(0f, 2f)] public float shotCooldown;
 
     public float hp { get; private set; }
     private Rigidbody2D rb;
@@ -45,6 +46,13 @@ public class PlayerCombat : MonoBehaviour
                 colliders[i].GetComponentInChildren<EnemyCombat>().ApplyHit(punchDmg, force);
             }
         }
+    }
+
+    public void Shoot()
+    {
+        Transform projectile = Prefabs.instance.projectile;
+        projectile.localScale = transform.lossyScale;
+        Instantiate(projectile, transform.position, Quaternion.identity);
     }
 
     public void ApplyHit(float dmg, Vector2 force)
