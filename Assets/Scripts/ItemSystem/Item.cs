@@ -1,35 +1,19 @@
 ﻿using UnityEngine;
 
-public class Item : MonoBehaviour
+public abstract class Item : ScriptableObject
 {
-    public enum ItemType
-    {
-        HealthPotion1,
-        HealthPotion2,
-        HealthPotion3
-    }
-
-
-    public IEffect effect;
-    public ItemType itemType;
     public Sprite icon;
-
 
     public static void SpawnItem(Item item, Vector2 position)
     {
         Transform newTransform = Instantiate(Prefabs.instance.item, position, Quaternion.identity);
-        newTransform.GetComponent<Item>().SetItem(item);
+        newTransform.GetComponent<ItemInteraction>().item.SetItem(item);
     }
 
-    void Start()
-    {
-        if (icon != null)
-            GetComponent<SpriteRenderer>().sprite = icon;
-    }
+    public abstract void Use(Transform target);
 
     public void SetItem(Item item)
     {
-        itemType = item.itemType;
         icon = item.icon;
     }
 }

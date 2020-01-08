@@ -40,6 +40,8 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
             Inventory.instance.DropItem();
+        if (Input.GetKeyDown(KeyCode.E))
+            Inventory.instance.UseItem();
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
             Inventory.instance.SelectItem(0);

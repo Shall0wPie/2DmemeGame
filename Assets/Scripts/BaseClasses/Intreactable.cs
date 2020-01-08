@@ -10,7 +10,7 @@ public abstract class Intreactable : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        Init();
     }
 
     public abstract void Interact();
@@ -26,7 +26,12 @@ public abstract class Intreactable : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    protected virtual void Init()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
+    protected void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, interactionRadius);

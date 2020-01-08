@@ -18,6 +18,7 @@ public class Inventory : MonoBehaviour
     public List<Item> items { get; private set; }
     public int selectedSlot { get; private set; }
     private int inventorySize = 4;
+    private Transform player;
 
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallBack;
@@ -28,6 +29,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         items = new List<Item>(inventorySize);
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public bool AddItem(Item item)
@@ -49,7 +51,6 @@ public class Inventory : MonoBehaviour
     {
         if (items.Count > selectedSlot)
         {
-            Transform player = GameObject.FindGameObjectWithTag("Player").transform;
             Vector2 position = new Vector2(player.position.x + 5f * player.lossyScale.x, player.position.y);
             
             Item.SpawnItem(items[selectedSlot], position);
@@ -73,6 +74,13 @@ public class Inventory : MonoBehaviour
 
     public void UseItem()
     {
-        items[selectedSlot].effect.Apply();
+        if (items.Count > selectedSlot)
+        {
+            items[selectedSlot].Use(player);
+            items.RemoveAt(selectedSlot);
+
+            if (onItemChangedCallBack != null)
+                onItemChangedCallBack.Invoke();
+        }
     }
 }
