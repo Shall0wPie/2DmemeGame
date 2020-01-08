@@ -12,4 +12,5 @@ public class Prefabs : MonoBehaviour
     }
 
     public Transform itemPrefab;
+    public Transform point;
 }
