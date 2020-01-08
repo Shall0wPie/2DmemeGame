@@ -9,8 +9,8 @@ public class Item : MonoBehaviour
         HealthPotion3
     }
 
-    [SerializeField] private IEffect effect;
 
+    public IEffect effect;
     public ItemType itemType;
     public Sprite icon;
 
