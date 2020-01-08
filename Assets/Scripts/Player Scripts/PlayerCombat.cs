@@ -69,13 +69,12 @@ public class PlayerCombat : MonoBehaviour
         // If hp bellow or equal to zero Kills this Enemy
         if (hp <= 0 && stats.isAlive)
         {
-
             StartCoroutine(Kill());
         }
     }
 
 
-    IEnumerator Kill()
+    public IEnumerator Kill()
     {
         // Plays anim
         GetComponentInParent<PlayerControl>().enabled = false;

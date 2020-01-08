@@ -135,6 +135,3 @@ MonoBehaviour:
   strikeForce: {x: 20, y: 20}
   speed: 50
   flyDistance: 20
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 512

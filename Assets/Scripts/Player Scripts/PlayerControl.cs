@@ -2,19 +2,32 @@
 
 public class PlayerControl : MonoBehaviour
 {
-
     public float horizontalMove { get; private set; }
-    public PlayerMovement movement;
-    public PlayerCombat combat;
-    public PlayerAnimationControl anim;
+    private PlayerMovement movement;
+    private PlayerCombat combat;
+    private PlayerAnimationControl anim;
+    private PlayerStats stats;
 
     [SerializeField] private bool isOnGround = true;
     private float punchTimeStamp = 0;
     private float shotTimeStamp = 0;
     private float jumpTimeStamp = 0;
 
+    private void Start()
+    {
+        movement = GetComponent<PlayerMovement>();
+        combat = GetComponentInChildren<PlayerCombat>();
+        anim = GetComponentInChildren<PlayerAnimationControl>();
+        stats = GetComponent<PlayerStats>();
+    }
+
     private void Update()
     {
+        if (transform.position.y < -10 && stats.isAlive)
+        {
+            Debug.Log("zdoh");
+            StartCoroutine(combat.Kill());
+        }
         isOnGround = movement.IsOnGround();
         if (jumpTimeStamp <= Time.time && Input.GetButton("Jump") && isOnGround)
         {
