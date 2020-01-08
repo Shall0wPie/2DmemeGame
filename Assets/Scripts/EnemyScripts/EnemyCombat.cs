@@ -63,7 +63,7 @@ public class EnemyCombat : MonoBehaviour
     public IEnumerator Kill()
     {
         // Plays anim
-        animControl.PlayDeth();
+        animControl.PlayDeath();
 
         // Sets body collider as Triggers to avoid any collisions
         stats.bodyCollider.isTrigger = true;
