@@ -10,7 +10,7 @@ public class PlayerCombat : MonoBehaviour
     [Range(0f, 2f)] public float punchCooldown;
     [Range(0f, 2f)] public float shotCooldown;
 
-    public float hp { get; private set; }
+    public float hp;
     private Rigidbody2D rb;
     private PlayerStats stats;
     public PlayerAnimationControl PlayerAnim;
