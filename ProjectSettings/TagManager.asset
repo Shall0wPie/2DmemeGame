@@ -5,8 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - AggroPoints
-  - Pashtet
-  - Maxim
+  - Enemy
   layers:
   - Default
   - TransparentFX
