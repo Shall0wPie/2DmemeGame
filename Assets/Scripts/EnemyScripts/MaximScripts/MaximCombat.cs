@@ -72,8 +72,6 @@ class MaximCombat : EnemyCombat
 
     public override void Respawn()
     {
-        // Revert Kill effects
-        //animControl.PlayRespawn();
         hp = stats.maxHP;
         rb.velocity = Vector2.zero;
         stats.bodyCollider.isTrigger = false;
