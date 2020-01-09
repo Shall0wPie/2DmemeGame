@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 4517146907118660715}
-  punchDmg: 25
+  punchDmg: 20
 --- !u!114 &5314053396470914144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,7 +37,7 @@ PrefabInstance:
     - target: {fileID: 261295329278739474, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 261295329278739474, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
@@ -47,12 +47,12 @@ PrefabInstance:
     - target: {fileID: 261295329278739474, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Size.y
-      value: 6
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 261295329278739474, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Size.x
-      value: 3.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 261295329278739474, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
@@ -154,6 +154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: attackRange
       value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: punchForce.x
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 271657252976213162, guid: eefa64718390fd64e896d529e7c93cfc, type: 3}

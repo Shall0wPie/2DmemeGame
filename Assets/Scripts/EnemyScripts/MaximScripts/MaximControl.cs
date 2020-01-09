@@ -8,7 +8,7 @@ public class MaximControl : EnemyControl
     void FixedUpdate()
     {
 
-        float distanceFormSpot = Vector2.Distance(target.position, stats.aggroPoint.position);
+        float distanceFormSpot = Vector2.Distance(target.position, transform.position);
 
         if (distanceFormSpot < stats.aggroRange)
         {
