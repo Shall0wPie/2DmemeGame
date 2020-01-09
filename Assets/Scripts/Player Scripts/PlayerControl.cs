@@ -48,6 +48,7 @@ public class PlayerControl : MonoBehaviour
         if (punchTimeStamp <= Time.time && Input.GetKeyDown(KeyCode.Q))
         {
             combat.Shoot();
+            anim.PlayAblility();
             punchTimeStamp = Time.time + combat.shotCooldown;
         }
 

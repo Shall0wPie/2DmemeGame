@@ -7,7 +7,7 @@ class MaximCombat : EnemyCombat
     public override IEnumerator Attack(float dmg, Vector2 force)
     {
         float distance;
-       // animControl.PlayMove();
+        animControl.PlayAttack();
 
         while (true)
         {
@@ -15,7 +15,7 @@ class MaximCombat : EnemyCombat
             yield return null;
             distance = Vector2.Distance(target.position, transform.position);
             
-            if ((animControl.renderer.sprite.name.Equals("walking3")) && (distance < stats.attackRange))
+            if ((animControl.renderer.sprite.name.Equals("MaximAttack")) && (distance < stats.attackRange))
             {
                 force = new Vector2(force.x * -transform.lossyScale.x, force.y);
                 target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
@@ -23,7 +23,7 @@ class MaximCombat : EnemyCombat
                 break;
             }
 
-            if (animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("MaximWalking"))
+            if (!animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("MaximAttack"))
                 break;
         }
     }

@@ -41,6 +41,10 @@ public class PlayerAnimationControl : MonoBehaviour
         }
     }
 
+    public void PlayAblility()
+    {
+        anim.SetTrigger("UseAbility");
+    }
     public void PlayDeath()
     {
         

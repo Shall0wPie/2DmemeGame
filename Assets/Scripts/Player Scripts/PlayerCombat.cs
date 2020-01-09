@@ -50,6 +50,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void Shoot()
     {
+        PlayerAnim.PlayAblility();
         Transform projectile = Prefabs.instance.projectile;
         projectile.localScale = transform.lossyScale;
         Instantiate(projectile, transform.position, Quaternion.identity);
