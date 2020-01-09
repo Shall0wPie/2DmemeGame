@@ -10,8 +10,8 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] private bool isOnGround = true;
     private float punchTimeStamp = 0;
-    private float shotTimeStamp = 0;
     private float jumpTimeStamp = 0;
+    private int selector;
 
     private void Start()
     {
@@ -23,10 +23,6 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.y < -10 && stats.isAlive)
-        {
-            StartCoroutine(combat.Kill());
-        }
         isOnGround = movement.IsOnGround();
         if (jumpTimeStamp <= Time.time && Input.GetButton("Jump") && isOnGround)
         {
@@ -44,26 +40,52 @@ public class PlayerControl : MonoBehaviour
             punchTimeStamp = Time.time + combat.punchCooldown;
         }
 
-        if (shotTimeStamp <= Time.time && Input.GetKeyDown(KeyCode.Q))
+        if (Input.mouseScrollDelta.y > 0)
         {
-            combat.Shoot();
-            anim.PlayAblility();
-            shotTimeStamp = Time.time + combat.shotCooldown;
+            selector++;
+            if (Inventory.instance.slotsCount-1 < selector)
+                selector = Inventory.instance.slotsCount-1;
+            Inventory.instance.SelectSlot(selector);
         }
+        else if(Input.mouseScrollDelta.y < 0)
+        {
+            selector--;
+            if (selector < 0)
+                selector = 0;
+            Inventory.instance.SelectSlot(selector);
+        }
+
 
         if (Input.GetKeyDown(KeyCode.G))
             Inventory.instance.DropItem();
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
             Inventory.instance.UseItem();
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
-            Inventory.instance.SelectItem(0);
+        {
+            selector = 0;
+            Inventory.instance.SelectSlot(selector);
+        }
         if (Input.GetKeyDown(KeyCode.Alpha2))
-            Inventory.instance.SelectItem(1);
+        {
+            selector = 1;
+            Inventory.instance.SelectSlot(selector);
+        }
         if (Input.GetKeyDown(KeyCode.Alpha3))
-            Inventory.instance.SelectItem(2);
+        {
+            selector = 2;
+            Inventory.instance.SelectSlot(selector);
+        }
         if (Input.GetKeyDown(KeyCode.Alpha4))
-            Inventory.instance.SelectItem(3);
+        {
+            selector = 3;
+            Inventory.instance.SelectSlot(selector);
+        }
+
+        if (transform.position.y < -10 && stats.isAlive)
+        {
+            StartCoroutine(combat.Kill());
+        }
     }
 
     void FixedUpdate()

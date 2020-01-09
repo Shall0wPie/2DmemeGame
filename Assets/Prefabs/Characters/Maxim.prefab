@@ -150,6 +150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MaximCombat
       objectReference: {fileID: 0}
+    - target: {fileID: 7039773973152811349, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3cc83794a1b715f468bb2cd6b07607ab, type: 2}
     - target: {fileID: 8224550254852356177, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Mass
@@ -164,6 +169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: punchForce.x
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 271657252976213162, guid: eefa64718390fd64e896d529e7c93cfc, type: 3}

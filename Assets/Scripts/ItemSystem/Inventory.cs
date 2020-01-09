@@ -15,6 +15,7 @@ public class Inventory : MonoBehaviour
     #endregion
 
     public int selectedSlot { get; private set; }
+    public int slotsCount { get; private set; }
 
     SlotUI[] slots;
     private Transform player;
@@ -23,6 +24,8 @@ public class Inventory : MonoBehaviour
     {
         slots = GetComponentsInChildren<SlotUI>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        slotsCount = slots.Length;
+        SelectSlot(0);
     }
 
     public bool AddItem(Item item)
@@ -47,21 +50,6 @@ public class Inventory : MonoBehaviour
         }
 
         return false;
-        //Item existing = items.Find(x => x.ItemName == item.ItemName);
-        //bool founded = items.Exists(x => x.ItemName == item.ItemName);
-
-        //if (founded && existing.stackable && existing.quantity < existing.maxStack)
-        //{
-        //    existing.quantity++;
-        //    return true;
-        //}
-        
-        //if (items.Count < inventorySize)
-        //{
-        //    items.Add(item);
-        //    return true;
-        //}
-        //return false;
     }
 
     public void DropItem()
@@ -74,16 +62,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void SelectItem(int slotIndex)
+    public void SelectSlot(int slotIndex)
     {
         selectedSlot = slotIndex;
         if (selectedSlot >= slots.Length)
-        {
             selectedSlot = slots.Length - 1;
-        }
+        else if (selectedSlot < 0)
+            selectedSlot = 0;
 
-
-        foreach(SlotUI slot in slots)
+        foreach (SlotUI slot in slots)
         {
             slot.GetComponent<Image>().color = Color.white;
         }
