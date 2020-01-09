@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SlotUI : MonoBehaviour
 {
-    public Image icon;
+    [SerializeField] private Image icon;
+    [SerializeField] private Text textCounter;
     private Stack<Item> items = new Stack<Item>();
     public int count { get; private set; }
 
@@ -16,6 +17,7 @@ public class SlotUI : MonoBehaviour
         items.Push(newItem);
         icon.sprite = newItem.icon;
         icon.enabled = true;
+        UpdateCounter();
     }
 
     public Item PopItem()
@@ -26,8 +28,21 @@ public class SlotUI : MonoBehaviour
             icon.sprite = null;
             icon.enabled = false;
         }
-
+        UpdateCounter();
         return items.Pop();
+    }
+
+    void UpdateCounter()
+    {
+        if (count < 2)
+        {
+            textCounter.enabled = false;
+        }
+        else
+        {
+            textCounter.enabled = true;
+            textCounter.text = count.ToString();
+        }
     }
 
     public bool IsEmpty()

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8d345e46778e44091f4274f125e98a, type: 3}
   m_Name: SpellItem
   m_EditorClassIdentifier: 
-  ItemName: 
-  icon: {fileID: 0}
-  stackSize: 0
+  ItemName: SpellItem
+  icon: {fileID: 21300000, guid: 1044322a95e8c534d8edc58badf2957e, type: 3}
+  stackSize: 5
