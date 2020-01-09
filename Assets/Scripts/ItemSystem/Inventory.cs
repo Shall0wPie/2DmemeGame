@@ -34,15 +34,21 @@ public class Inventory : MonoBehaviour
 
     public bool AddItem(Item item)
     {
-        for (int i = 0; i < inventorySize; i++)
+        Item existing = items.Find(x => x.ItemName == item.ItemName);
+        bool founded = items.Exists(x => x.ItemName == item.ItemName);
+
+        if (founded && existing.stackable && existing.quantity < existing.maxStack)
         {
-            if (items.Count < inventorySize)
-            {
-                items.Add(item);
-                if (onItemChangedCallBack != null)
-                    onItemChangedCallBack.Invoke();
-                return true;
-            }
+            existing.quantity++;
+            return true;
+        }
+
+        if (items.Count < inventorySize)
+        {
+            items.Add(item);
+            if (onItemChangedCallBack != null)
+                onItemChangedCallBack.Invoke();
+            return true;
         }
         return false;
     }
@@ -52,7 +58,7 @@ public class Inventory : MonoBehaviour
         if (items.Count > selectedSlot)
         {
             Vector2 position = new Vector2(player.position.x + 5f * player.lossyScale.x, player.position.y);
-            
+
             Item.SpawnItem(items[selectedSlot], position);
             items.RemoveAt(selectedSlot);
             if (onItemChangedCallBack != null)
@@ -77,7 +83,9 @@ public class Inventory : MonoBehaviour
         if (items.Count > selectedSlot)
         {
             items[selectedSlot].Use(player);
-            items.RemoveAt(selectedSlot);
+
+            if (!items[selectedSlot].stackable || items[selectedSlot].quantity <= 0)
+                items.RemoveAt(selectedSlot);
 
             if (onItemChangedCallBack != null)
                 onItemChangedCallBack.Invoke();
