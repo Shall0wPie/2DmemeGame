@@ -5,7 +5,6 @@ using UnityEngine;
 public class ItemInteraction : Intreactable
 {
     public Item item;
-
     private void Start()
     {
         Init();
@@ -20,7 +19,7 @@ public class ItemInteraction : Intreactable
     protected override void Init()
     {
         base.Init();
-
+        item = GetComponent<Item>();
         if (item.icon != null)
             GetComponent<SpriteRenderer>().sprite = item.icon;
     }
