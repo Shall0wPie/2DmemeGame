@@ -1,24 +1,42 @@
-﻿using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class SlotUI : MonoBehaviour
 {
     public Image icon;
-
-    Item item;
+    private Stack<Item> items = new Stack<Item>();
+    public int count { get; private set; }
 
     // Start is called before the first frame update
-    public void AddItem(Item newItem)
+    public void PushItem(Item newItem)
     {
-        item = newItem;
-        icon.sprite = item.icon;
+        count++;
+        items.Push(newItem);
+        icon.sprite = newItem.icon;
         icon.enabled = true;
     }
 
-    public void ClearSlot()
+    public Item PopItem()
     {
-        item = null;
-        icon.sprite = null;
-        icon.enabled = false;
+        count--;
+        if (count == 0)
+        {
+            icon.sprite = null;
+            icon.enabled = false;
+        }
+
+        return items.Pop();
+    }
+
+    public bool IsEmpty()
+    {
+        return items.Count == 0;
+    }
+
+    public bool Contains(Item item)
+    {
+        return items.Contains(item);
     }
 }
