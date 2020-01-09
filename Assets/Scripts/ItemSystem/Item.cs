@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
 
-public abstract class Item : MonoBehaviour
+public abstract class Item : ScriptableObject
 {
     public string ItemName;
     public Sprite icon;
-    public int quantity;
-    public bool stackable;
-    public int maxStack;
+    public int stackSize;
 
     public static void SpawnItem(Item item, Vector2 position)
     {
@@ -20,8 +18,6 @@ public abstract class Item : MonoBehaviour
     {
         ItemName = item.ItemName;
         icon = item.icon;
-        quantity = item.quantity;
-        stackable = item.stackable;
-        maxStack = item.maxStack;
+        stackSize = item.stackSize;
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -15,80 +14,87 @@ public class Inventory : MonoBehaviour
     }
     #endregion
 
-    public List<Item> items { get; private set; }
     public int selectedSlot { get; private set; }
-    private int inventorySize = 4;
+
+    SlotUI[] slots;
     private Transform player;
-
-    public delegate void OnItemChanged();
-    public OnItemChanged onItemChangedCallBack;
-
-    public delegate void OnSelectorChanged();
-    public OnSelectorChanged OnSelectorChangedCallBack;
 
     void Start()
     {
-        items = new List<Item>(inventorySize);
+        slots = GetComponentsInChildren<SlotUI>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public bool AddItem(Item item)
     {
-        Item existing = items.Find(x => x.ItemName == item.ItemName);
-        bool founded = items.Exists(x => x.ItemName == item.ItemName);
+        if (item.stackSize > 1)
+            foreach (SlotUI slot in slots)
+            {
+                if (slot.Contains(item) && slot.count < item.stackSize)
+                {
+                    slot.PushItem(item);
+                    return true;
+                }
+            }
 
-        if (founded && existing.stackable && existing.quantity < existing.maxStack)
+        foreach (SlotUI slot in slots)
         {
-            existing.quantity++;
-            return true;
+            if (slot.IsEmpty())
+            {
+                slot.PushItem(item);
+                return true;
+            }
         }
 
-        if (items.Count < inventorySize)
-        {
-            items.Add(item);
-            if (onItemChangedCallBack != null)
-                onItemChangedCallBack.Invoke();
-            return true;
-        }
         return false;
+        //Item existing = items.Find(x => x.ItemName == item.ItemName);
+        //bool founded = items.Exists(x => x.ItemName == item.ItemName);
+
+        //if (founded && existing.stackable && existing.quantity < existing.maxStack)
+        //{
+        //    existing.quantity++;
+        //    return true;
+        //}
+        
+        //if (items.Count < inventorySize)
+        //{
+        //    items.Add(item);
+        //    return true;
+        //}
+        //return false;
     }
 
     public void DropItem()
     {
-        if (items.Count > selectedSlot)
+        if (!slots[selectedSlot].IsEmpty())
         {
             Vector2 position = new Vector2(player.position.x + 5f * player.lossyScale.x, player.position.y);
 
-            Item.SpawnItem(items[selectedSlot], position);
-            items.RemoveAt(selectedSlot);
-            if (onItemChangedCallBack != null)
-                onItemChangedCallBack.Invoke();
+            Item.SpawnItem(slots[selectedSlot].PopItem(), position);
         }
     }
 
     public void SelectItem(int slotIndex)
     {
         selectedSlot = slotIndex;
-        if (selectedSlot >= inventorySize)
+        if (selectedSlot >= slots.Length)
         {
-            selectedSlot = inventorySize - 1;
+            selectedSlot = slots.Length - 1;
         }
 
-        if (OnSelectorChangedCallBack != null)
-            OnSelectorChangedCallBack.Invoke();
+
+        foreach(SlotUI slot in slots)
+        {
+            slot.GetComponent<Image>().color = Color.white;
+        }
+        slots[selectedSlot].GetComponent<Image>().color = Color.green;
     }
 
     public void UseItem()
     {
-        if (items.Count > selectedSlot)
+        if (!slots[selectedSlot].IsEmpty())
         {
-            items[selectedSlot].Use(player);
-
-            if (!items[selectedSlot].stackable || items[selectedSlot].quantity <= 0)
-                items.RemoveAt(selectedSlot);
-
-            if (onItemChangedCallBack != null)
-                onItemChangedCallBack.Invoke();
+            slots[selectedSlot].PopItem().Use(player);
         }
     }
 }

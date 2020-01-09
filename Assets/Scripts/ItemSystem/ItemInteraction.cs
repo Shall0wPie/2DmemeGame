@@ -19,7 +19,6 @@ public class ItemInteraction : Intreactable
     protected override void Init()
     {
         base.Init();
-        item = GetComponent<Item>();
         if (item.icon != null)
             GetComponent<SpriteRenderer>().sprite = item.icon;
     }

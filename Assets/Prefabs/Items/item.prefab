@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 114259460662554684}
   - component: {fileID: 4400435453841627665}
   - component: {fileID: 8760434414359229264}
-  - component: {fileID: 8705941097530230184}
   m_Layer: 10
   m_Name: item
   m_TagString: Untagged
@@ -96,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRadius: 2
-  item: {fileID: 8705941097530230184}
+  item: {fileID: 11400000, guid: b9f69dafd0820024fa9952ed67151773, type: 2}
 --- !u!50 &4400435453841627665
 Rigidbody2D:
   serializedVersion: 4
@@ -144,21 +143,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 3}
   m_EdgeRadius: 0
---- !u!114 &8705941097530230184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3802972731841279911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f103a4bd3cbdd468ec3d86e9c32a70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemName: HealthPotion
-  icon: {fileID: 21300000, guid: bdce2a9cb3d0242958c2593a3b8d8742, type: 3}
-  quantity: 1
-  stackable: 0
-  maxStack: 1
-  health: 20
