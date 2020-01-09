@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerCombat : MonoBehaviour
     public PlayerAnimationControl PlayerAnim;
     private ContactFilter2D contactFilter;
     private Collider2D[] colliders;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class PlayerCombat : MonoBehaviour
         colliders = new Collider2D[100];    
         rb = GetComponentInParent<Rigidbody2D>();
         hp = stats.maxHP;
+        
     }
 
     // Update is called once per frame
@@ -82,12 +85,14 @@ public class PlayerCombat : MonoBehaviour
         stats.isAlive = false;
         GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         PlayerAnim.PlayDeath();
+        
 
         // The rest of function will continue as deathDuration passes
         yield return new WaitForSeconds(stats.deathDuration);
 
         if (stats.allowRespawn)
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             PlayerAnim.PlayRespawn();
             GetComponentInParent<PlayerControl>().enabled = true;
             GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
