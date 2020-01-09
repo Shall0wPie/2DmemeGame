@@ -25,7 +25,6 @@ public class PlayerControl : MonoBehaviour
     {
         if (transform.position.y < -10 && stats.isAlive)
         {
-            Debug.Log("zdoh");
             StartCoroutine(combat.Kill());
         }
         isOnGround = movement.IsOnGround();
@@ -45,11 +44,11 @@ public class PlayerControl : MonoBehaviour
             punchTimeStamp = Time.time + combat.punchCooldown;
         }
 
-        if (punchTimeStamp <= Time.time && Input.GetKeyDown(KeyCode.Q))
+        if (shotTimeStamp <= Time.time && Input.GetKeyDown(KeyCode.Q))
         {
             combat.Shoot();
             anim.PlayAblility();
-            punchTimeStamp = Time.time + combat.shotCooldown;
+            shotTimeStamp = Time.time + combat.shotCooldown;
         }
 
         if (Input.GetKeyDown(KeyCode.G))
