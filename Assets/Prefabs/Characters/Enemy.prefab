@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8735393309590223288}
   - component: {fileID: 261295329278739474}
   m_Layer: 9
-  m_Name: Pashtet
-  m_TagString: Untagged
+  m_Name: Enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

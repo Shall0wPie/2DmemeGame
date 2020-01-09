@@ -39,6 +39,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pashtet
       objectReference: {fileID: 0}
+    - target: {fileID: 1335629947481452073, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452084, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_LocalPosition.x
