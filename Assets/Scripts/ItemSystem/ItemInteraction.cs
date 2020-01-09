@@ -9,7 +9,6 @@ public class ItemInteraction : Intreactable
     {
         Init();
     }
-    // Start is called before the first frame update
     public override void Interact()
     {
         if (Inventory.instance.AddItem(item))

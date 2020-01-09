@@ -9,7 +9,6 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float punchForce = 10f;
     [SerializeField] private float punchDmg = 10f;
     [Range(0f, 2f)] public float punchCooldown;
-    [Range(0f, 2f)] public float shotCooldown;
 
     public float hp;
     private Rigidbody2D rb;

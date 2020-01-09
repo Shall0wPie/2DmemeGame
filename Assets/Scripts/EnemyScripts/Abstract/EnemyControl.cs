@@ -19,8 +19,6 @@ public abstract class EnemyControl : MonoBehaviour
         combat = GetComponentInChildren<EnemyCombat>();
     }
 
-
-
     void FixedUpdate()
     {
         float distanceFormSpot = Vector2.Distance(target.position, stats.aggroPoint.position);

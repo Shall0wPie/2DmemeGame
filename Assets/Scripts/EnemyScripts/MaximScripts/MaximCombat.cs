@@ -19,7 +19,6 @@ class MaximCombat : EnemyCombat
             {
                 force = new Vector2(force.x * -transform.lossyScale.x, force.y);
                 target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
-                Debug.Log("popa");
                 break;
             }
 
