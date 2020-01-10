@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     private PlayerCombat combat;
     private PlayerAnimationControl anim;
     private PlayerStats stats;
+    private DialogueControl dialogues;
 
     [SerializeField] private bool isOnGround = true;
     private float punchTimeStamp = 0;
@@ -19,47 +20,56 @@ public class PlayerControl : MonoBehaviour
         combat = GetComponentInChildren<PlayerCombat>();
         anim = GetComponentInChildren<PlayerAnimationControl>();
         stats = GetComponent<PlayerStats>();
+        dialogues = GetComponent<DialogueControl>();
+
+        dialogues.TriggerDialogue("HochuSkazt");
     }
 
     private void Update()
     {
         isOnGround = movement.IsOnGround();
-        if (jumpTimeStamp <= Time.time && Input.GetButton("Jump") && isOnGround)
+
+        if (!DialogManager.instance.isInDialogue)
         {
-            movement.Jump();
-            jumpTimeStamp = Time.time + movement.jumpCooldown;
+            if (jumpTimeStamp <= Time.time && Input.GetButton("Jump") && isOnGround)
+            {
+                movement.Jump();
+                jumpTimeStamp = Time.time + movement.jumpCooldown;
+            }
+
+            if (punchTimeStamp <= Time.time && Input.GetButton("Fire1"))
+            {
+                combat.Punch();
+                anim.PlayAttack();
+                punchTimeStamp = Time.time + combat.punchCooldown;
+            }
+
+            if (Input.mouseScrollDelta.y > 0)
+            {
+                selector++;
+                if (Inventory.instance.slotsCount - 1 < selector)
+                    selector = Inventory.instance.slotsCount - 1;
+                Inventory.instance.SelectSlot(selector);
+            }
+            else if (Input.mouseScrollDelta.y < 0)
+            {
+                selector--;
+                if (selector < 0)
+                    selector = 0;
+                Inventory.instance.SelectSlot(selector);
+            }
+
+
+            if (Input.GetKeyDown(KeyCode.G))
+                Inventory.instance.DropItem();
+            if (Input.GetKeyDown(KeyCode.Q))
+                Inventory.instance.UseItem();
         }
-        anim.PlayJump(!isOnGround);
-
-        AnimateMove();
-
-        if (punchTimeStamp <= Time.time && Input.GetButton("Fire1"))
+        else
         {
-            combat.Punch();
-            anim.PlayAttack();
-            punchTimeStamp = Time.time + combat.punchCooldown;
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
+                DialogManager.instance.DisplayNextSentence();
         }
-
-        if (Input.mouseScrollDelta.y > 0)
-        {
-            selector++;
-            if (Inventory.instance.slotsCount-1 < selector)
-                selector = Inventory.instance.slotsCount-1;
-            Inventory.instance.SelectSlot(selector);
-        }
-        else if(Input.mouseScrollDelta.y < 0)
-        {
-            selector--;
-            if (selector < 0)
-                selector = 0;
-            Inventory.instance.SelectSlot(selector);
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.G))
-            Inventory.instance.DropItem();
-        if (Input.GetKeyDown(KeyCode.Q))
-            Inventory.instance.UseItem();
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -82,6 +92,9 @@ public class PlayerControl : MonoBehaviour
             Inventory.instance.SelectSlot(selector);
         }
 
+
+        anim.PlayJump(!isOnGround);
+        AnimateMove();
         if (transform.position.y < -10 && stats.isAlive)
         {
             StartCoroutine(combat.Kill());
@@ -90,8 +103,11 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal");
-        movement.Move(horizontalMove * Time.fixedDeltaTime);
+        if (!DialogManager.instance.isInDialogue)
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal");
+            movement.Move(horizontalMove * Time.fixedDeltaTime);
+        }
     }
 
     void AnimateMove()
@@ -107,6 +123,6 @@ public class PlayerControl : MonoBehaviour
             anim.PlayMove();
         }
         else
-            anim.PlayStand();        
+            anim.PlayStand();
     }
 }
