@@ -432,12 +432,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moskvin
       objectReference: {fileID: 0}
-    - target: {fileID: 8357872906699892758, guid: 366f65e54e388ab48af95e97be0b595f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: cb82f51ac187827449bc57db4197a9b4,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366f65e54e388ab48af95e97be0b595f, type: 3}
 --- !u!4 &171047326 stripped
