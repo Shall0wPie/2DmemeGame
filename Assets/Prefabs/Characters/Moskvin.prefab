@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moskvin
       objectReference: {fileID: 0}
+    - target: {fileID: 1335629947481452073, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Moskvin
+      objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452084, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73,6 +78,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: cb82f51ac187827449bc57db4197a9b4,
         type: 3}
+    - target: {fileID: 4733027229302843152, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7039773973152811349, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: m_Controller

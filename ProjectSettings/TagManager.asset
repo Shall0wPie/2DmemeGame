@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AggroPoints
   - Enemy
+  - Moskvin
   layers:
   - Default
   - TransparentFX
