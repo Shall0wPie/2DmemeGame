@@ -9,11 +9,10 @@ public abstract class Projectile : MonoBehaviour
     [SerializeField] protected float speed;
     [SerializeField] protected float flyDistance;
     protected Rigidbody2D rb;
-    protected Transform caster;
+    public Transform caster;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
-        caster = GetComponentInParent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         Vector2 velosity = new Vector2(speed * transform.localScale.x, 0);
         rb.velocity = velosity;
@@ -24,5 +23,10 @@ public abstract class Projectile : MonoBehaviour
         float distance = Vector2.Distance(transform.position, caster.position);
         if (distance > flyDistance)
             Destroy(gameObject);
-    }    
+    }
+
+    public void SetVelocityDirection(Vector2 dir)
+    {
+        rb.velocity = dir.normalized * speed;
+    }
 }

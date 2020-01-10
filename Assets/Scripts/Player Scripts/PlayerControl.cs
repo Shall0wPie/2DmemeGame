@@ -92,6 +92,10 @@ public class PlayerControl : MonoBehaviour
             Inventory.instance.SelectSlot(selector);
         }
 
+        // DELETE THIS
+        //if (Input.GetKey(KeyCode.Q))
+        //    combat.Shoot();
+
 
         anim.PlayJump(!isOnGround);
         AnimateMove();
