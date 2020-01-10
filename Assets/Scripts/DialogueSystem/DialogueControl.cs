@@ -6,12 +6,6 @@ using UnityEngine;
 public class DialogueControl : MonoBehaviour
 {
     [SerializeField] private Dialogue[] dialogue;
-    private DialogManager dialogManager;
-
-    private void Start()
-    {
-        dialogManager = DialogManager.instance;
-    }
 
     public void TriggerDialogue(string dialogueName)
     {
@@ -19,7 +13,7 @@ public class DialogueControl : MonoBehaviour
         {
             if (dialogueName == dialogue[i].dialogueName)
             {
-                dialogManager.StartDialogue(dialogue[i]);
+                DialogManager.instance.StartDialogue(dialogue[i]);
             }
         }
     }
