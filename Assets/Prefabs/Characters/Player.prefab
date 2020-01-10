@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2227669503303098993}
   - component: {fileID: 941328850850940546}
   - component: {fileID: 517518145887241092}
+  - component: {fileID: 2194979863235661590}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -75,7 +76,7 @@ MonoBehaviour:
   jumpForce: 41
   groundLayer:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 256
   groundCollider: {fileID: 517518145887241092}
   jumpCooldown: 0.6
 --- !u!114 &1335629947481452081
@@ -90,9 +91,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5dfa27e6916d98448aad94af6875c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 1335629947481452080}
-  combat: {fileID: 883772094793186865}
-  anim: {fileID: 6820982579937317026}
   isOnGround: 1
 --- !u!114 &2227669503303098993
 MonoBehaviour:
@@ -166,6 +164,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &2194979863235661590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335629947481452073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18ede6367c11c44686bbf13e94dafa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - {fileID: 11400000, guid: e7444b200d82fa94b8009f70734c586d, type: 2}
 --- !u!1 &3743331262452040822
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +342,7 @@ MonoBehaviour:
   punchForce: 40
   punchDmg: 20
   punchCooldown: 0.35
-  shotCooldown: 2
+  hp: 0
   PlayerAnim: {fileID: 6820982579937317026}
 --- !u!61 &6987354769803948042
 BoxCollider2D:
