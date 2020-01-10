@@ -9,11 +9,10 @@ public abstract class Projectile : MonoBehaviour
     [SerializeField] protected float speed;
     [SerializeField] protected float flyDistance;
     protected Rigidbody2D rb;
-    protected Transform caster;
+    public Transform caster;
 
     protected virtual void Start()
     {
-        caster = GetComponentInParent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         Vector2 velosity = new Vector2(speed * transform.localScale.x, 0);
         rb.velocity = velosity;

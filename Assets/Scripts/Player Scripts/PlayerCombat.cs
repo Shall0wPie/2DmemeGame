@@ -55,7 +55,10 @@ public class PlayerCombat : MonoBehaviour
         PlayerAnim.PlayAblility();
         Transform projectile = Prefabs.instance.projectileAnime;
         projectile.localScale = transform.lossyScale;
-        Instantiate(projectile, transform.position, Quaternion.identity);
+        projectile.GetComponent<Projectile>().caster = transform;
+        Quaternion q = new Quaternion();
+        q.SetFromToRotation(transform.position, Input.mousePosition);
+        Instantiate(projectile, transform.position, q);
     }
 
     public void ApplyHit(float dmg, Vector2 force)
