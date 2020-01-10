@@ -46,7 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 3802972731841279908, guid: e85dae0489237e1408ad66d4f4986c33, type: 3}
   point: {fileID: 921397493930275662, guid: e106440b813c92f4daf0f658dd2b04ab, type: 3}
-  projectile: {fileID: 539030466625479440, guid: 0284da4f457811c419f346efc489c0f6,
+  projectileAnime: {fileID: 283745188614811727, guid: a71fde1f5dda1c24badfc2efade50b73,
+    type: 3}
+  projectileTampon: {fileID: 6898087246238474741, guid: 201dc1a501161de4487938d7a08708c1,
     type: 3}
 --- !u!114 &1649863400229674757
 MonoBehaviour:
@@ -62,3 +64,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 0}
   dialogueText: {fileID: 0}
+  anim: {fileID: 0}

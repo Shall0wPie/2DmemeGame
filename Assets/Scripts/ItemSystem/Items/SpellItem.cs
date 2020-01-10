@@ -8,8 +8,8 @@ public class SpellItem : Item
     public override void Use(Transform caster)
     {
         caster.GetComponentInChildren<PlayerAnimationControl>().PlayAblility();
-        Transform projectile = Prefabs.instance.projectile;
+        Transform projectile = Prefabs.instance.projectileAnime;
         projectile.localScale = caster.lossyScale;
-        Instantiate(projectile, caster.position, Quaternion.identity);
+        Instantiate(projectile, caster.position, Quaternion.identity, caster.transform);
     }
 }
