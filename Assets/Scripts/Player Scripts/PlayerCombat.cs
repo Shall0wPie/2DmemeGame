@@ -57,8 +57,12 @@ public class PlayerCombat : MonoBehaviour
         projectile.localScale = transform.lossyScale;
         projectile.GetComponent<Projectile>().caster = transform;
         Quaternion q = new Quaternion();
-        q.SetFromToRotation(transform.position, Input.mousePosition);
-        Instantiate(projectile, transform.position, q);
+
+        Vector2 dir = new Vector2(0, 0) - (Vector2)transform.position;
+        
+        q.SetFromToRotation(Vector2.up, dir);
+        projectile = Instantiate(projectile, transform.position, q);
+        projectile.GetComponent<ProjectileAnime>().SetVelocityDirection(dir);
     }
 
     public void ApplyHit(float dmg, Vector2 force)

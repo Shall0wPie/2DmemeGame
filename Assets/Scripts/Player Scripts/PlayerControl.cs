@@ -93,8 +93,8 @@ public class PlayerControl : MonoBehaviour
         }
 
         // DELETE THIS
-        if (Input.GetKey(KeyCode.Q))
-            combat.Shoot();
+        //if (Input.GetKey(KeyCode.Q))
+        //    combat.Shoot();
 
 
         anim.PlayJump(!isOnGround);
