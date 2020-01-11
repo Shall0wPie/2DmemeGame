@@ -13,7 +13,7 @@ public class MoskvinCombat : EnemyCombat
 
     private float tamponTimeStamp = 0;
     [SerializeField] protected float tamponCooldown = 1f;
-    [SerializeField] protected float tamponRange = 1f;
+    [SerializeField] [Range(0f, 100f)] protected float tamponRange = 1f;
 
     protected override void FixedUpdate()
     {
@@ -50,12 +50,24 @@ public class MoskvinCombat : EnemyCombat
     }
 
     public void ShootTampon()
-    {
+    { 
+        Transform projectile = Prefabs.instance.projectileTampon;
+        projectile.localScale = transform.lossyScale;
+        projectile.GetComponent<Projectile>().caster = transform;
+        Quaternion q = new Quaternion();
 
+        Vector2 dir = target.position - transform.position;
+
+        q.SetFromToRotation(Vector2.up, dir);
+        projectile = Instantiate(projectile, transform.position, q);
+        projectile.GetComponent<Projectile>().SetVelocityDirection(dir);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, TpRange);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, tamponRange);
     }
 }

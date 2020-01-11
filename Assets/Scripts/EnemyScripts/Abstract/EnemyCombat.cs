@@ -73,6 +73,7 @@ public abstract class EnemyCombat : MonoBehaviour
         if (hp <= 0)
         {
             // Coriutine is function that lasts for some time (not only one Game circle)
+            StopAllCoroutines();
             StartCoroutine(Kill());
         }
     }

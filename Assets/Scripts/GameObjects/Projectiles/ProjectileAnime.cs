@@ -13,7 +13,8 @@ public class ProjectileAnime : Projectile
     {
         if (collision.tag == "Enemy")
         {
-            collision.GetComponentInChildren<EnemyCombat>().ApplyHit(damage, strikeForce);
+            Vector2 force = new Vector2(strikeForce.x * caster.lossyScale.x, strikeForce.y);
+            collision.GetComponentInChildren<EnemyCombat>().ApplyHit(damage, force);
             Destroy(gameObject);
         }
     }

@@ -20,8 +20,13 @@ public abstract class Projectile : MonoBehaviour
 
     protected virtual void CheckForOutrange()
     {
-        float distance = Vector2.Distance(transform.position, caster.position);
-        if (distance > flyDistance)
+        if (caster != null)
+        {
+            float distance = Vector2.Distance(transform.position, caster.position);
+            if (distance > flyDistance)
+                Destroy(gameObject);
+        }
+        else
             Destroy(gameObject);
     }
 

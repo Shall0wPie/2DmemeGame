@@ -6,7 +6,6 @@ public class EnemyAnimationControl : MonoBehaviour
     private Rigidbody2D rb;
     private EnemyControl enemyFollow;
     public Animator anim;
-    public SpriteRenderer renderer;
 
     // Start is called before the first frame update
     void Start()
@@ -15,8 +14,6 @@ public class EnemyAnimationControl : MonoBehaviour
         enemyFollow = GetComponentInParent<EnemyControl>();
         if (anim == null)
             anim = GetComponent<Animator>();
-        if (renderer == null)
-            renderer = GetComponent<SpriteRenderer>();
     }
 
     public void PlayMove()
@@ -51,8 +48,6 @@ public class EnemyAnimationControl : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         Anim.color = new Color(1, 1, 1);
     }
-
-
 
     public void FacingRight(bool isFacingRight)
     {
