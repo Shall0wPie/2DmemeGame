@@ -4,7 +4,7 @@ using UnityEngine;
 
 class MaximCombat : EnemyCombat
 {
-    public override IEnumerator Attack(float dmg, Vector2 force)
+    public override IEnumerator Attack()
     {
         float distance;
         animControl.PlayAttack();
@@ -15,10 +15,10 @@ class MaximCombat : EnemyCombat
             yield return null;
             distance = Vector2.Distance(target.position, transform.position);
             
-            if ((animControl.renderer.sprite.name.Equals("MaximAttack")) && (distance < stats.attackRange))
+            if ((animControl.renderer.sprite.name.Equals("MaximAttack")) && (distance < attackRange))
             {
-                force = new Vector2(force.x * -transform.lossyScale.x, force.y);
-                target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
+                Vector2 force = new Vector2(punchForce.x * -transform.lossyScale.x, punchForce.y);
+                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, force);
                 break;
             }
 

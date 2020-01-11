@@ -1,25 +1,23 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public abstract class EnemyControl : MonoBehaviour
+public class EnemyControl : MonoBehaviour
 {
     protected Transform target;
     protected EnemyStats stats;
     protected EnemyCombat combat;
-    protected float timeStamp = 0;
 
     public EnemyAnimationControl anim;
 
-    [SerializeField] protected float punchDmg = 25f;
 
-    void Start()
+    protected virtual void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         stats = GetComponent<EnemyStats>();
         combat = GetComponentInChildren<EnemyCombat>();
     }
 
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         float distanceFormSpot = Vector2.Distance(target.position, stats.aggroPoint.position);
 
@@ -38,15 +36,7 @@ public abstract class EnemyControl : MonoBehaviour
             AnimateMove(stats.aggroPoint.position);
         }
         else
-            anim.PlayStand();
-
-        float distance = Vector2.Distance(target.position, transform.position);
-        //Hit player
-        if (timeStamp <= Time.time && distance < stats.attackRange)
-        {
-            StartCoroutine(combat.Attack(punchDmg, stats.punchForce));
-            timeStamp = Time.time + stats.attackCooldown;
-        }
+            anim.PlayStand();        
     }
 
     public virtual void AnimateMove(Vector2 targetPos)

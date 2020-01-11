@@ -5,40 +5,57 @@ using UnityEngine;
 public class MoskvinCombat : EnemyCombat
 {
     public Transform[] point;
-    public Transform moskva;
-    private DialogManager dial;
     private float distance;
     [Range(0f, 10f)] public float DelayTp;
     [Range(0f, 10f)] public float TpRange;
-    int i = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        dial = GameObject.FindGameObjectWithTag("gameManager").GetComponent<DialogManager>();
-        moskva = GameObject.FindGameObjectWithTag("Moskvin").GetComponent<Transform>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    private bool isInRange = false;
+    private int prevPoint = -1;
 
-    }
+    private float tamponTimeStamp = 0;
+    [SerializeField] protected float tamponCooldown = 1f;
+    [SerializeField] protected float tamponRange = 1f;
 
-    // Update is called once per frame
-    void Update()
+    protected override void FixedUpdate()
     {
-        if ((dial.isInDialogue == false))
+        if ((DialogManager.instance.isInDialogue == false))
         {
-            int pos = Random.Range(0, 6);
-            StartCoroutine(ITeleport(pos));
+            distance = Vector2.Distance(target.position, transform.position);
+            if (distance < TpRange && !isInRange)
+            {
+                int pos = Random.Range(0, 7);
+
+                while (pos == prevPoint)
+                {
+                    pos = Random.Range(0, 7);
+                }
+                prevPoint = pos;
+                StartCoroutine(ITeleport(pos));
+            }
+
+            if (tamponTimeStamp <= Time.time && distance < tamponRange)
+            {
+                ShootTampon();
+                tamponTimeStamp = Time.time + tamponCooldown;
+            }
         }
     }
 
-    public virtual IEnumerator ITeleport(int pos)
+    private IEnumerator ITeleport(int pos)
+    {
+        isInRange = true;
+        yield return new WaitForSeconds(DelayTp);
+        
+        transform.parent.position = point[pos].position;
+        isInRange = false;
+    }
+
+    public void ShootTampon()
     {
 
-        
-        distance = Vector2.Distance(target.position, transform.position);
-        yield return new WaitForSeconds(DelayTp);
-        if(distance < TpRange)
-        moskva.position = point[pos].position;
+    }
 
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, TpRange);
     }
 }
