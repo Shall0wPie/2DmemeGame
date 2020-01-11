@@ -5,20 +5,15 @@ using UnityEngine;
 public class ItemInteraction : Intreactable
 {
     public Item item;
-    private void Start()
+    protected override void Start()
     {
-        Init();
+        base.Start();
+        if (item.icon != null)
+            GetComponent<SpriteRenderer>().sprite = item.icon;
     }
     public override void Interact()
     {
         if (Inventory.instance.AddItem(item))
             Destroy(gameObject);
-    }
-
-    protected override void Init()
-    {
-        base.Init();
-        if (item.icon != null)
-            GetComponent<SpriteRenderer>().sprite = item.icon;
     }
 }

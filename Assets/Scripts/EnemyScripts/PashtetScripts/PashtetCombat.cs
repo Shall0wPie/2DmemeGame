@@ -66,6 +66,7 @@ public class PashtetCombat : EnemyCombat
         {
             // Coriutine is function that lasts for some time (not only one Game circle)
             StartCoroutine(Kill());
+            DropItems();
         }
     }
 
@@ -80,5 +81,11 @@ public class PashtetCombat : EnemyCombat
         transform.parent.Rotate(0, 0, 90 * transform.parent.lossyScale.x);
 
         transform.parent.position = stats.spawnPoint;
+    }
+
+    private void DropItems()
+    {
+        LootTable table = GetComponent<LootTable>();
+        Destroy(table);
     }
 }
