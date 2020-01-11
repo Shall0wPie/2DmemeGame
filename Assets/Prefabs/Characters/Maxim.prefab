@@ -17,6 +17,23 @@ MonoBehaviour:
   punchForce: {x: 20, y: 20}
   attackCooldown: 1
   attackRange: 3
+--- !u!114 &8221354654998949477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6121133315692268782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3893bc0abbcfb214d85fa3ae8d605e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot:
+  - item: {fileID: 11400000, guid: da96f73136ad61241b0187678b476661, type: 2}
+    dropChance: 0.2
+  - item: {fileID: 11400000, guid: 5463165f1bd52c44cac38732fdff6e11, type: 2}
+    dropChance: 0.4
 --- !u!1001 &1094260551831882612
 PrefabInstance:
   m_ObjectHideFlags: 0
