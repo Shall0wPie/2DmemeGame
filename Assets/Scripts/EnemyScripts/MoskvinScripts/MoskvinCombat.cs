@@ -15,7 +15,7 @@ public class MoskvinCombat : EnemyCombat
     [SerializeField] protected float tamponCooldown = 1f;
     [SerializeField] [Range(0f, 100f)] protected float tamponRange = 1f;
 
-    protected override void FixedUpdate()
+    protected override void Update()
     {
         if ((DialogManager.instance.isInDialogue == false))
         {
@@ -34,7 +34,8 @@ public class MoskvinCombat : EnemyCombat
 
             if (tamponTimeStamp <= Time.time && distance < tamponRange)
             {
-                ShootTampon();
+                animControl.PlayShoot();
+                StartCoroutine(ShootTampon());
                 tamponTimeStamp = Time.time + tamponCooldown;
             }
         }
@@ -44,23 +45,38 @@ public class MoskvinCombat : EnemyCombat
     {
         isInRange = true;
         yield return new WaitForSeconds(DelayTp);
-        
+
         transform.parent.position = point[pos].position;
         isInRange = false;
     }
 
-    public void ShootTampon()
-    { 
+    public IEnumerator ShootTampon()
+    {
         Transform projectile = Prefabs.instance.projectileTampon;
         projectile.localScale = transform.lossyScale;
         projectile.GetComponent<Projectile>().caster = transform;
+
         Quaternion q = new Quaternion();
+        
 
-        Vector2 dir = target.position - transform.position;
+        while (true)
+        {
+            //force for enemy punch
+            yield return null;
+            distance = Vector2.Distance(target.position, transform.position);
+            if (animControl.renderer.sprite.name.Equals("throw"))
+            {
+                Debug.Log("throw");
 
-        q.SetFromToRotation(Vector2.up, dir);
-        projectile = Instantiate(projectile, transform.position, q);
-        projectile.GetComponent<Projectile>().SetVelocityDirection(dir);
+                Vector2 dir = target.position - transform.position;
+                q.SetFromToRotation(Vector2.up, dir);
+                projectile = Instantiate(projectile, transform.position, q);
+                projectile.GetComponent<Projectile>().SetVelocityDirection(dir);
+                break;
+            }
+            if (animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("afk"))
+                break;
+        }
     }
 
     private void OnDrawGizmos()

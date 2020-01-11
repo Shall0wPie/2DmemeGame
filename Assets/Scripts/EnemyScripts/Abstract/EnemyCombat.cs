@@ -25,7 +25,7 @@ public abstract class EnemyCombat : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    protected virtual void FixedUpdate()
+    protected virtual void Update()
     {
         float distance = Vector2.Distance(target.position, transform.position);
         //Hit player
@@ -40,7 +40,7 @@ public abstract class EnemyCombat : MonoBehaviour
     {
         float distance;
         animControl.PlayAttack();
-
+        
         while (true)
         {
             //force for enemy punch
