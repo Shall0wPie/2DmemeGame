@@ -8,9 +8,9 @@ public abstract class Intreactable : MonoBehaviour
     [Range(0f, 5f)] public float interactionRadius = 1f;
     // Start is called before the first frame update
 
-    void Start()
+    protected virtual void Start()
     {
-        Init();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     public abstract void Interact();
@@ -24,11 +24,6 @@ public abstract class Intreactable : MonoBehaviour
         {
             Interact();
         }
-    }
-
-    protected virtual void Init()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     protected void OnDrawGizmos()
