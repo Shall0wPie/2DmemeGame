@@ -2,17 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoskvinControl : MonoBehaviour
+public class MoskvinControl : EnemyControl
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private DialogManager dial;
+    
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        dial = GameObject.FindGameObjectWithTag("gameManager").GetComponent<DialogManager>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (dial.isInDialogue == false)
+        {
+           
+            AnimateMove(target.position);
+        }
+    }
+    public override void AnimateMove(Vector2 targetPos)
+    {       
+
+        if (targetPos.x > transform.position.x)
+            anim.FacingRight(true);
+        else
+            anim.FacingRight(false);
     }
 }

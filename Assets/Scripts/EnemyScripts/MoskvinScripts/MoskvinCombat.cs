@@ -6,32 +6,39 @@ public class MoskvinCombat : EnemyCombat
 {
     public Transform[] point;
     public Transform moskva;
+    private DialogManager dial;
+    private float distance;
+    [Range(0f, 10f)] public float DelayTp;
+    [Range(0f, 10f)] public float TpRange;
     int i = 0;
     // Start is called before the first frame update
     void Start()
     {
+        dial = GameObject.FindGameObjectWithTag("gameManager").GetComponent<DialogManager>();
         moskva = GameObject.FindGameObjectWithTag("Moskvin").GetComponent<Transform>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Teleport();
+        if ((dial.isInDialogue == false))
+        {
+            int pos = Random.Range(0, 6);
+            StartCoroutine(ITeleport(pos));
+        }
     }
 
-    void Teleport()
-    { 
-        if ((Input.GetKeyDown(KeyCode.Z))&&(i<point.Length))
-        {
-            
-                moskva.position = point[i].position;
-            i++;
-        }
+    public virtual IEnumerator ITeleport(int pos)
+    {
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
+        
+        distance = Vector2.Distance(target.position, transform.position);
+        yield return new WaitForSeconds(DelayTp);
+        if(distance < TpRange)
+        moskva.position = point[pos].position;
 
-            animControl.PlayAttack(); 
-        }
+
     }
 }
