@@ -13,20 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animControl: {fileID: 7865027945398089276}
---- !u!114 &763543660790633448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5634166290997198602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f271beaf88c99b41b73a7904471d8ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 7865027945398089276}
-  punchDmg: 50
+  punchDmg: 40
+  punchForce: {x: 30, y: 30}
+  attackCooldown: 1
+  attackRange: 6
 --- !u!1001 &6681521329153200419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,12 +101,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eefa64718390fd64e896d529e7c93cfc, type: 3}
---- !u!1 &5634166290997198602 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1335629947481452073, guid: eefa64718390fd64e896d529e7c93cfc,
-    type: 3}
-  m_PrefabInstance: {fileID: 6681521329153200419}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7865027945398089276 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3575780044286879519, guid: eefa64718390fd64e896d529e7c93cfc,

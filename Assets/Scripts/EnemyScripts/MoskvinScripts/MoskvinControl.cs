@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoskvinControl : MonoBehaviour
+public class MoskvinControl : EnemyControl
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void FixedUpdate()
     {
-        
+        if (DialogManager.instance.isInDialogue == false)
+        {
+            AnimateMove(target.position);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void AnimateMove(Vector2 targetPos)
     {
-        
+
+        if (targetPos.x > transform.position.x)
+            anim.FacingRight(true);
+        else
+            anim.FacingRight(false);
     }
 }

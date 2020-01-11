@@ -5,33 +5,85 @@ using UnityEngine;
 public class MoskvinCombat : EnemyCombat
 {
     public Transform[] point;
-    public Transform moskva;
-    int i = 0;
-    // Start is called before the first frame update
-    void Start()
+    private float distance;
+    [Range(0f, 10f)] public float DelayTp;
+    [Range(0f, 10f)] public float TpRange;
+    private bool isInRange = false;
+    private int prevPoint = -1;
+
+    private float tamponTimeStamp = 0;
+    [SerializeField] protected float tamponCooldown = 1f;
+    [SerializeField] [Range(0f, 100f)] protected float tamponRange = 1f;
+
+    protected override void Update()
     {
-        moskva = GameObject.FindGameObjectWithTag("Moskvin").GetComponent<Transform>();
+        if ((DialogManager.instance.isInDialogue == false))
+        {
+            distance = Vector2.Distance(target.position, transform.position);
+            if (distance < TpRange && !isInRange)
+            {
+                int pos = Random.Range(0, 7);
+
+                while (pos == prevPoint)
+                {
+                    pos = Random.Range(0, 7);
+                }
+                prevPoint = pos;
+                StartCoroutine(ITeleport(pos));
+            }
+
+            if (tamponTimeStamp <= Time.time && distance < tamponRange)
+            {
+                animControl.PlayShoot();
+                StartCoroutine(ShootTampon());
+                tamponTimeStamp = Time.time + tamponCooldown;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator ITeleport(int pos)
     {
-        Teleport();
+        isInRange = true;
+        yield return new WaitForSeconds(DelayTp);
+
+        transform.parent.position = point[pos].position;
+        isInRange = false;
     }
 
-    void Teleport()
-    { 
-        if ((Input.GetKeyDown(KeyCode.Z))&&(i<point.Length))
-        {
-            
-                moskva.position = point[i].position;
-            i++;
-        }
+    public IEnumerator ShootTampon()
+    {
+        Transform projectile = Prefabs.instance.projectileTampon;
+        projectile.localScale = transform.lossyScale;
+        projectile.GetComponent<Projectile>().caster = transform;
 
-        if (Input.GetKeyDown(KeyCode.X))
-        {
+        Quaternion q = new Quaternion();
+        
 
-            animControl.PlayAttack(); 
+        while (true)
+        {
+            //force for enemy punch
+            yield return null;
+            distance = Vector2.Distance(target.position, transform.position);
+            if (animControl.renderer.sprite.name.Equals("throw"))
+            {
+                Debug.Log("throw");
+
+                Vector2 dir = target.position - transform.position;
+                q.SetFromToRotation(Vector2.up, dir);
+                projectile = Instantiate(projectile, transform.position, q);
+                projectile.GetComponent<Projectile>().SetVelocityDirection(dir);
+                break;
+            }
+            if (animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("afk"))
+                break;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, TpRange);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, tamponRange);
     }
 }

@@ -15,10 +15,7 @@ public class EnemyStats : MonoBehaviour
     [Range(0f, 1f)] public float forceResistance = 0f;
     public Transform aggroPoint;
     [Range(0f, 50f)] public float aggroRange = 10f;
-    [Range(0f, 25f)] public float attackRange = 10f;
-    public Vector2 punchForce;
     public float deathDuration = 2f;
-    public float attackCooldown = 1f;
 
     [Space]
     [Header("Move stats")]
@@ -46,9 +43,5 @@ public class EnemyStats : MonoBehaviour
             Gizmos.DrawWireSphere(spawnPoint, aggroRange);
         else
             Gizmos.DrawWireSphere(transform.position, aggroRange);
-
-        // Draw attack range
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

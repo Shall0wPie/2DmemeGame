@@ -7,31 +7,49 @@ public abstract class EnemyCombat : MonoBehaviour
     protected Transform target;
     protected EnemyStats stats;
     public EnemyAnimationControl animControl;
-    public float hp { get; protected set; }
 
-    // Start is called before the first frame update
-    void Start()
+    public float hp { get; protected set; }
+    [SerializeField] protected float punchDmg = 25f;
+    [SerializeField] protected Vector2 punchForce;
+
+    [SerializeField] protected float attackCooldown = 1f;
+    [SerializeField] [Range(0f, 10f)] public float attackRange;
+    protected float attackTimeStamp = 0;
+
+
+    protected virtual void Start()
     {
         stats = GetComponentInParent<EnemyStats>();
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
+
+    protected virtual void Update()
+    {
+        float distance = Vector2.Distance(target.position, transform.position);
+        //Hit player
+        if (attackTimeStamp <= Time.time && distance < attackRange)
+        {
+            StartCoroutine(Attack());
+            attackTimeStamp = Time.time + attackCooldown;
+        }
+    }
     //COROUTINE ATTACK
-    public virtual IEnumerator Attack(float dmg, Vector2 force)
+    public virtual IEnumerator Attack()
     {
         float distance;
         animControl.PlayAttack();
-
+        
         while (true)
         {
             //force for enemy punch
             yield return null;
             distance = Vector2.Distance(target.position, transform.position);
-            if ((animControl.renderer.sprite.name.Equals("PashtetAttack3")) && (distance < stats.attackRange))
+            if ((animControl.renderer.sprite.name.Equals("PashtetAttack3")) && (distance < attackRange))
             {
-                force = new Vector2(force.x * -transform.lossyScale.x, force.y);
-                target.GetComponentInChildren<PlayerCombat>().ApplyHit(dmg, force);
+                Vector2 force = new Vector2(punchForce.x * -transform.lossyScale.x, punchForce.y);
+                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, force);
                 break;
             }
 
@@ -55,6 +73,7 @@ public abstract class EnemyCombat : MonoBehaviour
         if (hp <= 0)
         {
             // Coriutine is function that lasts for some time (not only one Game circle)
+            StopAllCoroutines();
             StartCoroutine(Kill());
         }
     }
@@ -95,5 +114,11 @@ public abstract class EnemyCombat : MonoBehaviour
         transform.parent.Rotate(0, 0, 90 * transform.parent.lossyScale.x);
 
         transform.parent.position = stats.spawnPoint;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

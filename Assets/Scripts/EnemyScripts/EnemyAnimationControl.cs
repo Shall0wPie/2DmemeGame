@@ -44,6 +44,11 @@ public class EnemyAnimationControl : MonoBehaviour
         anim.SetTrigger("Attack"); 
     }
 
+    public void PlayShoot()
+    {
+        anim.SetTrigger("Shoot");
+    }
+
 
     public IEnumerator Hitted(SpriteRenderer Anim)
     {
@@ -51,8 +56,6 @@ public class EnemyAnimationControl : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         Anim.color = new Color(1, 1, 1);
     }
-
-
 
     public void FacingRight(bool isFacingRight)
     {

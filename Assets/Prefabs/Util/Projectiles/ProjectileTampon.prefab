@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
-  strikeForce: {x: 40, y: 40}
-  speed: 40
+  strikeForce: {x: 20, y: 20}
+  speed: 25
   flyDistance: 80
+  caster: {fileID: 0}
 --- !u!1001 &6395648685306364645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77,6 +78,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 539030466625479440, guid: 0284da4f457811c419f346efc489c0f6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1651774929506094618, guid: 0284da4f457811c419f346efc489c0f6,
         type: 3}

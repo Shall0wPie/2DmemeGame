@@ -7,6 +7,7 @@ TagManager:
   - AggroPoints
   - Enemy
   - Moskvin
+  - gameManager
   layers:
   - Default
   - TransparentFX

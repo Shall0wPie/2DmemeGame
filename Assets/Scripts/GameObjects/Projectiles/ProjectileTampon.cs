@@ -13,7 +13,8 @@ public class ProjectileTampon : Projectile
     {
         if (collision.tag == "Player")
         {
-            collision.GetComponentInChildren<PlayerCombat>().ApplyHit(damage, strikeForce);
+            Vector2 force = new Vector2(strikeForce.x * -caster.lossyScale.x, strikeForce.y);
+            collision.GetComponentInChildren<PlayerCombat>().ApplyHit(damage, force);
             Destroy(gameObject);
         }
     }
