@@ -59,7 +59,7 @@ public abstract class EnemyCombat : MonoBehaviour
     }
 
     // Applis Force and Damage to this Enemy
-    public virtual void ApplyHit(float dmg, Vector2 force)
+    public void ApplyHit(float dmg, Vector2 force)
     {
         // Calculates dmg and force according to resistance
         dmg *= (1 - stats.dmgResistance);
@@ -79,10 +79,17 @@ public abstract class EnemyCombat : MonoBehaviour
     }
 
     // Kill function plays Death anim and disable stuff lol
-    public virtual IEnumerator Kill()
+    public IEnumerator Kill()
     {
         // Plays anim
         animControl.PlayDeath();
+
+        LootTable lootTable = GetComponent<LootTable>();
+        if (lootTable != null)
+        {
+            lootTable.SpawnLoot();
+            Debug.Log("Drop");
+        }
 
         // Sets body collider as Triggers to avoid any collisions
         stats.bodyCollider.isTrigger = true;

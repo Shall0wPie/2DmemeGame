@@ -6,7 +6,7 @@ public class LootTable : MonoBehaviour
 {
     [SerializeField] private Loot[] loot;
 
-    private void OnDestroy()
+    public void SpawnLoot()
     {
         foreach (Loot item in loot)
         {

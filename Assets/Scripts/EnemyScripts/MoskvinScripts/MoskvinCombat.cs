@@ -66,8 +66,6 @@ public class MoskvinCombat : EnemyCombat
             distance = Vector2.Distance(target.position, transform.position);
             if (animControl.renderer.sprite.name.Equals("throw"))
             {
-                Debug.Log("throw");
-
                 Vector2 dir = target.position - transform.position;
                 q.SetFromToRotation(Vector2.up, dir);
                 projectile = Instantiate(projectile, transform.position, q);
