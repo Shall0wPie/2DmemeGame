@@ -19,6 +19,8 @@ public class HPBarScript : MonoBehaviour
 
         healthBar.fillAmount = combat.hp / stats.maxHP;
         HPtext.text = combat.hp.ToString();
+        if (combat.hp < 0)
+            HPtext.text = "0";
         if ((combat.hp * 100 / stats.maxHP) > 60)
         {
             HPtext.color = Color.green;
