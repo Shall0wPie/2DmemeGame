@@ -14,7 +14,7 @@ public class MoskvinCombat : EnemyCombat
     private bool isInRange = false;
     private int prevPoint = -1;
     private float tamponTimeStamp = 0;
-
+    private bool IsDead = false;
     private int phase = 1;
     private bool firstPhasePassed = false;
     private bool secondPhasePassed = false;
@@ -22,6 +22,7 @@ public class MoskvinCombat : EnemyCombat
 
     protected override void Update()
     {
+
         distance = Vector2.Distance(target.position, transform.position);
         if (distance < tamponRange && SaveManager.instance.checkPoint != 3)
         {
@@ -43,7 +44,17 @@ public class MoskvinCombat : EnemyCombat
         if (phase == 3)
         {
             SecondPhase();
+            if (hp <= 0)
+                phase = 4;
         }
+        if (phase == 4)
+        {
+            if (!IsDead) {
+                StopAllCoroutines();
+                StartCoroutine(Kill());
+            }
+        }
+
     }
 
     void FirstPhase()
@@ -86,11 +97,9 @@ public class MoskvinCombat : EnemyCombat
             animControl.PlayShoot();
             StartCoroutine(ShootTamponPhase());
             tamponTimeStamp = Time.time + tamponCooldown;
-            if (hp <= 0)
-            {
-                StartCoroutine(IDeath());
-            }
+
         }
+
     }
 
     private IEnumerator ITeleport(int pos)
@@ -129,6 +138,7 @@ public class MoskvinCombat : EnemyCombat
         }
     }
 
+
     public IEnumerator ShootTamponPhase()
     {
         Transform projectile = Prefabs.instance.projectileTampon;
@@ -149,10 +159,11 @@ public class MoskvinCombat : EnemyCombat
         }
     }
 
-    public IEnumerator IDeath()
+    public override IEnumerator Kill()
     {
         // Plays anim
         animControl.PlayDeath();
+        IsDead = true;
 
         LootTable lootTable = GetComponent<LootTable>();
         if (lootTable != null)
@@ -162,15 +173,15 @@ public class MoskvinCombat : EnemyCombat
         }
 
         // Sets body collider as Triggers to avoid any collisions
-        stats.bodyCollider.isTrigger = true;
+        //stats.bodyCollider.isTrigger = true;
         // Disables Follow script
-        GetComponentInParent<EnemyControl>().enabled = false;
 
         // Rotates model by 90 degrees
-        transform.parent.Rotate(0, 0, -90 * transform.parent.lossyScale.x);
 
         // The rest of function will continue as deathDuration passes
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        GetComponentInParent<EnemyControl>().enabled = false;
+        transform.parent.Rotate(0, 0, -90 * transform.parent.lossyScale.x);
 
         // Respawns Enemy in its Spawn Point
         if (stats.allowRespawn)
