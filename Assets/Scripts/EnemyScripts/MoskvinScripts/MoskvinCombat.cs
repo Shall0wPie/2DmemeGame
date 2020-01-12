@@ -86,6 +86,10 @@ public class MoskvinCombat : EnemyCombat
             animControl.PlayShoot();
             StartCoroutine(ShootTamponPhase());
             tamponTimeStamp = Time.time + tamponCooldown;
+            if (hp <= 0)
+            {
+                StartCoroutine(IDeath());
+            }
         }
     }
 
@@ -145,6 +149,36 @@ public class MoskvinCombat : EnemyCombat
         }
     }
 
+    public IEnumerator IDeath()
+    {
+        // Plays anim
+        animControl.PlayDeath();
+
+        LootTable lootTable = GetComponent<LootTable>();
+        if (lootTable != null)
+        {
+            lootTable.SpawnLoot();
+            Debug.Log("Drop");
+        }
+
+        // Sets body collider as Triggers to avoid any collisions
+        stats.bodyCollider.isTrigger = true;
+        // Disables Follow script
+        GetComponentInParent<EnemyControl>().enabled = false;
+
+        // Rotates model by 90 degrees
+        transform.parent.Rotate(0, 0, -90 * transform.parent.lossyScale.x);
+
+        // The rest of function will continue as deathDuration passes
+        yield return new WaitForSeconds(10f);
+
+        // Respawns Enemy in its Spawn Point
+        if (stats.allowRespawn)
+            Respawn();
+        // Destroys parent object (the entire Enemy object)
+        else
+            Destroy(transform.parent.gameObject);
+    }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, TpRange);
