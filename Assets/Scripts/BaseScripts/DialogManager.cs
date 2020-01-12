@@ -6,14 +6,20 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     #region Singleton
-    public static DialogManager instance;
+    public static DialogManager instance { get; private set; }
 
-    private void Awake()
+    private void Start()
     {
         if (instance != null)
-            Debug.Log("Dialogue Manager already exists");
+        {
+            //Debug.Log("Dialog manager alredy exists");
+            Destroy(gameObject);
+        }
         else
+        {
             instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
     #endregion
 
@@ -28,7 +34,7 @@ public class DialogManager : MonoBehaviour
 
     private Queue<string> sentences;
 
-    void Start()
+    void Awake()
     {
         sentences = new Queue<string>();
     }

@@ -6,9 +6,15 @@ public class Prefabs : MonoBehaviour
 {
     public static Prefabs instance { get; private set; }
 
-    private void Awake()
+    private void Start()
     {
-        instance = this;
+        if (instance != null)
+        {
+            Debug.Log("Prefabs already exists");
+            Destroy(gameObject);
+        }
+        else
+            instance = this;
     }
 
     public Transform item;

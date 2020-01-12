@@ -39,8 +39,8 @@ MonoBehaviour:
   - {fileID: 0}
   DelayTp: 1.04
   TpRange: 7
-  tamponCooldown: 3
   tamponRange: 54.3
+  tamponCooldown: 3
 --- !u!114 &5752121115209632244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +162,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8dead4ac4afac3e47820f3f24aa7944a, type: 2}
+    - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: maxHP
+      value: 228
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6746139013946689077, guid: eefa64718390fd64e896d529e7c93cfc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eefa64718390fd64e896d529e7c93cfc, type: 3}

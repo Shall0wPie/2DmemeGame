@@ -13,6 +13,5 @@ public class HealthPotion : Item
         audiosrc = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
         audiosrc.Play();
         target.GetComponentInChildren<PlayerCombat>().hp += health;
-
     }
 }

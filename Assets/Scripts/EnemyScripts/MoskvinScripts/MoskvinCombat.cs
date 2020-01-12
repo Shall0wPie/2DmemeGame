@@ -6,21 +6,51 @@ public class MoskvinCombat : EnemyCombat
 {
     public Transform[] point;
     private float distance;
-    [Range(0f, 10f)] public float DelayTp;
-    [Range(0f, 10f)] public float TpRange;
+    [SerializeField] [Range(0f, 10f)] private float DelayTp;
+    [SerializeField] [Range(0f, 10f)] private float TpRange;
+    [SerializeField] [Range(0f, 100f)] protected float tamponRange = 1f;
+    [SerializeField] protected float tamponCooldown = 1f;
+
     private bool isInRange = false;
     private int prevPoint = -1;
-    private Vector2[] point1;   
     private float tamponTimeStamp = 0;
-    [SerializeField] protected float tamponCooldown = 1f;
-    [SerializeField] [Range(0f, 100f)] protected float tamponRange = 1f;
 
-    
+    private int phase = 1;
+    private bool firstPhasePassed = false;
+    private bool secondPhasePassed = false;
+
+
     protected override void Update()
     {
-        if ((DialogManager.instance.isInDialogue == false) && (hp * 100 / stats.maxHP > 20))
+        distance = Vector2.Distance(target.position, transform.position);
+        if (distance < tamponRange && SaveManager.instance.checkPoint != 3)
         {
-            distance = Vector2.Distance(target.position, transform.position);
+            GetComponentInParent<DialogueControl>().TriggerDialogue("MoskvinEngage");
+            SaveManager.instance.SavePosition(3);
+        }
+
+        if (phase == 1)
+        {
+            FirstPhase();
+        }
+
+        if (phase == 2)
+        {
+            GetComponentInParent<DialogueControl>().TriggerDialogue("Nahrena");
+            phase = 3;
+        }
+
+        if (phase == 3)
+        {
+            SecondPhase();
+        }
+    }
+
+    void FirstPhase()
+    {
+        if (DialogManager.instance.isInDialogue == false)
+        {
+
             if (distance < TpRange && !isInRange)
             {
                 int pos = Random.Range(0, 7);
@@ -31,7 +61,6 @@ public class MoskvinCombat : EnemyCombat
                 }
                 prevPoint = pos;
                 StartCoroutine(ITeleport(pos));
-        
             }
 
             if (tamponTimeStamp <= Time.time && distance < tamponRange)
@@ -39,19 +68,24 @@ public class MoskvinCombat : EnemyCombat
                 animControl.PlayShoot();
                 StartCoroutine(ShootTampon());
                 tamponTimeStamp = Time.time + tamponCooldown;
-            }           
-        }
-
-        else if ((DialogManager.instance.isInDialogue == false) && (hp * 100 / stats.maxHP < 20))
-        {
-            transform.parent.position = point[7].position;
-            if (tamponTimeStamp <= Time.time)
-            {
-                animControl.PlayShoot();
-                StartCoroutine(ShootTamponPhase());
-                tamponTimeStamp = Time.time + tamponCooldown;
             }
+            // Sec phase transition
+            if (hp / stats.maxHP < 0.3f)
+            {
+                phase = 2;
+                StopAllCoroutines();
+                transform.parent.position = point[1].position;
+            }
+        }
+    }
 
+    void SecondPhase()
+    {
+        if (tamponTimeStamp <= Time.time && DialogManager.instance.isInDialogue == false)
+        {
+            animControl.PlayShoot();
+            StartCoroutine(ShootTamponPhase());
+            tamponTimeStamp = Time.time + tamponCooldown;
         }
     }
 
@@ -71,7 +105,7 @@ public class MoskvinCombat : EnemyCombat
         projectile.GetComponent<Projectile>().caster = transform;
 
         Quaternion q = new Quaternion();
-        
+
 
         while (true)
         {
@@ -99,27 +133,15 @@ public class MoskvinCombat : EnemyCombat
 
         Quaternion q = new Quaternion();
 
-
-        while (true)
+        for (float i = 3.14f; i > -3.14f; i -= 0.5f)
         {
-            //force for enemy punch
-            
-            yield return null;
-            distance = Vector2.Distance(target.position, transform.position);
-            if (animControl.renderer.sprite.name.Equals("throw"))
-            {
-                for (int i = 8; i < 18; i++)
-                {
-
-                    Vector2 dir = (Vector2)point[i].position - (Vector2)transform.position;
-                    q.SetFromToRotation(Vector2.up, dir);
-                    projectile = Instantiate(projectile, transform.position, q);
-                    projectile.GetComponent<Projectile>().SetVelocityDirection(dir);
-                }
+            if (projectile == null)
                 break;
-            }
-            if (animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("afk"))
-                break;
+            Vector2 dir = new Vector2(Mathf.Sin(i), Mathf.Cos(i));
+            q.SetFromToRotation(Vector2.up, dir);
+            projectile = Instantiate(projectile, transform.position, q);
+            projectile.GetComponent<Projectile>().SetVelocityDirection(dir);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
