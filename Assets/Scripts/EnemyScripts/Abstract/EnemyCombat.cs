@@ -70,7 +70,7 @@ public abstract class EnemyCombat : MonoBehaviour
         // Sprites
         StartCoroutine(animControl.Hitted(animControl.renderer));
         // If hp bellow or equal to zero Kills this Enemy
-        if (hp <= 0)
+        if (hp <= 0 && stats.isAlive)
         {
             // Coriutine is function that lasts for some time (not only one Game circle)
             StopAllCoroutines();
@@ -81,6 +81,7 @@ public abstract class EnemyCombat : MonoBehaviour
     // Kill function plays Death anim and disable stuff lol
     public virtual IEnumerator Kill()
     {
+        stats.isAlive = false;
         // Plays anim
         animControl.PlayDeath();
 
@@ -88,7 +89,6 @@ public abstract class EnemyCombat : MonoBehaviour
         if (lootTable != null)
         {
             lootTable.SpawnLoot();
-            Debug.Log("Drop");
         }
 
         // Sets body collider as Triggers to avoid any collisions

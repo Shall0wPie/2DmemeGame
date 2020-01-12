@@ -14,7 +14,6 @@ public class MoskvinCombat : EnemyCombat
     private bool isInRange = false;
     private int prevPoint = -1;
     private float tamponTimeStamp = 0;
-    private bool IsDead = false;
     private int phase = 1;
     private bool firstPhasePassed = false;
     private bool secondPhasePassed = false;
@@ -22,7 +21,6 @@ public class MoskvinCombat : EnemyCombat
 
     protected override void Update()
     {
-
         distance = Vector2.Distance(target.position, transform.position);
         if (distance < tamponRange && SaveManager.instance.checkPoint != 3)
         {
@@ -43,18 +41,26 @@ public class MoskvinCombat : EnemyCombat
 
         if (phase == 3)
         {
-            SecondPhase();
             if (hp <= 0)
                 phase = 4;
+            else
+                SecondPhase();
         }
+
         if (phase == 4)
         {
-            if (!IsDead) {
+            GetComponentInParent<DialogueControl>().TriggerDialogue("Butilka");
+            phase = 5;
+        }
+
+        if (phase == 5)
+        {
+            if (stats.isAlive && !DialogManager.instance.isInDialogue)
+            {
                 StopAllCoroutines();
                 StartCoroutine(Kill());
             }
         }
-
     }
 
     void FirstPhase()
@@ -99,7 +105,6 @@ public class MoskvinCombat : EnemyCombat
             tamponTimeStamp = Time.time + tamponCooldown;
 
         }
-
     }
 
     private IEnumerator ITeleport(int pos)
@@ -138,7 +143,6 @@ public class MoskvinCombat : EnemyCombat
         }
     }
 
-
     public IEnumerator ShootTamponPhase()
     {
         Transform projectile = Prefabs.instance.projectileTampon;
@@ -162,26 +166,20 @@ public class MoskvinCombat : EnemyCombat
     public override IEnumerator Kill()
     {
         // Plays anim
+        stats.isAlive = false;
+
+        yield return new WaitForSeconds(2f);
         animControl.PlayDeath();
-        IsDead = true;
 
         LootTable lootTable = GetComponent<LootTable>();
         if (lootTable != null)
         {
             lootTable.SpawnLoot();
-            Debug.Log("Drop");
         }
-
-        // Sets body collider as Triggers to avoid any collisions
-        //stats.bodyCollider.isTrigger = true;
-        // Disables Follow script
-
-        // Rotates model by 90 degrees
+        GetComponentInParent<EnemyControl>().enabled = false;
 
         // The rest of function will continue as deathDuration passes
-        yield return new WaitForSeconds(2f);
-        GetComponentInParent<EnemyControl>().enabled = false;
-        transform.parent.Rotate(0, 0, -90 * transform.parent.lossyScale.x);
+        yield return new WaitForSeconds(8f);
 
         // Respawns Enemy in its Spawn Point
         if (stats.allowRespawn)

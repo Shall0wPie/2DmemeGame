@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 
@@ -14,6 +13,7 @@ public class DialogueControl : MonoBehaviour
             if (dialogueName == dialogue[i].dialogueName)
             {
                 DialogManager.instance.StartDialogue(dialogue[i]);
+                MainCamera.instance.DialogueZoom(transform);
             }
         }
     }
