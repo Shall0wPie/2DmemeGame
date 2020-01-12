@@ -23,6 +23,9 @@ public class PlayerControl : MonoBehaviour
         dialogues = GetComponent<DialogueControl>();
 
         dialogues.TriggerDialogue("HochuSkazt");
+
+        if (SaveManager.instance != null && SaveManager.instance.lastPosition != Vector2.zero)
+            transform.position = SaveManager.instance.lastPosition;
     }
 
     private void Update()

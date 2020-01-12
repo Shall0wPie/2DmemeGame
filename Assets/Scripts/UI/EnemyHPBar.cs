@@ -22,6 +22,8 @@ public class EnemyHPBar : MonoBehaviour
     {
         healthBar.fillAmount = combat.hp / stats.maxHP;
         HPtext.text = combat.hp.ToString();
+        if (combat.hp < 0)
+            HPtext.text = "0";
 
         Vector2 iceCube = transform.localScale;
         canvas.transform.localScale = iceCube;

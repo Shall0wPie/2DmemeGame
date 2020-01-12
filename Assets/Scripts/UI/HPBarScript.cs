@@ -13,12 +13,17 @@ public class HPBarScript : MonoBehaviour
         combat = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerCombat>();
         stats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
+    private void OnLevelWasLoaded(int level)
+    {
+        Start();
+    }
 
     void Update()
     {
-
         healthBar.fillAmount = combat.hp / stats.maxHP;
         HPtext.text = combat.hp.ToString();
+        if (combat.hp < 0)
+            HPtext.text = "0";
         if ((combat.hp * 100 / stats.maxHP) > 60)
         {
             HPtext.color = Color.green;

@@ -6,9 +6,12 @@ using UnityEngine;
 public class HealthPotion : Item
 {
     [SerializeField] private int health;
-
+    private AudioSource audiosrc;
+    
     public override void Use(Transform target)
     {
+        audiosrc = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+        audiosrc.Play();
         target.GetComponentInChildren<PlayerCombat>().hp += health;
     }
 }

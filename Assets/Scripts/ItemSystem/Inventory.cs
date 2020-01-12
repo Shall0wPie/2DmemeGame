@@ -5,10 +5,13 @@ public class Inventory : MonoBehaviour
 {
     #region Singleton
     public static Inventory instance { get; private set; }
-    private void Awake()
+    private void Start()
     {
         if (instance != null)
-            Debug.Log("Inventory is aldeady exists");
+        {
+            //Debug.Log("Inventory is alredy exists");
+            Destroy(gameObject);
+        }
         else
             instance = this;
     }
@@ -17,15 +20,20 @@ public class Inventory : MonoBehaviour
     public int selectedSlot { get; private set; }
     public int slotsCount { get; private set; }
 
-    SlotUI[] slots;
+    public SlotUI[] slots { get; private set; }
     private Transform player;
 
-    void Start()
+    void Awake()
     {
         slots = GetComponentsInChildren<SlotUI>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         slotsCount = slots.Length;
         SelectSlot(0);
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public bool AddItem(Item item)

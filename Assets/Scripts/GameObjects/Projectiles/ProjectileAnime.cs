@@ -17,5 +17,11 @@ public class ProjectileAnime : Projectile
             collision.GetComponentInChildren<EnemyCombat>().ApplyHit(damage, force);
             Destroy(gameObject);
         }
+        else if (collision.tag  == "Moskvin")
+        {
+            Vector2 force = new Vector2(0, 0);
+            collision.GetComponentInChildren<EnemyCombat>().ApplyHit(damage, force);
+            Destroy(gameObject);
+        }
     }
 }

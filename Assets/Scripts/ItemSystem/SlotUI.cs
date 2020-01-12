@@ -7,9 +7,9 @@ public class SlotUI : MonoBehaviour
 {
     [SerializeField] private Image icon;
     [SerializeField] private Text textCounter;
-    private Stack<Item> items = new Stack<Item>();
+    private Stack<Item> items = new Stack<Item>(5);
     public int count { get; private set; }
-
+    
     // Start is called before the first frame update
     public void PushItem(Item newItem)
     {
