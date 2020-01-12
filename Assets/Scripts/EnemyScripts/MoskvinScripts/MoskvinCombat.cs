@@ -10,12 +10,12 @@ public class MoskvinCombat : EnemyCombat
     [Range(0f, 10f)] public float TpRange;
     private bool isInRange = false;
     private int prevPoint = -1;
-    //Vector2[] point1;   
+    private Vector2[] point1;   
     private float tamponTimeStamp = 0;
     [SerializeField] protected float tamponCooldown = 1f;
     [SerializeField] [Range(0f, 100f)] protected float tamponRange = 1f;
 
-
+    
     protected override void Update()
     {
         if ((DialogManager.instance.isInDialogue == false) && (hp * 100 / stats.maxHP > 20))
@@ -45,10 +45,10 @@ public class MoskvinCombat : EnemyCombat
         else if ((DialogManager.instance.isInDialogue == false) && (hp * 100 / stats.maxHP < 20))
         {
             transform.parent.position = point[7].position;
-            if (tamponTimeStamp <= Time.time && distance < tamponRange)
+            if (tamponTimeStamp <= Time.time)
             {
                 animControl.PlayShoot();
-                StartCoroutine(ShootTampon());
+                StartCoroutine(ShootTamponPhase());
                 tamponTimeStamp = Time.time + tamponCooldown;
             }
 
@@ -91,36 +91,37 @@ public class MoskvinCombat : EnemyCombat
         }
     }
 
-    //public IEnumerator ShootTamponPhase()
-    //{
-    //    Transform projectile = Prefabs.instance.projectileTampon;
-    //    projectile.localScale = transform.lossyScale;
-    //    projectile.GetComponent<Projectile>().caster = transform;
+    public IEnumerator ShootTamponPhase()
+    {
+        Transform projectile = Prefabs.instance.projectileTampon;
+        projectile.localScale = transform.lossyScale;
+        projectile.GetComponent<Projectile>().caster = transform;
 
-    //    Quaternion q = new Quaternion();
+        Quaternion q = new Quaternion();
 
 
-    //    while (true)
-    //    {
-    //        //force for enemy punch
-    //        yield return null;
-    //        distance = Vector2.Distance(target.position, transform.position);
-    //        if (animControl.renderer.sprite.name.Equals("throw"))
-    //        {
-    //            for (int i = 0; i < point.Length; i++)
-    //            { 
-    //                point1[i] = 
-    //                Vector2[i] dir;
-    //                q.SetFromToRotation(Vector2.up, dir[i]);
-    //                projectile = Instantiate(projectile, transform.position, q);
-    //                projectile.GetComponent<Projectile>().SetVelocityDirection(dir[i]);
-    //            }
-    //            break;
-    //        }
-    //        if (animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("afk"))
-    //            break;
-    //    }
-    //}
+        while (true)
+        {
+            //force for enemy punch
+            
+            yield return null;
+            distance = Vector2.Distance(target.position, transform.position);
+            if (animControl.renderer.sprite.name.Equals("throw"))
+            {
+                for (int i = 8; i < 18; i++)
+                {
+
+                    Vector2 dir = (Vector2)point[i].position - (Vector2)transform.position;
+                    q.SetFromToRotation(Vector2.up, dir);
+                    projectile = Instantiate(projectile, transform.position, q);
+                    projectile.GetComponent<Projectile>().SetVelocityDirection(dir);
+                }
+                break;
+            }
+            if (animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("afk"))
+                break;
+        }
+    }
 
     private void OnDrawGizmos()
     {
