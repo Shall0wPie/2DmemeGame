@@ -10,7 +10,7 @@ public class SaveManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("Save manager alredy exists");
+            //Debug.Log("Save manager alredy exists");
             Destroy(gameObject);
         }
         else

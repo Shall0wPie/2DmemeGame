@@ -16,6 +16,7 @@ public class EnemyStats : MonoBehaviour
     public Transform aggroPoint;
     [Range(0f, 50f)] public float aggroRange = 10f;
     public float deathDuration = 2f;
+    public bool isAlive = true;
 
     [Space]
     [Header("Move stats")]
