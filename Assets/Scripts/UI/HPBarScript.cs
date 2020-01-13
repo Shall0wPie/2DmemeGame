@@ -15,7 +15,10 @@ public class HPBarScript : MonoBehaviour
     }
     private void OnLevelWasLoaded(int level)
     {
-        Start();
+        if (level == 3)
+            Destroy(gameObject);
+        else
+            Start();
     }
 
     void Update()

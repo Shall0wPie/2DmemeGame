@@ -176,6 +176,7 @@ public class MoskvinCombat : EnemyCombat
 
         // The rest of function will continue as deathDuration passes
         yield return new WaitForSeconds(8f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 
         // Respawns Enemy in its Spawn Point
         if (stats.allowRespawn)
@@ -185,9 +186,6 @@ public class MoskvinCombat : EnemyCombat
             Destroy(transform.parent.gameObject);
     }
 
-   
-
-    
 
     private void OnDrawGizmos()
     {

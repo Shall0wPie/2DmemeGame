@@ -33,7 +33,10 @@ public class Inventory : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (level == 3)
+            Destroy(gameObject);
+        else
+            player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     public bool AddItem(Item item)
