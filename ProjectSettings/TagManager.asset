@@ -9,6 +9,7 @@ TagManager:
   - Moskvin
   - gameManager
   - CanvasMaxim
+  - ItemSpell
   layers:
   - Default
   - TransparentFX

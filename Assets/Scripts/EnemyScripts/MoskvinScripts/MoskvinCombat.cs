@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoskvinCombat : EnemyCombat
 {
@@ -10,6 +11,9 @@ public class MoskvinCombat : EnemyCombat
     [SerializeField] [Range(0f, 10f)] private float TpRange;
     [SerializeField] [Range(0f, 100f)] protected float tamponRange = 1f;
     [SerializeField] protected float tamponCooldown = 1f;
+    private AudioSource audioCamera;
+    private AudioSource audioMoskva;
+    private bool music = false;
 
     private bool isInRange = false;
     private int prevPoint = -1;
@@ -22,16 +26,24 @@ public class MoskvinCombat : EnemyCombat
     protected override void Update()
     {
         
-
         distance = Vector2.Distance(target.position, transform.position);
         if (distance < tamponRange && SaveManager.instance.checkPoint != 3)
         {
+            audioCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+            audioCamera.Stop();
             GetComponentInParent<DialogueControl>().TriggerDialogue("MoskvinEngage");
             SaveManager.instance.SavePosition(3);
+            if ((!music) && DialogManager.instance.isInDialogue == false)
+            {
+                audioMoskva = GameObject.FindGameObjectWithTag("Moskvin").GetComponent<AudioSource>();
+                audioMoskva.Play();
+                music = true;
+            }
         }
 
         if (phase == 1)
         {
+            
             FirstPhase();
         }
 
@@ -57,7 +69,7 @@ public class MoskvinCombat : EnemyCombat
     {
         if (DialogManager.instance.isInDialogue == false)
         {
-
+            
             if (distance < TpRange && !isInRange)
             {
                 int pos = Random.Range(0, 7);
@@ -179,6 +191,11 @@ public class MoskvinCombat : EnemyCombat
         else
             Destroy(transform.parent.gameObject);
     }
+
+   
+
+    
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, TpRange);

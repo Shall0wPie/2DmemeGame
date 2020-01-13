@@ -4,6 +4,7 @@ using UnityEngine;
 
 class MaximCombat : EnemyCombat
 {
+    AudioSource audioMaxim;
     public override IEnumerator Attack()
     {
         float distance;
@@ -24,6 +25,26 @@ class MaximCombat : EnemyCombat
 
             if (!animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("MaximAttack"))
                 break;
+        }
+    }
+    public override void ApplyHit(float dmg, Vector2 force)
+    {
+        // Calculates dmg and force according to resistance
+        dmg *= (1 - stats.dmgResistance);
+        force *= (1 - stats.forceResistance);
+        // Applies effects
+        rb.velocity += force;
+        hp -= dmg;
+        // Sprites
+        StartCoroutine(animControl.Hitted(animControl.renderer));
+        // If hp bellow or equal to zero Kills this Enemy
+        if (hp <= 0 && stats.isAlive)
+        {
+            audioMaxim = GetComponentInParent<AudioSource>();
+            audioMaxim.Play();
+            // Coriutine is function that lasts for some time (not only one Game circle)
+            StopAllCoroutines();
+            StartCoroutine(Kill());
         }
     }
 }
