@@ -21,9 +21,9 @@ public class MainCamera : MonoBehaviour
     #endregion
 
     public Stack<Transform> targetStack;
-    public Transform player;
     public Vector3 offset;
     public Vector3 dialogueOffset;
+    private Transform player;
     private Camera camera;
 
     public float zoomOrtho;

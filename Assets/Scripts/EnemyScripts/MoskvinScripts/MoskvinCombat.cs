@@ -175,8 +175,8 @@ public class MoskvinCombat : EnemyCombat
         GetComponentInParent<EnemyControl>().enabled = false;
 
         // The rest of function will continue as deathDuration passes
-        yield return new WaitForSeconds(8f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        yield return new WaitForSeconds(10f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         // Respawns Enemy in its Spawn Point
         if (stats.allowRespawn)
