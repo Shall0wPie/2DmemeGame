@@ -15,6 +15,14 @@ public class FadePanel : MonoBehaviour
         image = GetComponent<Image>();
     }
 
+    private void OnLevelWasLoaded(int level)
+    {
+        if (level == 3)
+            Destroy(gameObject);
+        else
+            moskvinStats = FindObjectOfType<MoskvinCombat>().GetComponentInParent<EnemyStats>();
+    }
+
     private void FixedUpdate()
     {
         if (!moskvinStats.isAlive && !isRunning)
