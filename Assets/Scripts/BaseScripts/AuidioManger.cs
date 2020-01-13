@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class AuidioManger : MonoBehaviour
 {
+    public static AuidioManger instance;
+
+    private void Start()
+    {
+        if (instance != null)
+            Destroy(gameObject);
+        else
+            instance = this;
+    }
+
     public AudioClip main;
     public AudioClip moskvinTheme;
     public AudioClip failSound;
@@ -11,7 +21,7 @@ public class AuidioManger : MonoBehaviour
     private Transform player;
     private AudioSource source;
 
-    private void Start()
+    private void Awake()
     {
         source = GetComponent<AudioSource>();
     }
