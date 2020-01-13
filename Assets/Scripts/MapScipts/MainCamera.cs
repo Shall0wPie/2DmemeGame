@@ -36,9 +36,14 @@ public class MainCamera : MonoBehaviour
     {
         camera = GetComponent<Camera>();
         defOrtho = camera.orthographicSize;
-
-        targetStack = new Stack<Transform>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        transform.position = player.position + offset;
+        targetStack = new Stack<Transform>();
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        //player = GameObject.FindGameObjectWithTag("Player").transform;
         transform.position = player.position + offset;
     }
     void FixedUpdate()
