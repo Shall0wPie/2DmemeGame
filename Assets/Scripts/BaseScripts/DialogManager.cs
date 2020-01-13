@@ -41,6 +41,8 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        StartCoroutine(DisableControl());
+
         sentences.Clear();
         nameText.text = dialogue.actorName;
         anim.SetBool("IsOpen", true);
@@ -86,5 +88,13 @@ public class DialogManager : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
         }
         isTyping = false;
+    }
+
+    IEnumerator DisableControl()
+    {
+        PlayerControl playerControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>();
+        playerControl.enabled = false;
+        yield return new WaitForSeconds(0.8f);
+        playerControl.enabled = true;
     }
 }
