@@ -23,6 +23,7 @@ public abstract class EnemyCombat : MonoBehaviour
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
     }
 
     protected virtual void Update()
@@ -59,7 +60,7 @@ public abstract class EnemyCombat : MonoBehaviour
     }
 
     // Applis Force and Damage to this Enemy
-    public void ApplyHit(float dmg, Vector2 force)
+    public virtual void ApplyHit(float dmg, Vector2 force)
     {
         // Calculates dmg and force according to resistance
         dmg *= (1 - stats.dmgResistance);

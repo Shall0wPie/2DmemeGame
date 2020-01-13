@@ -11,6 +11,7 @@ public class HealthPotion : Item
     public override void Use(Transform target)
     {
         audiosrc = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+        
         audiosrc.Play();
         target.GetComponentInChildren<PlayerCombat>().hp += health;
     }
