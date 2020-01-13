@@ -9,11 +9,10 @@ public class MoskvinCombat : EnemyCombat
     private float distance;
     [SerializeField] [Range(0f, 10f)] private float DelayTp;
     [SerializeField] [Range(0f, 10f)] private float TpRange;
-    [SerializeField] [Range(0f, 100f)] protected float tamponRange = 1f;
+    [SerializeField] [Range(0f, 100f)] public float tamponRange = 1f;
     [SerializeField] protected float tamponCooldown = 1f;
-    private AudioSource audioCamera;
-    private AudioSource audioMoskva;
-    private bool music = false;
+
+    [SerializeField] private GameObject door;
 
     private bool isInRange = false;
     private int prevPoint = -1;
@@ -25,25 +24,19 @@ public class MoskvinCombat : EnemyCombat
 
     protected override void Update()
     {
-        
         distance = Vector2.Distance(target.position, transform.position);
         if (distance < tamponRange && SaveManager.instance.checkPoint != 3)
         {
-            audioCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
-            audioCamera.Stop();
             GetComponentInParent<DialogueControl>().TriggerDialogue("MoskvinEngage");
             SaveManager.instance.SavePosition(3);
-            if ((!music) && DialogManager.instance.isInDialogue == false)
-            {
-                audioMoskva = GameObject.FindGameObjectWithTag("Moskvin").GetComponent<AudioSource>();
-                audioMoskva.Play();
-                music = true;
-            }
+        }
+        if (SaveManager.instance.checkPoint == 3)
+        {
+            door.SetActive(true);
         }
 
         if (phase == 1)
         {
-            
             FirstPhase();
         }
 
@@ -183,6 +176,7 @@ public class MoskvinCombat : EnemyCombat
 
         // The rest of function will continue as deathDuration passes
         yield return new WaitForSeconds(8f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 
         // Respawns Enemy in its Spawn Point
         if (stats.allowRespawn)
@@ -192,9 +186,6 @@ public class MoskvinCombat : EnemyCombat
             Destroy(transform.parent.gameObject);
     }
 
-   
-
-    
 
     private void OnDrawGizmos()
     {
