@@ -111,7 +111,7 @@ MonoBehaviour:
   maxHP: 100
   dmgResistance: 0
   forceResistance: 0
-  deathDuration: 2
+  deathDuration: 3.2
   isAlive: 1
 --- !u!61 &941328850850940546
 BoxCollider2D:

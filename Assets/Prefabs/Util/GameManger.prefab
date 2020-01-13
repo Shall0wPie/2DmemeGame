@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main: {fileID: 8300000, guid: 7dd17bc00259e574cb045f3a9a049a3c, type: 3}
   moskvinTheme: {fileID: 8300000, guid: 43ddd2cbc86937149a2819c91b6a405d, type: 3}
+  failSound: {fileID: 8300000, guid: 6b79e0729185cab44a644e41cf7f874a, type: 3}
 --- !u!1001 &7934317587271493248
 PrefabInstance:
   m_ObjectHideFlags: 0
