@@ -21,6 +21,8 @@ public class MoskvinCombat : EnemyCombat
 
     protected override void Update()
     {
+        
+
         distance = Vector2.Distance(target.position, transform.position);
         if (distance < tamponRange && SaveManager.instance.checkPoint != 3)
         {
@@ -41,25 +43,13 @@ public class MoskvinCombat : EnemyCombat
 
         if (phase == 3)
         {
-            if (hp <= 0)
-                phase = 4;
-            else
-                SecondPhase();
+            SecondPhase();
         }
 
         if (phase == 4)
         {
             GetComponentInParent<DialogueControl>().TriggerDialogue("Butilka");
-            phase = 5;
-        }
-
-        if (phase == 5)
-        {
-            if (stats.isAlive && !DialogManager.instance.isInDialogue)
-            {
-                StopAllCoroutines();
-                StartCoroutine(Kill());
-            }
+            phase = 0;
         }
     }
 
@@ -165,6 +155,7 @@ public class MoskvinCombat : EnemyCombat
 
     public override IEnumerator Kill()
     {
+        phase = 4;
         // Plays anim
         stats.isAlive = false;
 
