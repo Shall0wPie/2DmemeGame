@@ -81,7 +81,6 @@ public abstract class EnemyCombat : MonoBehaviour
     // Kill function plays Death anim and disable stuff lol
     public virtual IEnumerator Kill()
     {
-        Debug.Log("kill def");
         stats.isAlive = false;
         // Plays anim
         animControl.PlayDeath();
