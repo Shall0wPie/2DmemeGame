@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animControl: {fileID: 7865027945398089276}
-  punchDmg: 40
+  punchDmg: 60
   punchForce: {x: 30, y: 30}
   attackCooldown: 1
   attackRange: 6
@@ -117,7 +117,12 @@ PrefabInstance:
     - target: {fileID: 7106080597651081633, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: loot.Array.data[0].dropChance
-      value: 1
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: maxHP
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eefa64718390fd64e896d529e7c93cfc, type: 3}
