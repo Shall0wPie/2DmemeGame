@@ -74,7 +74,7 @@ public class PlayerCombat : MonoBehaviour
 
         rb.velocity += force;
         hp -= dmg;
-        Debug.Log("Hp: " + hp + " Dmg: " + dmg);
+        //Debug.Log("Hp: " + hp + " Dmg: " + dmg);
 
         // If hp bellow or equal to zero Kills this Enemy
         if (hp <= 0 && stats.isAlive)
