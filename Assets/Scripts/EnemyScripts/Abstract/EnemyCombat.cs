@@ -23,7 +23,6 @@ public abstract class EnemyCombat : MonoBehaviour
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        
     }
 
     protected virtual void Update()

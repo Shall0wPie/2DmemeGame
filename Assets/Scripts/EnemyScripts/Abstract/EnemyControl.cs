@@ -19,9 +19,9 @@ public class EnemyControl : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        float distanceFormSpot = Vector2.Distance(target.position, stats.aggroPoint.position);
+        float distanceFromSpot = Vector2.Distance(target.position, stats.aggroPoint.position);
 
-        if (distanceFormSpot < stats.aggroRange)
+        if (distanceFromSpot < stats.aggroRange)
         {
             Vector2 xToTarget = new Vector2(target.position.x, transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, xToTarget, stats.speed * Time.deltaTime);
