@@ -1,16 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Prefabs : MonoBehaviour
 {
     public static Prefabs instance { get; private set; }
 
-    private void Start()
+    private void Awake()
     {
         if (instance != null)
         {
-            Debug.Log("Prefabs already exists");
             Destroy(gameObject);
         }
         else

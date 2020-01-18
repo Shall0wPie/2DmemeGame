@@ -29,7 +29,9 @@ public class EnemyStats : MonoBehaviour
         if (aggroPoint == null)
         {
             //aggroPoint = GameObject.FindGameObjectWithTag("AggroPoints").transform;
-            aggroPoint = Instantiate(Prefabs.instance.point, spawnPoint, Quaternion.identity, GameObject.FindGameObjectWithTag("AggroPoints").transform);
+            Transform point = GameObject.FindGameObjectWithTag("AggroPoints").transform;
+            Transform pref = Prefabs.instance.point;
+            aggroPoint = Instantiate(pref, spawnPoint, Quaternion.identity, point);
             //aggroPoint.position = spawnPoint;
         }
     }

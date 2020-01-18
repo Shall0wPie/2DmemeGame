@@ -13,7 +13,7 @@ public abstract class EnemyCombat : MonoBehaviour
     [SerializeField] protected Vector2 punchForce;
 
     [SerializeField] protected float attackCooldown = 1f;
-    [SerializeField] [Range(0f, 10f)] public float attackRange;
+    [SerializeField] [Range(0f, 30f)] public float attackRange;
     protected float attackTimeStamp = 0;
 
 
@@ -23,7 +23,6 @@ public abstract class EnemyCombat : MonoBehaviour
         hp = stats.maxHP;
         rb = GetComponentInParent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        
     }
 
     protected virtual void Update()
@@ -95,7 +94,9 @@ public abstract class EnemyCombat : MonoBehaviour
         // Sets body collider as Triggers to avoid any collisions
         stats.bodyCollider.isTrigger = true;
         // Disables Follow script
-        GetComponentInParent<EnemyControl>().enabled = false;
+        EnemyControl control = GetComponentInParent<EnemyControl>();
+        if (control != null)
+            control.enabled = false;
 
         // Rotates model by 90 degrees
         transform.parent.Rotate(0, 0, -90 * transform.parent.lossyScale.x);
