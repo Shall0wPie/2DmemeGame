@@ -138,6 +138,8 @@ MonoBehaviour:
     type: 3}
   projectileTampon: {fileID: 6898087246238474741, guid: 201dc1a501161de4487938d7a08708c1,
     type: 3}
+  projectileWolf: {fileID: 134657534713418322, guid: e3353224559c8584cb7f418173f68724,
+    type: 3}
 --- !u!114 &1649863400229674757
 MonoBehaviour:
   m_ObjectHideFlags: 0

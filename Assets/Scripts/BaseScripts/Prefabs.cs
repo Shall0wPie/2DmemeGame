@@ -18,4 +18,5 @@ public class Prefabs : MonoBehaviour
     public Transform point;
     public Transform projectileAnime;
     public Transform projectileTampon;
+    public Transform projectileWolf;
 }
