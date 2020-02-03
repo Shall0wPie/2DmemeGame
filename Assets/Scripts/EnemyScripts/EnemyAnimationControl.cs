@@ -39,6 +39,26 @@ public class EnemyAnimationControl : MonoBehaviour
         anim.SetBool("IsDead", false);
     }
 
+    public void PlayTransformationToWolf()
+    {
+        anim.SetBool("IsWolfed", true);
+    }
+
+    public void PlayTransformationFromWolf()
+    {
+        anim.SetBool("IsWolfed", false);
+    }
+
+    public void PlayFlightRotation()
+    {
+        anim.SetBool("Rotation", true);
+    }
+
+    public void PlayFlightBackRotation()
+    {
+        anim.SetBool("Rotation", false);
+    }
+
     public void PlayAttack()
     {
         anim.SetTrigger("Attack"); 
