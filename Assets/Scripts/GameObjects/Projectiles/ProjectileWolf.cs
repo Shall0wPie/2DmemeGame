@@ -7,10 +7,19 @@ public class ProjectileWolf : Projectile
     private void Start()
     {
         Vector3 scale = transform.localScale;
-        scale.x *= -1;
+        Vector3 rot = transform.eulerAngles;
+
+        scale.x = 1f;
+        if ((rot.z >= 90f && rot.z < 180f) || (rot.z >= 180 && rot.z < 270))
+        {
+            rot.z -= 180f;
+            scale.x = -1f;
+        }
+
         transform.localScale = scale;
+        transform.eulerAngles = rot;
     }
-    // Start is called before the first frame update
+
     void Update()
     {
         CheckForOutrange();
@@ -18,8 +27,6 @@ public class ProjectileWolf : Projectile
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        
         if (collision.tag == "Player")
         {
             Vector2 force = new Vector2(strikeForce.x * -caster.lossyScale.x, strikeForce.y);

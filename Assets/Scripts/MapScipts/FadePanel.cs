@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class FadePanel : MonoBehaviour
 {
-    private EnemyStats moskvinStats;
     private Image image;
     private bool isRunning = false;
 
     private void Start()
     {
-        moskvinStats = FindObjectOfType<MoskvinCombat>().GetComponentInParent<EnemyStats>();
         image = GetComponent<Image>();
     }
 
@@ -19,13 +17,13 @@ public class FadePanel : MonoBehaviour
     {
         if (level == 3)
             Destroy(gameObject);
-        else
-            moskvinStats = FindObjectOfType<MoskvinCombat>().GetComponentInParent<EnemyStats>();
+        //else
+            //moskvinStats = FindObjectOfType<MoskvinCombat>().GetComponentInParent<EnemyStats>();
     }
 
     private void FixedUpdate()
     {
-        if (!moskvinStats.isAlive && !isRunning)
+        //if (!moskvinStats.isAlive && !isRunning)
         {
             StartCoroutine(FadeOut());
             isRunning = true;
