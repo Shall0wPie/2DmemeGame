@@ -4,25 +4,30 @@ using UnityEngine;
 
 public class WalkCombat : EnemyCombat
 {
+    [SerializeField] private GameObject platforms;
+    private new Rigidbody2D rigidbody;
     private float distance;
     Vector2 spawnpoint;
-    private new Rigidbody2D rigidbody;
-    public GameObject wolf;
+
 
     protected override void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
             //animControl.PlaySummon();
-            StartCoroutine(SummonWolf());
-
+            SummonWolf();
         }
+
+        // + Platform controll
         if (Input.GetKeyDown(KeyCode.X))
         {
             animControl.PlayTransformationToWolf();
-            
 
+            Animator[] anims = platforms.GetComponentsInChildren<Animator>();
+            foreach (Animator anim in anims)
+                anim.SetBool("IsUp", false);
         }
+
         if (Input.GetKeyDown(KeyCode.V))
         {
             animControl.PlayAttack();
@@ -32,6 +37,9 @@ public class WalkCombat : EnemyCombat
         {
             animControl.PlayTransformationFromWolf();
 
+            Animator[] anims = platforms.GetComponentsInChildren<Animator>();
+            foreach (Animator anim in anims)
+                anim.SetBool("IsUp", true);
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
@@ -45,28 +53,19 @@ public class WalkCombat : EnemyCombat
         }
     }
 
-    public IEnumerator SummonWolf()
+    public void SummonWolf()
     {
         Transform projectile = Prefabs.instance.projectileWolf;
         projectile.localScale = transform.lossyScale;
         projectile.GetComponent<Projectile>().caster = transform;
 
         Quaternion q = new Quaternion();
+        distance = Vector2.Distance(target.position, transform.position);
 
+        Vector2 dir = target.position - transform.position;
+        q.SetFromToRotation(Vector2.left, dir);
 
-        while (true)
-        {
-            //force for enemy punch
-            yield return null;
-            distance = Vector2.Distance(target.position, transform.position);
-            
-            Vector2 dir = target.position - transform.position;
-            
-            
-            projectile = Instantiate(projectile, transform.position, q);
-            projectile.GetComponent<Projectile>().SetVelocityDirection(dir);
-            break;
-
-        }
+        projectile = Instantiate(projectile, transform.position, q);
+        projectile.GetComponent<Projectile>().SetVelocityDirection(dir);
     }
 }
