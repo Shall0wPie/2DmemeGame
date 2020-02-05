@@ -16,9 +16,10 @@ public class SaveManager : MonoBehaviour
         }
         else
         {
+            checkPoint = -1;
             instance = this;
             DontDestroyOnLoad(gameObject);
-        }
+        }        
     }
     #endregion
 

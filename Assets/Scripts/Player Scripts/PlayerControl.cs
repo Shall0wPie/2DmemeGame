@@ -68,11 +68,6 @@ public class PlayerControl : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
                 Inventory.instance.UseItem();
         }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
-                DialogManager.instance.DisplayNextSentence();
-        }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {

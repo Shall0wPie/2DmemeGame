@@ -31,10 +31,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a08c833d23c864fba10d4723aa03b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  strikeForce: {x: 0, y: 0}
+  damage: 5
+  strikeForce: {x: 5, y: 5}
   speed: 25
-  flyDistance: 80
+  flyDistance: 200
   caster: {fileID: 0}
 --- !u!1001 &4986119968297514659
 PrefabInstance:

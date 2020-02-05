@@ -29,7 +29,7 @@ public class TrapTrigger : MonoBehaviour
         {
             TriggerTrap();
         }
-        if (isTriggerd && spikesColl.IsTouchingLayers(playerLayer))
+        if (isTriggerd && spikesColl.IsTouchingLayers(playerLayer) && !DialogManager.instance.isInDialogue)
         {
             if (dmgTimeStamp <= Time.time)
             {

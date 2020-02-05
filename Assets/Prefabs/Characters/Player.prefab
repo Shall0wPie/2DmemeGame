@@ -77,7 +77,7 @@ MonoBehaviour:
   jumpForce: 41
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 8448
   groundCollider: {fileID: 517518145887241092}
   jumpCooldown: 0.6
 --- !u!114 &1335629947481452081
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {x: 0, y: 0}
   allowRespawn: 1
-  bodyCollider: {fileID: 0}
+  bodyCollider: {fileID: 941328850850940546}
   maxHP: 100
   dmgResistance: 0
   forceResistance: 0
@@ -163,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 0.2}
+  m_Size: {x: 1.5, y: 0.2}
   m_EdgeRadius: 0
 --- !u!114 &2194979863235661590
 MonoBehaviour:

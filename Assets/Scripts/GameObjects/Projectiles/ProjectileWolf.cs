@@ -29,7 +29,7 @@ public class ProjectileWolf : Projectile
     {
         if (collision.tag == "Player")
         {
-            Vector2 force = new Vector2(strikeForce.x * -caster.lossyScale.x, strikeForce.y);
+            Vector2 force = rb.velocity;
             collision.GetComponentInChildren<PlayerCombat>().ApplyHit(damage, force);
             Destroy(gameObject);
         }
