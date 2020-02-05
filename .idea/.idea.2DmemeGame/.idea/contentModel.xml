@@ -10,12 +10,12 @@
         <e p="Scripts" t="Include">
           <e p="BaseScripts" t="Include">
             <e p="AuidioManger.cs" t="Include" />
-            <e p="DialogManager.cs" t="Include" />
             <e p="Intreactable.cs" t="Include" />
             <e p="Prefabs.cs" t="Include" />
             <e p="SaveManager.cs" t="Include" />
           </e>
           <e p="DialogueSystem" t="Include">
+            <e p="DialogManager.cs" t="Include" />
             <e p="Dialogue.cs" t="Include" />
             <e p="DialogueControl.cs" t="Include" />
           </e>

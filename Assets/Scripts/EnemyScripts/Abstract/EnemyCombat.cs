@@ -9,6 +9,7 @@ public abstract class EnemyCombat : MonoBehaviour
     public EnemyAnimationControl animControl;
 
     public float hp { get; protected set; }
+    public bool isInvincible = false;
     [SerializeField] protected float punchDmg = 25f;
     [SerializeField] protected Vector2 punchForce;
 
@@ -35,12 +36,13 @@ public abstract class EnemyCombat : MonoBehaviour
             attackTimeStamp = Time.time + attackCooldown;
         }
     }
+
     //COROUTINE ATTACK
     public virtual IEnumerator Attack()
     {
         float distance;
         animControl.PlayAttack();
-        
+
         while (true)
         {
             //force for enemy punch
@@ -61,20 +63,24 @@ public abstract class EnemyCombat : MonoBehaviour
     // Applis Force and Damage to this Enemy
     public virtual void ApplyHit(float dmg, Vector2 force)
     {
-        // Calculates dmg and force according to resistance
-        dmg *= (1 - stats.dmgResistance);
-        force *= (1 - stats.forceResistance);
-        // Applies effects
-        rb.velocity += force;
-        hp -= dmg;
-        // Sprites
-        StartCoroutine(animControl.Hitted(animControl.renderer));
-        // If hp bellow or equal to zero Kills this Enemy
-        if (hp <= 0 && stats.isAlive)
+        if (!isInvincible)
         {
-            // Coriutine is function that lasts for some time (not only one Game circle)
-            StopAllCoroutines();
-            StartCoroutine(Kill());
+            // Calculates dmg and force according to resistance
+            dmg *= (1 - stats.dmgResistance);
+            force *= (1 - stats.forceResistance);
+            // Applies effects
+            rb.velocity += force;
+            hp -= dmg;
+            // Sprites
+            StartCoroutine(animControl.Hitted(animControl.renderer));
+
+            // If hp bellow or equal to zero Kills this Enemy
+            if (hp <= 0 && stats.isAlive)
+            {
+                // Coriutine is function that lasts for some time (not only one Game circle)
+                StopAllCoroutines();
+                StartCoroutine(Kill());
+            }
         }
     }
 

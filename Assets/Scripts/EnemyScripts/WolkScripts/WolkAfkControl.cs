@@ -6,14 +6,16 @@ public class WolkAfkControl : StateMachineBehaviour
 {
     private Animator anim;
     private WolkCombat combat;
+    private DialogueControl dialogue;
 
 
     private void OnEnable()
     {
         combat = GameObject.Find("Wolk").GetComponentInChildren<WolkCombat>();
         anim = GameObject.Find("Wolk").GetComponentInChildren<Animator>();
+        dialogue = GameObject.Find("Wolk").GetComponent<DialogueControl>();
     }
-    
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -25,37 +27,54 @@ public class WolkAfkControl : StateMachineBehaviour
     {
         switch (anim.GetInteger("Stage"))
         {
-            case -3:
+            case 40:
+                combat.StartCoroutine(TeleportToTalk("FirstDialogue", combat.tpPoints[4]));
+                anim.SetInteger("Stage", 0);
                 break;
-            case -2:
+            case 30:
+                combat.StartCoroutine(TeleportToTalk("SecondDialogue", combat.tpPoints[3]));
+                anim.SetInteger("Stage", 0);
                 break;
-            case -1:
+            case 20:
+                combat.StartCoroutine(TeleportToTalk("SecondDialogue", combat.tpPoints[2]));
+                anim.SetInteger("Stage", 0);
+                break;
+            case 10:
+                combat.StartCoroutine(TeleportToTalk("ThirdDialogue", combat.tpPoints[0]));
+                anim.SetInteger("Stage", 0);
+                combat.isInvincible = false;
                 break;
         }
-        
-        if (anim.GetInteger("Stage") == 0)
+
+        if (anim.GetInteger("Stage") == 0 && SaveManager.instance.checkPoint == 3 && !DialogManager.instance.isInDialogue)
         {
+            anim.SetInteger("Stage", 1);
+        }
+
+        if (anim.GetInteger("Stage") == 1)
+        {
+            combat.isInvincible = false;
             anim.SetBool("IsCast", true);
-        }
-        
-        if (anim.GetInteger("Stage") == 1 && !DialogManager.instance.isInDialogue)
-        {
-            combat.GetComponentInParent<DialogueControl>().TriggerDialogue("WolfPower");
-            anim.SetBool("IsWolfed", true);
         }
 
         if (anim.GetInteger("Stage") == 2 && !DialogManager.instance.isInDialogue)
         {
-            anim.SetBool("IsCast", true);
-        }
-        
-        if (anim.GetInteger("Stage") == 3 && !DialogManager.instance.isInDialogue)
-        {
-            combat.GetComponentInParent<DialogueControl>().TriggerDialogue("WolfPower2");
+            dialogue.TriggerDialogue("WolfPower");
             anim.SetBool("IsWolfed", true);
         }
-        
+
+        if (anim.GetInteger("Stage") == 3 && !DialogManager.instance.isInDialogue)
+        {
+            anim.SetBool("IsCast", true);
+        }
+
         if (anim.GetInteger("Stage") == 4 && !DialogManager.instance.isInDialogue)
+        {
+            dialogue.TriggerDialogue("WolfPower2");
+            anim.SetBool("IsWolfed", true);
+        }
+
+        if (anim.GetInteger("Stage") == 5 && !DialogManager.instance.isInDialogue)
         {
             anim.SetBool("IsCast", true);
         }
@@ -67,15 +86,19 @@ public class WolkAfkControl : StateMachineBehaviour
     //    
     //}
 
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
+    IEnumerator TeleportToTalk(string dialogueName, Transform to)
+    {
+        dialogue.TriggerDialogue(dialogueName);
+        combat.transform.parent.position = to.position;
 
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
+        while (DialogManager.instance.isInDialogue)
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.2f);
+        combat.transform.parent.position = combat.tpPoints[0].position;
+        if (dialogueName == "ThirdDialogue")
+            anim.SetInteger("Stage", 1);
+    }
 }

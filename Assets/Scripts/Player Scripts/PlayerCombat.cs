@@ -10,13 +10,14 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float punchDmg = 10f;
     [Range(0f, 2f)] public float punchCooldown;
 
+    public bool isInvincible = false;
     public float hp;
     private Rigidbody2D rb;
     private PlayerStats stats;
     public PlayerAnimationControl PlayerAnim;
     private ContactFilter2D contactFilter;
     private Collider2D[] colliders;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +26,9 @@ public class PlayerCombat : MonoBehaviour
         contactFilter.layerMask = enemyLayer;
         contactFilter.useLayerMask = true;
         stats = GetComponentInParent<PlayerStats>();
-        colliders = new Collider2D[100];    
+        colliders = new Collider2D[100];
         rb = GetComponentInParent<Rigidbody2D>();
         hp = stats.maxHP;
-        
     }
 
     // Update is called once per frame
@@ -58,8 +58,8 @@ public class PlayerCombat : MonoBehaviour
         projectile.GetComponent<Projectile>().caster = transform;
         Quaternion q = new Quaternion();
 
-        Vector2 dir = new Vector2(0, 0) - (Vector2)transform.position;
-        
+        Vector2 dir = new Vector2(0, 0) - (Vector2) transform.position;
+
         q.SetFromToRotation(Vector2.up, dir);
         projectile = Instantiate(projectile, transform.position, q);
         projectile.GetComponent<ProjectileAnime>().SetVelocityDirection(dir);
@@ -67,19 +67,22 @@ public class PlayerCombat : MonoBehaviour
 
     public void ApplyHit(float dmg, Vector2 force)
     {
-        // Calculates dmg and force according to resistance
-        dmg *= (1 - stats.dmgResistance);
-        force *= (1 - stats.forceResistance);
-        // Applies effects
-
-        rb.velocity += force;
-        hp -= dmg;
-        //Debug.Log("Hp: " + hp + " Dmg: " + dmg);
-
-        // If hp bellow or equal to zero Kills this Enemy
-        if (hp <= 0 && stats.isAlive)
+        if (!isInvincible)
         {
-            StartCoroutine(Kill());
+            // Calculates dmg and force according to resistance
+            dmg *= (1 - stats.dmgResistance);
+            force *= (1 - stats.forceResistance);
+            // Applies effects
+
+            rb.velocity += force;
+            hp -= dmg;
+            //Debug.Log("Hp: " + hp + " Dmg: " + dmg);
+
+            // If hp bellow or equal to zero Kills this Enemy
+            if (hp <= 0 && stats.isAlive)
+            {
+                StartCoroutine(Kill());
+            }
         }
     }
 
@@ -91,7 +94,6 @@ public class PlayerCombat : MonoBehaviour
         stats.isAlive = false;
         GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         PlayerAnim.PlayDeath();
-        
 
         // The rest of function will continue as deathDuration passes
         yield return new WaitForSeconds(stats.deathDuration);
@@ -104,7 +106,7 @@ public class PlayerCombat : MonoBehaviour
             GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             transform.parent.position = stats.spawnPoint;
             hp = stats.maxHP;
-            stats.isAlive = true;
+            //stats.isAlive = true;
         }
     }
 }

@@ -10,7 +10,7 @@ public class CheckPoint : MonoBehaviour
     [SerializeField] private int pointNumber;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && SaveManager.instance.checkPoint != pointNumber)
         {
             SaveManager.instance.SaveAll(pointNumber);
             onSave(pointNumber);

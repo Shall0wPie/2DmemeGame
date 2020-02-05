@@ -76,6 +76,36 @@ public class WolkCombat : EnemyCombat
         }
         yield return null;
     }
+    public override IEnumerator Kill()
+    {
+        stats.isAlive = false;
+        // Plays anim
+        animControl.PlayDeath();
+
+        LootTable lootTable = GetComponent<LootTable>();
+        if (lootTable != null)
+        {
+            lootTable.SpawnLoot();
+        }
+
+        // Sets body collider as Triggers to avoid any collisions
+        stats.bodyCollider.isTrigger = true;
+        // Disables Follow script
+        EnemyControl control = GetComponentInParent<EnemyControl>();
+        if (control != null)
+            control.enabled = false;
+        
+        GetComponentInParent<DialogueControl>().TriggerDialogue("Imposible");
+
+        // The rest of function will continue as deathDuration passes
+        yield return new WaitForSeconds(stats.deathDuration);
+
+        // Respawns Enemy in its Spawn Point
+        if (stats.allowRespawn)
+            Respawn();
+        else
+            Destroy(transform.parent.gameObject);
+    }
 
     private void OnDrawGizmos()
     {

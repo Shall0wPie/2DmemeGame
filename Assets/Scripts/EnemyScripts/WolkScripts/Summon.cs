@@ -10,23 +10,25 @@ public class Summon : StateMachineBehaviour
     private Animator anim;
     private WolkCombat combat;
     private Transform[] points;
+    private DialogueControl dialogue;
 
 
     private void OnEnable()
     {
         combat = GameObject.Find("Wolk").GetComponentInChildren<WolkCombat>();
         anim = GameObject.Find("Wolk").GetComponentInChildren<Animator>();
+        dialogue = GameObject.Find("Wolk").GetComponent<DialogueControl>();
         points = combat.dawgPoints;
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (anim.GetInteger("Stage") == 0)
+        if (anim.GetInteger("Stage") == 1)
             combat.StartCoroutine(FirstPattern());
-        if (anim.GetInteger("Stage") == 2)
+        if (anim.GetInteger("Stage") == 3)
             combat.StartCoroutine(SecondPattern());
-        if (anim.GetInteger("Stage") == 4)
+        if (anim.GetInteger("Stage") == 5)
             combat.StartCoroutine(PentaPattern());
     }
 
@@ -80,9 +82,10 @@ public class Summon : StateMachineBehaviour
         yield return new WaitForSeconds(waveDuration);
         combat.StartCoroutine(MakeWave(3, 4, waveDuration));
         yield return new WaitForSeconds(waveDuration + 2);
-        combat.GetComponentInParent<DialogueControl>().TriggerDialogue("AfterFirst");
+        
+        dialogue.TriggerDialogue("AfterFirst");
         anim.SetBool("IsCast", false);
-        anim.SetInteger("Stage", 1);
+        anim.SetInteger("Stage", 2);
     }
 
     private IEnumerator SecondPattern()
@@ -100,9 +103,10 @@ public class Summon : StateMachineBehaviour
         combat.StartCoroutine(MakeWave(0, 1, waveDuration));
         combat.StartCoroutine(MakeWave(1, 4, waveDuration));
         yield return new WaitForSeconds(waveDuration + 2);
-        combat.GetComponentInParent<DialogueControl>().TriggerDialogue("AfterSecond");
+        
+        dialogue.TriggerDialogue("AfterSecond");
         anim.SetBool("IsCast", false);
-        anim.SetInteger("Stage", 3);
+        anim.SetInteger("Stage", 4);
     }
 
     private IEnumerator PentaPattern()

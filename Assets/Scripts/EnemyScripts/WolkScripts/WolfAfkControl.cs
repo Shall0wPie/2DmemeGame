@@ -9,12 +9,14 @@ public class WolfAfkControl : StateMachineBehaviour
     private float jumpTimeStemp = 0;
     private Animator anim;
     private WolkCombat combat;
+    private DialogueControl dialogue;
 
 
     private void OnEnable()
     {
         combat = GameObject.Find("Wolk").GetComponentInChildren<WolkCombat>();
         anim = GameObject.Find("Wolk").GetComponentInChildren<Animator>();
+        dialogue = GameObject.Find("Wolk").GetComponent<DialogueControl>();
     }
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -26,17 +28,17 @@ public class WolfAfkControl : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (combat.GetHpInPercents() < 0.6 && anim.GetInteger("Stage") == 1)
+        if (combat.GetHpInPercents() < 0.6 && anim.GetInteger("Stage") == 2)
         {
             anim.SetBool("IsWolfed", false);
-            anim.SetInteger("Stage", 2);
+            anim.SetInteger("Stage", 3);
             combat.StartCoroutine(TpToBalcony(combat.tpPoints[0], "FirstWolfDefeat"));
             return;
         }
         
-        if (combat.GetHpInPercents() < 0.3 && anim.GetInteger("Stage") == 3)
+        if (combat.GetHpInPercents() < 0.3 && anim.GetInteger("Stage") == 4)
         {
-            anim.SetInteger("Stage", 5);
+            anim.SetInteger("Stage", 6);
             combat.StartCoroutine(TpToBalcony(combat.tpPoints[1], "SecondWolfDefeat"));
                 
             Rigidbody2D rb = combat.GetComponentInParent<Rigidbody2D>();
@@ -45,10 +47,9 @@ public class WolfAfkControl : StateMachineBehaviour
             return;
         }
 
-        if (anim.GetInteger("Stage") == 5 && !DialogManager.instance.isInDialogue)
+        if (anim.GetInteger("Stage") == 6 && !DialogManager.instance.isInDialogue)
         {
-            anim.SetInteger("Stage", 4);
-            //anim.SetBool("IsWolfed", false);
+            anim.SetInteger("Stage", 5);
             anim.SetBool("IsCast", true);
         }
         
@@ -68,10 +69,9 @@ public class WolfAfkControl : StateMachineBehaviour
 
     private IEnumerator TpToBalcony(Transform to,string dialogueName)
     {
-        combat.GetComponentInParent<DialogueControl>().TriggerDialogue(dialogueName);
+        dialogue.TriggerDialogue(dialogueName);
         while (DialogManager.instance.isInDialogue)
         {
-            Debug.Log("while");
             yield return null;
         }
 

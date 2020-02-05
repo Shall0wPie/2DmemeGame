@@ -45,6 +45,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e1d144573c9fbdd468ccecf6cae32579, type: 2}
   - {fileID: 11400000, guid: a1a8d2d6209ff8143a0f762c16051046, type: 2}
   - {fileID: 11400000, guid: 948f84696379647428558e1e84df4b35, type: 2}
+  - {fileID: 11400000, guid: f8058cf6848cd8b4b9cf7c565c511431, type: 2}
+  - {fileID: 11400000, guid: 9047cbad9c033984cbbb2a588c10a83a, type: 2}
+  - {fileID: 11400000, guid: 61083068c1f41374394b9c3a0eeef747, type: 2}
+  - {fileID: 11400000, guid: b532b7ab53b546c439430bb09c572f6b, type: 2}
+--- !u!114 &4106817259243526129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4129812838698162898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8119f519128b5ae4287032e82c4994e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9000726051438805914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,18 +74,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1893393900225467364}
---- !u!114 &4106817259243526129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4129812838698162898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8119f519128b5ae4287032e82c4994e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!70 &2543757325830892167
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -99,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animControl: {fileID: 1893393900225467364}
+  isInvincible: 1
   punchDmg: 25
   punchForce: {x: 0, y: 0}
   attackCooldown: 1
@@ -240,6 +245,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxHP
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: deathDuration
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6746139013946689077, guid: eefa64718390fd64e896d529e7c93cfc, type: 3}

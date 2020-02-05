@@ -5,28 +5,35 @@ using UnityEngine;
 
 public class WolkCheckPoint : MonoBehaviour
 {
+    private Animator wolkAnim;
+    
     private void Start()
     {
         CheckPoint.onSave += TriggerWolk;
+        wolkAnim = GetComponentInChildren<Animator>();
     }
 
-    public static void TriggerWolk(int pointNumber)
+    private void TriggerWolk(int pointNumber)
     {
-        Animator wolkAnim = GameObject.Find("Wolk").GetComponentInChildren<Animator>();
         switch (pointNumber)
         {
             case 0:
-                wolkAnim.SetInteger("Stage", -3);
+                wolkAnim.SetInteger("Stage", 40);
                 break;
             case 1:
-                wolkAnim.SetInteger("Stage", -2);
+                wolkAnim.SetInteger("Stage", 30);
                 break;
             case 2:
-                wolkAnim.SetInteger("Stage", -2);
+                wolkAnim.SetInteger("Stage", 20);
                 break;
             case 3:
-                wolkAnim.SetInteger("Stage", -1);
+                wolkAnim.SetInteger("Stage", 10);
                 break;
         }
+    }
+
+    private void OnDestroy()
+    {
+        CheckPoint.onSave -= TriggerWolk;
     }
 }
