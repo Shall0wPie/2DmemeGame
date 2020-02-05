@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Desaf\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Desaf\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_2DmemeGame.1018370975.00" t="ExcludeRecursive" />
+    <e p="D:\Unity Projects\2DmemeGame" t="IncludeRecursive">
+      <e p="2DmemeGame.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="BaseScripts" t="Include">
+            <e p="AuidioManger.cs" t="Include" />
+            <e p="DialogManager.cs" t="Include" />
+            <e p="Intreactable.cs" t="Include" />
+            <e p="Prefabs.cs" t="Include" />
+            <e p="SaveManager.cs" t="Include" />
+          </e>
+          <e p="DialogueSystem" t="Include">
+            <e p="Dialogue.cs" t="Include" />
+            <e p="DialogueControl.cs" t="Include" />
+          </e>
+          <e p="EnemyScripts" t="Include">
+            <e p="Abstract" t="Include">
+              <e p="EnemyCombat.cs" t="Include" />
+            </e>
+            <e p="DimaScripts" t="Include">
+              <e p="DimaCombat.cs" t="Include" />
+            </e>
+            <e p="EnemyAnimationControl.cs" t="Include" />
+            <e p="EnemyControl.cs" t="Include" />
+            <e p="EnemyStats.cs" t="Include" />
+            <e p="MaximScripts" t="Include">
+              <e p="MaximCombat.cs" t="Include" />
+            </e>
+            <e p="MoskvinScripts" t="Include">
+              <e p="MoskvinCombat.cs" t="Include" />
+              <e p="MoskvinControl.cs" t="Include" />
+            </e>
+            <e p="PashtetScripts" t="Include">
+              <e p="PashtetCombat.cs" t="Include" />
+            </e>
+            <e p="WolkScripts" t="Include">
+              <e p="Summon.cs" t="Include" />
+              <e p="WolfAfkControl.cs" t="Include" />
+              <e p="WolfJump.cs" t="Include" />
+              <e p="WolkAfkControl.cs" t="Include" />
+              <e p="WolkCombat.cs" t="Include" />
+              <e p="WolkControl.cs" t="Include" />
+            </e>
+          </e>
+          <e p="GameObjects" t="Include">
+            <e p="Projectiles" t="Include">
+              <e p="Projectile.cs" t="Include" />
+              <e p="ProjectileAnime.cs" t="Include" />
+              <e p="ProjectileTampon.cs" t="Include" />
+              <e p="ProjectileWolf.cs" t="Include" />
+            </e>
+            <e p="TrapTrigger.cs" t="Include" />
+          </e>
+          <e p="ItemSystem" t="Include">
+            <e p="Inventory.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="ItemInteraction.cs" t="Include" />
+            <e p="Items" t="Include">
+              <e p="DefaultItem.cs" t="Include" />
+              <e p="HealthPotion.cs" t="Include" />
+              <e p="SpellItem.cs" t="Include" />
+            </e>
+            <e p="Loot" t="Include">
+              <e p="Loot.cs" t="Include" />
+              <e p="LootTable.cs" t="Include" />
+            </e>
+            <e p="SlotUI.cs" t="Include" />
+          </e>
+          <e p="LevelLoader.cs" t="Include" />
+          <e p="MapScipts" t="Include">
+            <e p="CheckPoint.cs" t="Include" />
+            <e p="DoorOpen.cs" t="Include" />
+            <e p="FadePanel.cs" t="Include" />
+            <e p="MainCamera.cs" t="Include" />
+          </e>
+          <e p="NextLevelScript.cs" t="Include" />
+          <e p="Player Scripts" t="Include">
+            <e p="PlayerAnimationControl.cs" t="Include" />
+            <e p="PlayerCombat.cs" t="Include" />
+            <e p="PlayerControl.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerStats.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="EnemyHPBar.cs" t="Include" />
+            <e p="HPBarScript.cs" t="Include" />
+            <e p="menus" t="Include">
+              <e p="MainMenu.cs" t="Include" />
+              <e p="Titles.cs" t="Include" />
+              <e p="TitleScreen.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Examples &amp; Extras" t="Include">
+            <e p="Fonts" t="Include">
+              <e p="Anton OFL.txt" t="Include" />
+              <e p="Bangers - OFL.txt" t="Include" />
+              <e p="Oswald-Bold - OFL.txt" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Benchmark01.cs" t="Include" />
+              <e p="Benchmark01_UGUI.cs" t="Include" />
+              <e p="Benchmark02.cs" t="Include" />
+              <e p="Benchmark03.cs" t="Include" />
+              <e p="Benchmark04.cs" t="Include" />
+              <e p="CameraController.cs" t="Include" />
+              <e p="ChatController.cs" t="Include" />
+              <e p="EnvMapAnimator.cs" t="Include" />
+              <e p="ObjectSpin.cs" t="Include" />
+              <e p="ShaderPropAnimator.cs" t="Include" />
+              <e p="SimpleScript.cs" t="Include" />
+              <e p="SkewTextExample.cs" t="Include" />
+              <e p="TeleType.cs" t="Include" />
+              <e p="TextConsoleSimulator.cs" t="Include" />
+              <e p="TextMeshProFloatingText.cs" t="Include" />
+              <e p="TextMeshSpawner.cs" t="Include" />
+              <e p="TMP_DigitValidator.cs" t="Include" />
+              <e p="TMP_ExampleScript_01.cs" t="Include" />
+              <e p="TMP_FrameRateCounter.cs" t="Include" />
+              <e p="TMP_PhoneNumberValidator.cs" t="Include" />
+              <e p="TMP_TextEventCheck.cs" t="Include" />
+              <e p="TMP_TextEventHandler.cs" t="Include" />
+              <e p="TMP_TextInfoDebugTool.cs" t="Include" />
+              <e p="TMP_TextSelector_A.cs" t="Include" />
+              <e p="TMP_TextSelector_B.cs" t="Include" />
+              <e p="TMP_UiFrameRateCounter.cs" t="Include" />
+              <e p="TMPro_InstructionOverlay.cs" t="Include" />
+              <e p="VertexColorCycler.cs" t="Include" />
+              <e p="VertexJitter.cs" t="Include" />
+              <e p="VertexShakeA.cs" t="Include" />
+              <e p="VertexShakeB.cs" t="Include" />
+              <e p="VertexZoom.cs" t="Include" />
+              <e p="WarpTextExample.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="WolfFly.cs" t="Include" />
+        <e p="WolfSlide.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

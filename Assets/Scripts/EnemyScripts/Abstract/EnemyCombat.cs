@@ -130,4 +130,9 @@ public abstract class EnemyCombat : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+
+    public float GetHpInPercents()
+    {
+        return hp / stats.maxHP;
+    }
 }
