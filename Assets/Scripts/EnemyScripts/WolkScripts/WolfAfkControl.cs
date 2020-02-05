@@ -48,7 +48,7 @@ public class WolfAfkControl : StateMachineBehaviour
         if (anim.GetInteger("Stage") == 5 && !DialogManager.instance.isInDialogue)
         {
             anim.SetInteger("Stage", 4);
-            anim.SetBool("IsWolfed", false);
+            //anim.SetBool("IsWolfed", false);
             anim.SetBool("IsCast", true);
         }
         

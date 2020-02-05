@@ -42,8 +42,11 @@
             <e p="WolkScripts" t="Include">
               <e p="Summon.cs" t="Include" />
               <e p="WolfAfkControl.cs" t="Include" />
+              <e p="WolfFly.cs" t="Include" />
               <e p="WolfJump.cs" t="Include" />
+              <e p="WolfSlide.cs" t="Include" />
               <e p="WolkAfkControl.cs" t="Include" />
+              <e p="WolkCheckPoint.cs" t="Include" />
               <e p="WolkCombat.cs" t="Include" />
               <e p="WolkControl.cs" t="Include" />
             </e>
@@ -167,8 +170,6 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="WolfFly.cs" t="Include" />
-        <e p="WolfSlide.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />

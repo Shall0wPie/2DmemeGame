@@ -23,6 +23,16 @@ public class WolkAfkControl : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        switch (anim.GetInteger("Stage"))
+        {
+            case -3:
+                break;
+            case -2:
+                break;
+            case -1:
+                break;
+        }
+        
         if (anim.GetInteger("Stage") == 0)
         {
             anim.SetBool("IsCast", true);
