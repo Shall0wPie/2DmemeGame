@@ -1,0 +1,6231 @@
+fileFormatVersion: 2
+guid: 6a124dc163b74a44fbe8de053c78b647
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_0"
+    21300002: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_1"
+    21300004: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_2"
+    21300006: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_3"
+    21300008: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_4"
+    21300010: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_5"
+    21300012: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_6"
+    21300014: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_7"
+    21300016: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_8"
+    21300018: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_9"
+    21300020: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_10"
+    21300022: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_11"
+    21300024: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_12"
+    21300026: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_13"
+    21300028: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_14"
+    21300030: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_15"
+    21300032: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_16"
+    21300034: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_17"
+    21300036: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_18"
+    21300038: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_19"
+    21300040: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_20"
+    21300042: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_21"
+    21300044: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_22"
+    21300046: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_23"
+    21300048: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_24"
+    21300050: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_25"
+    21300052: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_26"
+    21300054: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_27"
+    21300056: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_28"
+    21300058: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_29"
+    21300060: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_30"
+    21300062: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_31"
+    21300064: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_32"
+    21300066: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_33"
+    21300068: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_34"
+    21300070: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_35"
+    21300072: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_36"
+    21300074: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_37"
+    21300076: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_38"
+    21300078: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_39"
+    21300080: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_40"
+    21300082: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_41"
+    21300084: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_42"
+    21300086: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_43"
+    21300088: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_44"
+    21300090: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_45"
+    21300092: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_46"
+    21300094: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_47"
+    21300096: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_48"
+    21300098: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_49"
+    21300100: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_50"
+    21300102: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_51"
+    21300104: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_52"
+    21300106: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_53"
+    21300108: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_54"
+    21300110: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_55"
+    21300112: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_56"
+    21300114: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_57"
+    21300116: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_58"
+    21300118: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_59"
+    21300120: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_60"
+    21300122: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_61"
+    21300124: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_62"
+    21300126: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_63"
+    21300128: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_64"
+    21300130: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_65"
+    21300132: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_66"
+    21300134: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_67"
+    21300136: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_68"
+    21300138: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_69"
+    21300140: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_70"
+    21300142: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_71"
+    21300144: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_72"
+    21300146: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_73"
+    21300148: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_74"
+    21300150: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_75"
+    21300152: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_76"
+    21300154: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_77"
+    21300156: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_78"
+    21300158: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_79"
+    21300160: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_80"
+    21300162: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_81"
+    21300164: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_82"
+    21300166: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_83"
+    21300168: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_84"
+    21300170: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_85"
+    21300172: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_86"
+    21300174: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_87"
+    21300176: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_88"
+    21300178: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_89"
+    21300180: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_90"
+    21300182: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_91"
+    21300184: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_92"
+    21300186: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_93"
+    21300188: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_94"
+    21300190: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_95"
+    21300192: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_96"
+    21300194: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_97"
+    21300196: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_98"
+    21300198: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_99"
+    21300200: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_100"
+    21300202: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_101"
+    21300204: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_102"
+    21300206: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_103"
+    21300208: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_104"
+    21300210: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_105"
+    21300212: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_106"
+    21300214: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_107"
+    21300216: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_108"
+    21300218: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_109"
+    21300220: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_110"
+    21300222: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_111"
+    21300224: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_112"
+    21300226: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_113"
+    21300228: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_114"
+    21300230: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_115"
+    21300232: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_116"
+    21300234: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_117"
+    21300236: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_118"
+    21300238: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_119"
+    21300240: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_120"
+    21300242: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_121"
+    21300244: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_122"
+    21300246: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_123"
+    21300248: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_124"
+    21300250: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_125"
+    21300252: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_126"
+    21300254: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_127"
+    21300256: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_128"
+    21300258: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_129"
+    21300260: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_130"
+    21300262: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_131"
+    21300264: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_132"
+    21300266: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_133"
+    21300268: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_134"
+    21300270: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_135"
+    21300272: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_136"
+    21300274: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_137"
+    21300276: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_138"
+    21300278: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_139"
+    21300280: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_140"
+    21300282: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_141"
+    21300284: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_142"
+    21300286: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_143"
+    21300288: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_144"
+    21300290: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_145"
+    21300292: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_146"
+    21300294: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_147"
+    21300296: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_148"
+    21300298: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_149"
+    21300300: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_150"
+    21300302: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_151"
+    21300304: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_152"
+    21300306: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_153"
+    21300308: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_154"
+    21300310: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_155"
+    21300312: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_156"
+    21300314: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_157"
+    21300316: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_158"
+    21300318: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_159"
+    21300320: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_160"
+    21300322: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_161"
+    21300324: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_162"
+    21300326: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_163"
+    21300328: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_164"
+    21300330: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_165"
+    21300332: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_166"
+    21300334: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_167"
+    21300336: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_168"
+    21300338: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_169"
+    21300340: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_170"
+    21300342: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_171"
+    21300344: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_172"
+    21300346: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_173"
+    21300348: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_174"
+    21300350: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_175"
+    21300352: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_176"
+    21300354: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_177"
+    21300356: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_178"
+    21300358: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_179"
+    21300360: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_180"
+    21300362: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_181"
+    21300364: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_182"
+    21300366: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_183"
+    21300368: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_184"
+    21300370: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_185"
+    21300372: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_186"
+    21300374: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_187"
+    21300376: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_188"
+    21300378: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_189"
+    21300380: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_190"
+    21300382: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_191"
+    21300384: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_192"
+    21300386: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_193"
+    21300388: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_194"
+    21300390: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_195"
+    21300392: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_196"
+    21300394: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_197"
+    21300396: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_198"
+    21300398: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_199"
+    21300400: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_200"
+    21300402: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_201"
+    21300404: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_202"
+    21300406: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_203"
+    21300408: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_204"
+    21300410: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_205"
+    21300412: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_206"
+    21300414: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_207"
+    21300416: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_208"
+    21300418: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_209"
+    21300420: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_210"
+    21300422: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_211"
+    21300424: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_212"
+    21300426: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_213"
+    21300428: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_214"
+    21300430: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_215"
+    21300432: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_216"
+    21300434: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_217"
+    21300436: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_218"
+    21300438: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_219"
+    21300440: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_220"
+    21300442: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_221"
+    21300444: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_222"
+    21300446: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_223"
+    21300448: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_224"
+    21300450: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_225"
+    21300452: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_226"
+    21300454: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_227"
+    21300456: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_228"
+    21300458: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_229"
+    21300460: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_230"
+    21300462: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_231"
+    21300464: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_232"
+    21300466: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_233"
+    21300468: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_234"
+    21300470: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_235"
+    21300472: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_236"
+    21300474: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_237"
+    21300476: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_238"
+    21300478: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_239"
+    21300480: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_240"
+    21300482: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_241"
+    21300484: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_242"
+    21300486: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_243"
+    21300488: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_244"
+    21300490: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_245"
+    21300492: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_246"
+    21300494: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_247"
+    21300496: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_248"
+    21300498: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_249"
+    21300500: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_250"
+    21300502: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_251"
+    21300504: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_252"
+    21300506: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_253"
+    21300508: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_254"
+    21300510: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_255"
+    21300512: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_256"
+    21300514: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_257"
+    21300516: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_258"
+    21300518: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_259"
+    21300520: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_260"
+    21300522: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_261"
+    21300524: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_262"
+    21300526: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_263"
+    21300528: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_264"
+    21300530: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_265"
+    21300532: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_266"
+    21300534: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_267"
+    21300536: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_268"
+    21300538: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_269"
+    21300540: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_270"
+    21300542: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_271"
+    21300544: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_272"
+    21300546: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_273"
+    21300548: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_274"
+    21300550: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_275"
+    21300552: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_276"
+    21300554: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_277"
+    21300556: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_278"
+    21300558: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_279"
+    21300560: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_280"
+    21300562: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_281"
+    21300564: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_282"
+    21300566: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_283"
+    21300568: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_284"
+    21300570: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_285"
+    21300572: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_286"
+    21300574: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_287"
+    21300576: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_288"
+    21300578: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_289"
+    21300580: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_290"
+    21300582: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_291"
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_0"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1db0aa27018ff94aa5fde5c08c46ac7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_1"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9baf6e2cb84183849b4b328a3fb240b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_2"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b1ad74968619d49a9aa6fb5ad657b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_3"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707fa6e21f69623468653700528a4309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_4"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9204a3e72ef450e4b801e9c8bb7ddf17
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_5"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3002f108638d66a48aceaec3a0e3e6e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_6"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31e2b6e5eb7e3d4185f1a7c2fe1454e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_7"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab006947d65ada45a10cd9b268613f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_8"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9734bd20e1821a41baa1528ed4e0f5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_9"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa49b7ff8898347418690bac40b63707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_10"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4845fabba8595c043b4172ca6a3b6b5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_11"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c4e27ae8d499942b21187d786249fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_12"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39119d402977b33428f9338b2847bfa6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_13"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312d0cd70cc4a8e4e888a8686b86edd3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_14"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f4e2407afc88b4c88739527d29a0c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_15"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282b8faf73e42ad469f94a95b8157d43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_16"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360442f82e76b9e4a8d4b4c555cef1b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_17"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f179a93a4acb4ef4fa884ac83068f9a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_18"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0087ebc6934d396418fa82aa3cc691a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_19"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2793a1efe1abae468eef69455c75cbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_20"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b051626a76db8d3409ae32fbea95d439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_21"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afe7720365a4e043821cbed3f092b3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_22"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc0833be89cfd14fa286b6e7a0e813f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_23"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678342e1973ef10448d8e6400434fdc3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_24"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c696ef164dffb4294a9e43731e8049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_25"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f3d99136c94714f8330c14badd160e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_26"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4880c88cd54e9459c97aa4bca5eba4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_27"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7db174eb00d794182d1088336e931b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_28"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda75b8ab90e31340869d220c73874d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_29"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e10677adf6308488c1f74b63744dd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_30"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18b90c396de8044088bab7d610d65dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_31"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f85e85e7f626848ad01327cf003f0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_32"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0727bbe8107dd40a5aa51a85e05bac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_33"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396314e2706ddae43a1c0ff523e7d0d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_34"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64ab8c108048ea4994ac2884c4aae73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_35"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e133f5588b92363488777ab85e690802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_36"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04afcd290ea6dd749b2834c365c1a7d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_37"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe19e94537db0042be7cb397e3394d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_38"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ab3058e3dd5c04d97915b2f828cc69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_39"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e195ce70e35ab4f8162011d9a6533c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_40"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f685682bfdb8a1a49b0a8bb678979472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_41"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b6c619f4270b24c88beb0c713239de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_42"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734aeab0e14dd5741a23755af8883711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_43"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7023a47681e67b84f8ca69b68497e23e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_44"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e92988f4b63d31468b59ab1b2df1584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_45"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85942112ee75734bae915bcbfa7d1ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_46"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0e98f5b14bade4e9da15e268412e7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_47"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1b1a74cec912a4c8b36ab5c72d3904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_48"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831371db6eaa247449ccfa8d16b9bb6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_49"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27c03f0169bd9e4caf7629bfc96e021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_50"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c180eaae8f97024d9f4826ee9491db9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_51"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d75c8bf7dc8844e80d3b1eb3aa626e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_52"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc336c3c7681b55448f629cdca10615f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_53"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea06a024aa1ace4595f02cd523b7c85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_54"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c2f262ac42eca459458a233c55a149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_55"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb29d4f88b9f7b419c7857373ba432d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_56"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a3a4f36457ad442a7354b398a2e07c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_57"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e4ecffaa3d51241b3c6eaf15aa53e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_58"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93eb39f8591c86d469b7163e9e54dad7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_59"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1404537409fe8ce4f85d6e0d2edd7ada
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_60"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c9a970f06ffe3408d6331f8efd970a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_61"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa501ecb44162247ba70468ed30aa82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_62"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5303a21d2e48e4293087d8f590d9c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_63"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd9091f1d1c7044aae453726760bac7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_64"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72548c897e4ae2c49822cf90c26ed525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_65"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ccc07545532c8e4f9fb4a9e91d55737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_66"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45bb112f2e920944a0ef4600c353bc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_67"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd68b42b63b52c840ac21e173fe450d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_68"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf53dfe07c57ea458b916d3ec1cf8b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_69"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55ce02b704636749bec1d3accf91b72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_70"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedefa0562ad95e46aacda06dcedfdc4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_71"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d640633374f7741a48667aa801863d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_72"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc73eaf0ccfba754c95a1f4f2bfaba96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_73"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86910739d9018b748b5e52447d066bce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_74"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659fc8693d3d85746a60cb7b36cef798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_75"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6ad0c8481216d4a9bfb8900a38803f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_76"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163121b6f1ea09d43b0a19f1a17e8451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_77"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd259949c4630614e86dc590181675e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_78"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ae1e9808517fc47a28d687b9ebe619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_79"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0722238e5d715964c8bf7bfd504f0fa1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_80"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c9a9391f9f91148816f016cdb64928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_81"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec60b4585f32674f93d015dfcdab5ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_82"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b6c482d4594e34283d23fc69970800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_83"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76e18f315f877d4f84999eb045da9e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_84"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4246cbe5b626f0945a84f99c8ec02654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_85"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da5f949464cff84e8757af32941aac5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_86"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b523a08a032fd4d855284a43323143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_87"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69bbf749c9132184892555c131b892b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_88"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddfde26b0b06384b8bd39937e956192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_89"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a7ccf7fa2c25741a991edcb0e41a19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_90"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338d31219969d1a42a0769dc946bbf0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_91"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a37908f0b94d3b43b790003ec899bb8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_92"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d456ef6bd5821d44a2d66ded578d924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_93"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6f2441263d5324ca91e8aed8f74e0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_94"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0aebcdef24abc849b03e98b8d492301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_95"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a67f679147ac34bac6a88790347558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_96"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce5f80424276c5479dfd3f27d335859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_97"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb0bd845bea0b24c8bc7d1b7bf8cc9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_98"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa2abdc511a8374b899ed956a23cc20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_99"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629ec941a882bcb479278c1abbf2d02e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_100"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8819c39ea67369e46bd22b6d4f7daf22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_101"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5e9ff9af0f87c478c18fc21c7c46f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_102"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f77131eb7ec94e44b2337c04a959708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_103"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a533efb79d3a2740833a76042798c97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_104"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d239791aba0d4409ea610f2ccd9be3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_105"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e124ba7a19e8b44f9ffcf1daeb57e15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_106"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2148da4bf6342b942b1d9c5465c68d2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_107"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889e8719f9c2e044c95007a5faf7d40f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_108"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778265d573ae65244a3938a4ed0b53b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_109"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215c26b03ab863944ab37fb1efe7c0e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_110"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff2f6d8aaa92bc40ad00eee7ff34add
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_111"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767c02abee6facf45b4bef53cee66971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_112"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c1aefe810678e499fa4e80d1e17a8b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_113"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f270bc434a9b124a9d45823c7b69822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_114"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45bde22eae0913499cfbbfc8b9c97e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_115"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a37ef82bc0645945b3b763190a36a35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_116"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c25d953b3db334493a5240fc9c22e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_117"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e645fedc96a5f3340bc18fc985482e45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_118"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcd05ae9eeeaff4a831ff8f2678be5d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_119"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ff329f0bffc20419598d7c83b08876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_120"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1689d401778f54ca5c9cdc7339ca35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_121"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0dee0f230ca37941a0dcf64e609ef92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_122"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6c24d6a3cc2014eae5e6f5c1316b58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_123"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c1d10d8fc65494994a195a3b4780c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_124"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a47d430f548ab44a0576a05a1d3af2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_125"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934fb50b521317b47a7719c7ed34e1fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_126"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae5bd0e8e4860348863ffa08c4bb256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_127"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166ddd56a61d8a049a4e800093f20951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_128"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe9bbca3d8cac140898578ed072fcf8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_129"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19bb09297777124ca2c17d783e1e095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_130"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a4db25bf14454458786e17f889bb8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_131"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be98780d2ad55c24daa78b90bc660095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_132"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6869f950d708248abb657c883ff519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_133"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef487bf4967c9d546bf7dfee3a2b1620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_134"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e1488bdb5f28c4cb54b4aaf4f38c91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_135"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff01063cdf5255a4bb48ec8ae550234e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_136"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f99237447c38846aa56b698d928f1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_137"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53dc3889517a614aa4abf8922bf49f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_138"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba942c0f8cab47f48b05f786137d9307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_139"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8046b1bf377906441a01db2cd9359187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_140"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa14dcb90ea275b44a16165dfeffec02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_141"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07903dcf2b8269f448c42e647a165433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_142"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f33755c5228c4e45a4653f0432a380e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_143"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94243d1f1642dbc4fa1500632cfcbf5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_144"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0709fae97b4df13498bedd35d4d42dc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_145"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da0bcb04c67d1f4c98f6a5df5644584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_146"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2218ba65c6d765d47a015859efee7f21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_147"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82518301fae44924f8c0e08ac4f8952a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_148"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79feaabeb6617341b5401a3f68899fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_149"
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240ec5c5d5f33f645bd5bfb40e8a1e16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_150"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51446fa53200fdf4681a963c34a846e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_151"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90458b8469d800346a116b732ce2b6ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_152"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391630610f1df2b42916e02039595b1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_153"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14157c067b0b85d4fa7aa6f8c3fa9d78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_154"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15bc0e39b8ce2646875326f26c26bc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_155"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d43ad55629336543b3914b2171b0efc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_156"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4346f303f898ad64cb1014267143d896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_157"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3d99a1809e27048b49f1838c785252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_158"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8b7be63f19b8f479761a1abf46aee2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_159"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757f4257a65bb2f41a752c0e7f322205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_160"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fde647bc37f6bc4a81f4bb854636cb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_161"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c82ecfcc9694a748803905ce2dda32f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_162"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85318f7cd5da4254589e4f76bb9d367f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_163"
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1432d35493c04448bfda4d5c6331d9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_164"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491e71be78c656b4c98d30c745d3ddf9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_165"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5679650fa178a6b4391374402f04e38f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_166"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f45ef26d187ae46b7c14189e008824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_167"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ee11cf8660aa347b74ceaa2ba44887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_168"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427e6a42e1570614fa9e71861efbbe2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_169"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7286f49613eca0439a7e4edd552c7b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_170"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad458f04caaa904c9389e7063f8b5fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_171"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1589e250028614c8ffdede69eb0b90
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_172"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e35d2a0654e23644b17bf12fd2df13c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_173"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d44a5e89564504c97aa36905e16520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_174"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fc8831f72f9c6498798224afcd7636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_175"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02db31a7292175c4aa75c5b7e856c93d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_176"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4a21cf351c8e24b81261352e3724a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_177"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8dcd66a0eeba8144848fabd97b84cb8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_178"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe13362e2ca8f046bdd292b0acb2985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_179"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae70e432008a14b499f83a5ab72b64da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_180"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efa1b1f78ed19745a3a6f3c62a49432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_181"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f188e40b875dddf45897d6eb037efce0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_182"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b4c0ac96445104da7bc545e59a2335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_183"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9bcefcc41d919419e1a0408391b41e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_184"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1986cd3a19d69a44cbcee5933156fa45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_185"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b762fec309c7e4b938560ecdc11742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_186"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1afb20f5c692e4089c5c458cbd33b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_187"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a1f03b3ba089a4aaee334a42071255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_188"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3838e2265f57ee34db810e8ccae4e221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_189"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b657b5a0d1ce2774280f53714ebeb6d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_190"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8f7ef7bc4201243bdcce44cd70fc5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_191"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb75319bf50674f4db4f30291c02665d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_192"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e50af575e9b96d4f8ac3bf035d2c3de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_193"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed65208a8a902140a4416efacea7910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_194"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99d4a85948c7a044a53666e151478b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_195"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87acfcacaa64c0247a2e36193622c284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_196"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94add27bc92febf439f5773b8c83491f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_197"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8b502bc2dda034e9b348ae8d4859ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_198"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e03078daa5e6040897b002a402487f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_199"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0b0ddcf6294cf4496232795371a225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_200"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3139a8c83464aad41b96604c859e883e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_201"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b0d2448722dac47a57424aa3e0cca8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_202"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7b0f2cda63b484f8e70fee580c7f08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_203"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26c3ca2c572d8f438b905e451cf1d20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_204"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04864a364463a3b4b90286d71ae796a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_205"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfaea8b31c924a34db4b448c0bc1aa3e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_206"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b607d6f88a8af864eaffff35fcc0176b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_207"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3038597b2f6aa9419fa6c1c0faeb5b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_208"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50c3588300f27f4c801e6a5f4878fe0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_209"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4d2bbeaf45d444f86f8b028f145f0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_210"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce23b8a04cf2a94fb48d43446f28c2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_211"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95fb2d0a087985448b78d45f22c4192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_212"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58171cf22654dd4fa63948e2d029dc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_213"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7396a592ffa7bc944aadc36d860bc85b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_214"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0edc78b9f8f7d4189711aaedc93340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_215"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686ac158c87fd5f46a5a1f1d7bceec85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_216"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b59f100dfcaf44d832483bed2ddacb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_217"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8781b65f4b25964794614fc7666c479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_218"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f58fd47ef17754086af2b20e1af77f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_219"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd95d0e1152b53540b5feccb3e19b7ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_220"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c310e75e658704095c99c3e5bbf67e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_221"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed95772c9135374ca73ffeff9582492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_222"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b569a976ce238f4e8b7d104004e22b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_223"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: befc005f6f28f654ab3d0e0b1aaf8ea9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_224"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4545790338ee4874f9d11bd40ea1067d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_225"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a94eeaaa24cabf45b25d87aecb5f4e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_226"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026b79609755821428e3ddffb67896ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_227"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7d86ce6751c42408520ee424326b73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_228"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d22c2e4a285fda49a27bbca8f177a88
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_229"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dabbb7fe86fbc32438a46fed4ba17042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_230"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002d5715fa0073a4c8b91ab6e94dd4f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_231"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a865c39ca87844a8314d1692bfebdd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_232"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9079d08ad4890b4aaa4e076cedf9545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_233"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f840225937cebd14aa7bf9716eda60e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_234"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b68e785e566b744cac82e6353571cc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_235"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2659be433a7e8294f81f681d2c65840b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_236"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ce0e2fb9924584883a2427eec2105c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_237"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53e2284670266e48a2df8532846930f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_238"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1b9996e24e32646b53b888a66485ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_239"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83846d57200eda940a4e45b16546365f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_240"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d215c99913b3fa249830b1e416f10a58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_241"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65fd4d32d046ed4e8c198e41762eef4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_242"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8883ad82c61bc47aca20babbfd8e02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_243"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd555685206d2c74a92f1b5eaa0de3ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_244"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae42f3c6250f3b54488d82836a39214a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_245"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a4ece1542aa2f4ba31c7bb96b19397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_246"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882d9ab6e7df6b24f879741ee0ee17c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_247"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceda4db1f8ea2674881ada759dd8c7fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_248"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0826d996457702940a3a74ebe2cf296e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_249"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067d252cf91605e419d5f8fbf2b16a1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_250"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe341f7db3214d48b0b9ec3e5674d3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_251"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356bb189f334bb54fab73d72fd52f31a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_252"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a6ced2b5b305245a1918f1d06060a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_253"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95502b39d7f50d48ba64ece38892989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_254"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbc4d16e8a17664ca006d4a76b9dbfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_255"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c976fb078e2124db512685c1a46b39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_256"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac118af3ae12384aa863e2284428820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_257"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6da44f3d7e3ea84fbf776788f862c3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_258"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2412b634f47c9754398062e052d07814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_259"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ca5fc582789b14fae3af4bcde0fb5d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_260"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd93d34f7e0f3724bb6423ff96ed4778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_261"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8462b6986ffee4b96faedd1564ea94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_262"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ffee1fd1ac0fc4799c19e0f0c816ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_263"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac046c5556139d4ca0db1472c0a5048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_264"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0996175db979f07498effb71632d5a8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_265"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13707cf6bb05d9946ac987a65d8e3c65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_266"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e735d4930646b54babf648c923726bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_267"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe25903d7dbb949498cf80fe437eccf7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_268"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44d1f41d50faf7498cc84a61917c976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_269"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39e5b2aa860aa746837b0a40b790918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_270"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37faaaa59872ae4a9c2cd8b658a3f6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_271"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0df4b76a0d3ea4faa3b9bdb701835a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_272"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adaa64cdbf8f284e9ad56f4620f4400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_273"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010da6f32284d2e40a046fd6a19db439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_274"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fbac5dd8cbd884dafec90e0cba5ec1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_275"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f11d4639a67ab40b2dccb17a438c28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_276"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0295cfece3dad749a0b837a640c37d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_277"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724ec531c3d87404494bb4c6b730d774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_278"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fd43044954e564493996cb165ef4de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_279"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40dd97d6a932bb247b0a91f9ec82d044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_280"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cacd01bb8605264b916f168e0fdd55b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_281"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d51557282e0031418aeafe8ced1082c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_282"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab96f7f9b2b09349884e8dce21596af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_283"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45a573ac04b60f4facb3e534446bc57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_284"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6112e6a2cf5ac41863d8bd364ad6a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_285"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d6e8f1ef257e54d9e3469ce25a5f78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_286"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0dfb61e98fca841b35b771934769fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_287"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8217a0a4f284a2744aebca8099b90bb7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_288"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97731b05d1b4a24e82a2b9a9ea08c9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_289"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd86afa08a8769941add942141ff87be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_290"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d239ad511da6b241aef306123fad895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "oppcastle-tiles \u2014 \u043A\u043E\u043F\u0438\u044F_291"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b0c4d3b0f18a744a5d3f57b86ac5e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 926614d6fb6b4c540af100de5b5995df
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
