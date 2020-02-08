@@ -53,7 +53,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.5
   m_GravityScale: 8
   m_Material: {fileID: 6200000, guid: eca5b9a44b8ca4f4996daae3b9087a02, type: 2}
@@ -74,12 +74,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpCooldown: 0.6
-  runSpeed: 1000
+  runSpeed: 1100
   jumpForce: 41
   groundLayer:
     serializedVersion: 2
     m_Bits: 8448
   groundCollider: {fileID: 517518145887241092}
+  rayLength: 4
 --- !u!114 &1335629947481452081
 MonoBehaviour:
   m_ObjectHideFlags: 0
