@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -34,6 +35,8 @@ public class PlayerControl : MonoBehaviour
 
         if (!DialogManager.instance.isInDialogue)
         {
+            horizontalMove = Input.GetAxisRaw("Horizontal");
+
             if (jumpTimeStamp <= Time.time && Input.GetButton("Jump") && isOnGround)
             {
                 movement.Jump();
@@ -62,11 +65,14 @@ public class PlayerControl : MonoBehaviour
                 Inventory.instance.SelectSlot(selector);
             }
 
-
             if (Input.GetKeyDown(KeyCode.G))
                 Inventory.instance.DropItem();
             if (Input.GetKeyDown(KeyCode.Q))
                 Inventory.instance.UseItem();
+        }
+        else
+        {
+            horizontalMove = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -74,16 +80,19 @@ public class PlayerControl : MonoBehaviour
             selector = 0;
             Inventory.instance.SelectSlot(selector);
         }
+
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             selector = 1;
             Inventory.instance.SelectSlot(selector);
         }
+
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             selector = 2;
             Inventory.instance.SelectSlot(selector);
         }
+
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             selector = 3;
@@ -105,11 +114,7 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!DialogManager.instance.isInDialogue)
-        {
-            horizontalMove = Input.GetAxisRaw("Horizontal");
-            movement.Move(horizontalMove * Time.fixedDeltaTime);
-        }
+        movement.Move(horizontalMove * Time.fixedDeltaTime);
     }
 
     void AnimateMove()

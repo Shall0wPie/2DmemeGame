@@ -73,13 +73,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376252ccc13053045a50fdcf081736e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 20
+  jumpCooldown: 0.6
+  runSpeed: 1000
   jumpForce: 41
   groundLayer:
     serializedVersion: 2
     m_Bits: 8448
   groundCollider: {fileID: 517518145887241092}
-  jumpCooldown: 0.6
 --- !u!114 &1335629947481452081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 4.5}
+  m_Size: {x: 2.1, y: 4.5}
   m_EdgeRadius: 0
 --- !u!61 &517518145887241092
 BoxCollider2D:
@@ -163,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.2}
+  m_Size: {x: 2, y: 0.62}
   m_EdgeRadius: 0
 --- !u!114 &2194979863235661590
 MonoBehaviour:
@@ -438,6 +438,7 @@ MonoBehaviour:
   punchForce: 40
   punchDmg: 20
   punchCooldown: 0.35
+  isInvincible: 0
   hp: 0
   PlayerAnim: {fileID: 6820982579937317026}
 --- !u!61 &6987354769803948042

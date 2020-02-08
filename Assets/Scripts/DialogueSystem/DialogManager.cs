@@ -26,12 +26,12 @@ public class DialogManager : MonoBehaviour
 
     #endregion
 
+    public bool isInDialogue { get; private set; }
     public Text nameText;
     public Text dialogueText;
-
     public Animator anim;
 
-    public bool isInDialogue { get; private set; }
+    private bool isControllEnabled = true;
     private bool isTyping = false;
     private string currentSentence;
     private PlayerStats playerStats;
@@ -48,7 +48,7 @@ public class DialogManager : MonoBehaviour
         if (playerStats == null)
             playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
+        if (isControllEnabled && (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1")))
             DisplayNextSentence();
 
         if (!playerStats.isAlive && isInDialogue)
@@ -111,10 +111,9 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator DisableControl()
     {
-        PlayerControl playerControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>();
-        playerControl.enabled = false;
+        isControllEnabled = false;
         yield return new WaitForSeconds(0.8f);
-        playerControl.enabled = true;
+        isControllEnabled = true;
     }
 
     void StopDialogue()
@@ -124,6 +123,5 @@ public class DialogManager : MonoBehaviour
         StopAllCoroutines();
         isTyping = false;
         GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerCombat>().isInvincible = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>().enabled = true;
     }
 }
