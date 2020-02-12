@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 public class InventoryCell : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
+    public event Action Ejecting;
+
     [SerializeField] private Text _nameField;
     [SerializeField] private Image _iconField;
 
@@ -33,9 +36,22 @@ public class InventoryCell : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (In((RectTransform)_originalParent))
+            InsertInGrid();
+        else
+            Eject();
+    }
+
+    private void Eject()
+    {
+        Ejecting?.Invoke();
+    }
+
+    private void InsertInGrid()
+    {
         int closestIndex = 0;
-        
-        for(int i = 0; i < _originalParent.transform.childCount; i++)
+
+        for (int i = 0; i < _originalParent.transform.childCount; i++)
         {
             if (Vector3.Distance(transform.position, _originalParent.GetChild(i).position) <
                 Vector3.Distance(transform.position, _originalParent.GetChild(closestIndex).position))
@@ -46,6 +62,11 @@ public class InventoryCell : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
         transform.parent = _originalParent;
         transform.SetSiblingIndex(closestIndex);
+    }
+
+    private bool In(RectTransform originalParent)
+    {
+        return originalParent.rect.Contains(transform.position);
     }
 }
 
