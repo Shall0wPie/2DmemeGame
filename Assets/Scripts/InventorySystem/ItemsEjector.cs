@@ -5,14 +5,17 @@ using UnityEngine;
 
 
 
-    class ItemsEjector : MonoBehaviour
+    public class ItemsEjector : MonoBehaviour
     {
     [SerializeField] private ItemsObjectPool _pool;
     [SerializeField] private float _range;
-    [SerializeField] private PolygonCollider2D _ground;
+    [SerializeField] private CompositeCollider2D _ground;
 
-    public void EjectFromPool(IItem item, Vector3 position, Vector3 direction)
+    
+
+    public  void EjectFromPool(IItem item, Vector3 position, Vector3 direction)
     {
+        
         var presenter = _pool.Get(item);
         presenter.transform.position = position;
 
