@@ -8,18 +8,20 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 {
     public event Action Ejecting;
 
-    public Text nameField { get; private set; }
-    public Image iconField { get; private set; }
+    [SerializeField] private Text nameField;
+    [SerializeField] private Image iconField;
     private Stack<AssetItem> items = new Stack<AssetItem>(5);
     public int count { get; private set; }
 
     private Transform _draggingParent;
     private Transform _originalParent;
 
-    public void Init(Transform draggingParent)
+    public void Init(Transform draggingParent, AssetItem item)
     {
         _draggingParent = draggingParent;
         _originalParent = transform.parent;
+        nameField.text = item.Name;
+        iconField.sprite = item.UIIcon;
     }
 
     public void Render()
@@ -50,11 +52,6 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     {
         count++;
         items.Push(newItem);
-        Debug.Log(newItem.UIIcon);
-        iconField.sprite = newItem.UIIcon;
-        Debug.Log(newItem.Name);
-        nameField.text = newItem.Name;
-        Debug.Log("da");
         //icon.enabled = true;
         UpdateCounter();
     }

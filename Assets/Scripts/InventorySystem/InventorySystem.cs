@@ -22,9 +22,9 @@ public class InventorySystem : MonoBehaviour
 
     #endregion
 
-    [SerializeField] private List<InventorySlot> Slots;
+    [SerializeField] private List<InventorySlot> slots;
 
-    [FormerlySerializedAs("_inventoryCellTemplate")] [SerializeField]
+    [SerializeField]
     private InventorySlot inventorySlotTemplate;
 
     [SerializeField] private Transform _container;
@@ -34,20 +34,27 @@ public class InventorySystem : MonoBehaviour
     //[SerializeField] private ItemsEjector _ejector;
     public void OnEnable()
     {
-        Refresh(Slots);
+        Refresh();
     }
 
-    public void Refresh(List<InventorySlot> slots)
+    public void Refresh()
     {
-        foreach (Transform child in _container)
-            Destroy(child.gameObject);
+        // Debug.Log(slots.Count);
+        // foreach (Transform child in _container)
+        //     Destroy(child.gameObject);
+        Debug.Log(slots.Count);
 
         foreach (InventorySlot slot in slots)
         {
-            InventorySlot cell = Instantiate(inventorySlotTemplate, _container);
-            cell.Init(_draggingParent);
-            cell.Render();
-            cell.Ejecting += () => Destroy(slot.gameObject);
+            //InventorySlot cell = Instantiate(inventorySlotTemplate, _container);
+            //cell.Init(_draggingParent);
+            //slot.Render();
+            Debug.Log("ref");
+            slot.Ejecting += () =>
+            {
+                slots.Remove(slot);
+                Destroy(slot.gameObject);
+            };
             //slot.Ejecting += () => _ejector.EjectFromPool(item, _ejector.transform.position, _ejector.transform.right);
         }
     }
@@ -55,7 +62,7 @@ public class InventorySystem : MonoBehaviour
     public bool AddItem(AssetItem item)
     {
         if (item.stackSize > 1)
-            foreach (InventorySlot slot in Slots)
+            foreach (InventorySlot slot in slots)
             {
                 if (slot.Contains(item) && slot.count < item.stackSize)
                 {
@@ -65,11 +72,10 @@ public class InventorySystem : MonoBehaviour
             }
 
         InventorySlot newSlot = Instantiate(inventorySlotTemplate, _container);
-        Debug.Log(newSlot.nameField);
-        Slots.Add(newSlot);
-        
-        Debug.Log(Slots.Count-1);
-        Slots[Slots.Count-1].PushItem(item);
+        newSlot.Init(_draggingParent, item);
+        newSlot.PushItem(item);
+        slots.Add(newSlot);
+        Refresh();
         
         return true;
     }

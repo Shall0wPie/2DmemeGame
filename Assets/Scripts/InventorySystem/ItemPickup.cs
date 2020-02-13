@@ -21,7 +21,10 @@ public class ItemPickup : Interactable
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
-        if (item.UIIcon != null)
+        if (item.UIIcon != null && item.Name != null)
+        {
             GetComponent<SpriteRenderer>().sprite = item.UIIcon;
+            name = item.Name;
+        }
     }
 }
