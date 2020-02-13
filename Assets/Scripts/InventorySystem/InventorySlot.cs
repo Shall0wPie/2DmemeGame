@@ -2,13 +2,16 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
+using System.Collections.Generic;
 
-public class InventoryCell : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
+public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
     public event Action Ejecting;
 
-    [SerializeField] private Text _nameField;
-    [SerializeField] private Image _iconField;
+    public Text nameField { get; }
+    public Image iconField { get; }
+    private Stack<IItem> items = new Stack<IItem>(5);
+    public int count { get; private set; }
 
     private Transform _draggingParent;
     private Transform _originalParent;
@@ -18,10 +21,11 @@ public class InventoryCell : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         _draggingParent = draggingParent;
         _originalParent = transform.parent;
     }
-    public void Render(IItem item)
+
+    public void Render(InventorySlot item)
     {
-        _nameField.text = item.Name;
-        _iconField.sprite = item.UIIcon;
+        nameField.text = item.nameField.text;
+        iconField.sprite = item.iconField.sprite;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -36,10 +40,32 @@ public class InventoryCell : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (In((RectTransform)_draggingParent))
+        if (In((RectTransform) _draggingParent))
             InsertInGrid();
         else
             Eject();
+    }
+
+    public void PushItem(IItem newItem)
+    {
+        count++;
+        items.Push(newItem);
+        iconField.sprite = newItem.UIIcon;
+        //icon.enabled = true;
+        UpdateCounter();
+    }
+
+    private void UpdateCounter()
+    {
+        if (count < 2)
+        {
+            //textCounter.enabled = false;
+        }
+        else
+        {
+            //textCounter.enabled = true;
+            //textCounter.text = count.ToString();
+        }
     }
 
     private void Eject()
@@ -68,5 +94,14 @@ public class InventoryCell : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     {
         return draggingParent.rect.Contains(transform.localPosition);
     }
-}
 
+    public bool Contains(IItem item)
+    {
+        return items.Contains(item);
+    }
+
+    public bool IsEmpty()
+    {
+        return items.Count == 0;
+    }
+}

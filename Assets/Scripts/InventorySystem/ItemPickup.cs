@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemPickup : ItemInteraction
+public class ItemPickup : Intreactable
 {
-    // Start is called before the first frame update
-    void Start()
+    public AssetItem item;
+    protected override void Start()
     {
-        
+        base.Start();
+        if (item.UIIcon != null)
+            GetComponent<SpriteRenderer>().sprite = item.UIIcon;
     }
-
-    // Update is called once per frame
-    void Update()
+    public override void Interact()
     {
-        
+        if (InventorySystem.instance.AddItem(item))
+            Destroy(gameObject);
     }
 }

@@ -1980,6 +1980,11 @@ PrefabInstance:
       propertyPath: _ground
       value: 
       objectReference: {fileID: 1156286120}
+    - target: {fileID: 8147053460654814648, guid: 0ce8b516cd808b346b0abfe557eed63c,
+        type: 3}
+      propertyPath: _range
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 8959362586428237348, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}
       propertyPath: Items.Array.size
@@ -2007,7 +2012,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Items.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: badf32e1eb27c2e4d88f3dde54b71b2d,
+      objectReference: {fileID: 11400000, guid: 72206fadf358a634bad98f8664076c4e,
         type: 2}
     - target: {fileID: 8959362586428237348, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}
