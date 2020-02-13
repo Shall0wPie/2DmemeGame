@@ -36,7 +36,7 @@ public class InventoryCell : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (In((RectTransform)_originalParent))
+        if (In((RectTransform)_draggingParent))
             InsertInGrid();
         else
             Eject();
@@ -64,9 +64,9 @@ public class InventoryCell : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         transform.SetSiblingIndex(closestIndex);
     }
 
-    private bool In(RectTransform originalParent)
+    private bool In(RectTransform draggingParent)
     {
-        return originalParent.rect.Contains(transform.position);
+        return draggingParent.rect.Contains(transform.localPosition);
     }
 }
 
