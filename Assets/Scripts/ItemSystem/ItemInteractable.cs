@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemInteractable : Intreactable
+public class ItemInteractable : Interactable
 {
     public Item item;
     protected override void Start()

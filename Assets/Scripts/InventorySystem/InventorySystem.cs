@@ -6,7 +6,9 @@ using UnityEngine.Serialization;
 public class InventorySystem : MonoBehaviour
 {
     #region Singleton
+
     public static InventorySystem instance { get; private set; }
+
     private void Start()
     {
         if (instance != null)
@@ -17,37 +19,43 @@ public class InventorySystem : MonoBehaviour
         else
             instance = this;
     }
+
     #endregion
-    
-    [SerializeField] private List<InventorySlot> Items;
-    [FormerlySerializedAs("_inventoryCellTemplate")] [SerializeField] private InventorySlot inventorySlotTemplate;
+
+    [SerializeField] private List<InventorySlot> Slots;
+
+    [FormerlySerializedAs("_inventoryCellTemplate")] [SerializeField]
+    private InventorySlot inventorySlotTemplate;
+
     [SerializeField] private Transform _container;
+
     [SerializeField] private Transform _draggingParent;
+
     //[SerializeField] private ItemsEjector _ejector;
     public void OnEnable()
     {
-        Refresh(Items);
+        Refresh(Slots);
     }
 
-    public void Refresh(List<InventorySlot> items)
+    public void Refresh(List<InventorySlot> slots)
     {
         foreach (Transform child in _container)
             Destroy(child.gameObject);
 
-        foreach (InventorySlot item in items)
+        foreach (InventorySlot slot in slots)
         {
-            InventorySlot slot = Instantiate(inventorySlotTemplate, _container);
-            slot.Init(_draggingParent);
-            slot.Render(item);
-            slot.Ejecting += () => Destroy(slot.gameObject);
+            InventorySlot cell = Instantiate(inventorySlotTemplate, _container);
+            cell.Init(_draggingParent);
+            cell.Render();
+            cell.Ejecting += () => Destroy(slot.gameObject);
             //slot.Ejecting += () => _ejector.EjectFromPool(item, _ejector.transform.position, _ejector.transform.right);
         }
     }
-    
-    public bool AddItem(IItem item)
+
+    public bool AddItem(AssetItem item)
     {
         if (item.stackSize > 1)
-            foreach (InventorySlot slot in Items)
+            foreach (InventorySlot slot in Slots)
             {
                 if (slot.Contains(item) && slot.count < item.stackSize)
                 {
@@ -55,16 +63,14 @@ public class InventorySystem : MonoBehaviour
                     return true;
                 }
             }
-    
-        foreach (InventorySlot slot in Items)
-        {
-            if (slot.IsEmpty())
-            {
-                slot.PushItem(item);
-                return true;
-            }
-        }
-    
-        return false;
+
+        InventorySlot newSlot = Instantiate(inventorySlotTemplate, _container);
+        Debug.Log(newSlot.nameField);
+        Slots.Add(newSlot);
+        
+        Debug.Log(Slots.Count-1);
+        Slots[Slots.Count-1].PushItem(item);
+        
+        return true;
     }
-} 
+}

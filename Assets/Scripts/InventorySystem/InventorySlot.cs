@@ -8,9 +8,9 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 {
     public event Action Ejecting;
 
-    public Text nameField { get; }
-    public Image iconField { get; }
-    private Stack<IItem> items = new Stack<IItem>(5);
+    public Text nameField { get; private set; }
+    public Image iconField { get; private set; }
+    private Stack<AssetItem> items = new Stack<AssetItem>(5);
     public int count { get; private set; }
 
     private Transform _draggingParent;
@@ -22,10 +22,10 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         _originalParent = transform.parent;
     }
 
-    public void Render(InventorySlot item)
+    public void Render()
     {
-        nameField.text = item.nameField.text;
-        iconField.sprite = item.iconField.sprite;
+        nameField.text = items.Peek().Name;
+        iconField.sprite = items.Peek().UIIcon;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -46,11 +46,15 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
             Eject();
     }
 
-    public void PushItem(IItem newItem)
+    public void PushItem(AssetItem newItem)
     {
         count++;
         items.Push(newItem);
+        Debug.Log(newItem.UIIcon);
         iconField.sprite = newItem.UIIcon;
+        Debug.Log(newItem.Name);
+        nameField.text = newItem.Name;
+        Debug.Log("da");
         //icon.enabled = true;
         UpdateCounter();
     }
@@ -95,7 +99,7 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         return draggingParent.rect.Contains(transform.localPosition);
     }
 
-    public bool Contains(IItem item)
+    public bool Contains(AssetItem item)
     {
         return items.Contains(item);
     }

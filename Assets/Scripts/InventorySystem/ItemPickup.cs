@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemPickup : Intreactable
+public class ItemPickup : Interactable
 {
-    public AssetItem item;
+    [SerializeField] private AssetItem item;
+
     protected override void Start()
     {
         base.Start();
@@ -15,5 +16,12 @@ public class ItemPickup : Intreactable
     {
         if (InventorySystem.instance.AddItem(item))
             Destroy(gameObject);
+    }
+    
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+        if (item.UIIcon != null)
+            GetComponent<SpriteRenderer>().sprite = item.UIIcon;
     }
 }
