@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1343701624973039078}
   - component: {fileID: 114164254021112288}
   m_Layer: 0
-  m_Name: ItemScenePresenterTemplate
+  m_Name: SceneItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,5 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fa79d898902d949ac1769b064ccad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRadius: 1
+  interactionRadius: 2
   item: {fileID: 0}

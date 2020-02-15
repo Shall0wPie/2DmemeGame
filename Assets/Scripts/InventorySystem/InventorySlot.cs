@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 using System.Collections.Generic;
+using TMPro;
 
 public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
@@ -10,20 +11,43 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     [SerializeField] private Text nameField;
     [SerializeField] private Image iconField;
+    [SerializeField] private TextMeshProUGUI counterField;
     private Stack<AssetItem> items = new Stack<AssetItem>(5);
-    public int count { get; private set; }
-
+    public int counter { get; private set; }
+    bool isDragging = false;
     private Transform _draggingParent;
     private Transform _originalParent;
 
+    private void Update()
+    {
+
+        if (Input.GetMouseButtonDown(1) && isDragging && !In((RectTransform)_draggingParent))
+        {
+            InventorySystem.instance.DropItem(this, 1);
+            counter--;
+            UpdateCounter();
+        }
+
+    }
     public void Init(Transform draggingParent, AssetItem item)
     {
+      
         _draggingParent = draggingParent;
         _originalParent = transform.parent;
         nameField.text = item.Name;
         iconField.sprite = item.UIIcon;
+        Ejecting += () =>
+        {
+            InventorySystem.instance.DropItem(this, items.Count);
+            InventorySystem.instance.slots.Remove(this);
+            Destroy(gameObject);
+        };
     }
 
+    public Stack<AssetItem> GetItem()
+    {
+        return items;
+    }
     public void Render()
     {
         nameField.text = items.Peek().Name;
@@ -32,17 +56,21 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        isDragging = true;
         transform.parent = _draggingParent;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+
         transform.position = Input.mousePosition;
     }
 
+
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (In((RectTransform) _draggingParent))
+        isDragging = false;
+        if (In((RectTransform)_draggingParent))
             InsertInGrid();
         else
             Eject();
@@ -50,7 +78,7 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     public void PushItem(AssetItem newItem)
     {
-        count++;
+        counter++;
         items.Push(newItem);
         //icon.enabled = true;
         UpdateCounter();
@@ -58,14 +86,18 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     private void UpdateCounter()
     {
-        if (count < 2)
+        if (counter == 0)
         {
-            //textCounter.enabled = false;
+            Eject();
+        }
+        if (counter < 2)
+        {
+            counterField.enabled = false;
         }
         else
         {
-            //textCounter.enabled = true;
-            //textCounter.text = count.ToString();
+            counterField.enabled = true;
+            counterField.text = counter.ToString();
         }
     }
 

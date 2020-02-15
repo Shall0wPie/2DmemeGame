@@ -12,6 +12,13 @@ public class ItemPickup : Interactable
         if (item.UIIcon != null)
             GetComponent<SpriteRenderer>().sprite = item.UIIcon;
     }
+
+    public void Init(AssetItem newItem)
+    {
+        item = newItem;
+        if (item.UIIcon != null)
+            GetComponent<SpriteRenderer>().sprite = item.UIIcon;
+    }
     public override void Interact()
     {
         if (InventorySystem.instance.AddItem(item))

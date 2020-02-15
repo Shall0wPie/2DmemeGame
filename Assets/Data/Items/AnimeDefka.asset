@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703b486c26bef9469566c2111f9bb9d, type: 3}
   m_Name: AnimeDefka
   m_EditorClassIdentifier: 
-  _stackSize: 0
+  _stackSize: 5
   _name: AnimeDefka
   _uiIcon: {fileID: 21300000, guid: 1044322a95e8c534d8edc58badf2957e, type: 3}

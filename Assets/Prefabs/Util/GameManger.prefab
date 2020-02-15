@@ -317,6 +317,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2406524698626232098}
     m_Modifications:
+    - target: {fileID: 148405391202948986, guid: 4d4e11f138130b145b5290272cb0ab26,
+        type: 3}
+      propertyPath: SceneItemTemplate
+      value: 
+      objectReference: {fileID: 114164254021112288, guid: 4fd4d86589fba5346963772205d2af62,
+        type: 3}
     - target: {fileID: 847548600854347558, guid: 4d4e11f138130b145b5290272cb0ab26,
         type: 3}
       propertyPath: m_AnchorMin.y
