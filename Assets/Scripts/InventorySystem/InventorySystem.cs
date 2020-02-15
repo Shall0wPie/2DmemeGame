@@ -22,15 +22,14 @@ public class InventorySystem : MonoBehaviour
 
     #endregion
 
-    [SerializeField] private List<InventorySlot> slots;
+    [SerializeField] public List<InventorySlot> slots;
 
     [SerializeField]
     private InventorySlot inventorySlotTemplate;
-
+    private Transform player;
     [SerializeField] private Transform _container;
 
     [SerializeField] private Transform _draggingParent;
-
     //[SerializeField] private ItemsEjector _ejector;
     public void OnEnable()
     {
@@ -43,19 +42,17 @@ public class InventorySystem : MonoBehaviour
         // foreach (Transform child in _container)
         //     Destroy(child.gameObject);
         Debug.Log(slots.Count);
-
         foreach (InventorySlot slot in slots)
         {
             //InventorySlot cell = Instantiate(inventorySlotTemplate, _container);
             //cell.Init(_draggingParent);
-            //slot.Render();
-            Debug.Log("ref");
+            //slot.Render();          
             slot.Ejecting += () =>
             {
                 slots.Remove(slot);
                 Destroy(slot.gameObject);
             };
-            //slot.Ejecting += () => _ejector.EjectFromPool(item, _ejector.transform.position, _ejector.transform.right);
+            //slot.Ejecting += () => DropItem(slot);
         }
     }
 
@@ -76,7 +73,18 @@ public class InventorySystem : MonoBehaviour
         newSlot.PushItem(item);
         slots.Add(newSlot);
         Refresh();
-        
+
         return true;
+    }
+    public void DropItem(InventorySlot slot)
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        if (slot != null)
+        {
+            Vector2 position = new Vector2(player.position.x + 5f * player.lossyScale.x, player.position.y);
+            Debug.Log(position);
+            InventorySlot newItem  = Instantiate(slot, position, Quaternion.identity);
+            //Item.SpawnItem(slots[selectedSlot].PopItem(), position);
+        }
     }
 }
