@@ -2,6 +2,16 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+[merge]
+	tool = unityyamlmerge
+
+[mergetool "unityyamlmerge"]
+	trustExitCode = false
+	keepTemporaries = true
+	keepBackup = false
+	path = 'D:\\Unity\\Editor\\2018.4.14f1\\Editor\\Data\\Tools\\UnityYAMLMerge.exe'
+	cmd = 'D:\\Unity\\Editor\\2018.4.14f1\\Editor\\Data\\Tools\\UnityYAMLMerge.exe' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
