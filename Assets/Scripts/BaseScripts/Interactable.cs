@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Intreactable : MonoBehaviour
+public abstract class Interactable : MonoBehaviour
 {
     protected Transform player;
     [Range(0f, 5f)] public float interactionRadius = 1f;
@@ -26,7 +26,7 @@ public abstract class Intreactable : MonoBehaviour
         }
     }
 
-    protected void OnDrawGizmos()
+    protected virtual void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, interactionRadius);
