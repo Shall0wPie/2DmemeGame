@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 4283079314761562877}
   - component: {fileID: 2035364468883593038}
   - component: {fileID: 7161293172298653937}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Scroll View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 2154246256121446278}
   - component: {fileID: 7531773912305482668}
   - component: {fileID: 7857095013009619233}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,16 +15,16 @@ public class PlayerMovement : MonoBehaviour
     private new Rigidbody2D rigidbody;
     RaycastHit2D hit;
 
+    private Vector2 prev;
 
     protected void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     public void Move(float horizontalMove)
     {
-        Vector2 velocity = rigidbody.velocity;
+        Vector2 velocity = Vector2.zero;
         if (IsOnSlope())
         {
             float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.x = horizontalMove * runSpeed;
         }
 
-        rigidbody.velocity = velocity;
+        transform.position += (Vector3)velocity;
     }
 
     public void Jump()
@@ -60,10 +61,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!IsOnGround())
             return false;
-        hit = Physics2D.Raycast((Vector2) transform.position, Vector2.down, rayLength, groundLayer);
+        hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
         if (hit)
         {
-            if ((Vector2) hit.normal != Vector2.up)
+            if (hit.normal != Vector2.up)
                 return true;
         }
 
