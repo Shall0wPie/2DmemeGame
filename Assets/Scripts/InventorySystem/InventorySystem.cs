@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class InventorySystem : MonoBehaviour
 {
@@ -33,6 +35,12 @@ public class InventorySystem : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+            _draggingParent.gameObject.active = _draggingParent.gameObject.active ? false : true;
     }
 
     public bool AddItem(AssetItem item)
