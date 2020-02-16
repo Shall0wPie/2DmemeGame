@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class InventorySystem : MonoBehaviour
 {
@@ -28,9 +26,14 @@ public class InventorySystem : MonoBehaviour
     [SerializeField] private ItemPickup SceneItemTemplate;
 
     private Transform player;
-    [SerializeField] private Transform _container;
 
+    [SerializeField] private Transform _container;
     [SerializeField] private Transform _draggingParent;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     public bool AddItem(AssetItem item)
     {
@@ -39,7 +42,6 @@ public class InventorySystem : MonoBehaviour
             {
                 if (slot.Contains(item) && slot.counter < item.stackSize)
                 {
-
                     slot.PushItem(item);
                     return true;
                 }
@@ -51,25 +53,21 @@ public class InventorySystem : MonoBehaviour
         slots.Add(newSlot);
         return true;
     }
+
     public void DropItem(InventorySlot slot, int dropAmount)
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        ItemPickup newItem;
         if (slot != null)
         {
-            Debug.Log(slot.GetItem().Count);
-            Vector2 position = new Vector2(player.position.x + Random.Range(3f, 7f) * player.lossyScale.x, player.position.y);
+            Vector2 position = new Vector2(player.position.x, player.position.y);
+            Vector2 velocity = new Vector2(Random.Range(20f, 25f) * player.lossyScale.x, 0);
+            
             Stack<AssetItem> item = slot.GetItem();
             for (int i = dropAmount; i > 0 && item.Count > 0; i--)
             {
-
-                newItem = Instantiate(SceneItemTemplate, position, Quaternion.identity);
+                ItemPickup newItem = Instantiate(SceneItemTemplate, position, Quaternion.identity);
                 newItem.Init(item.Pop());
-
+                newItem.GetComponent<Rigidbody2D>().velocity = velocity;
             }
-            //newItem = Instantiate(item, position, Quaternion.identity);
-            //Item.SpawnItem(slots[selectedSlot].PopItem(), position);
         }
     }
 }

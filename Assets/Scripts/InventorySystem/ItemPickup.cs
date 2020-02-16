@@ -5,6 +5,8 @@ using UnityEngine;
 public class ItemPickup : Interactable
 {
     [SerializeField] private AssetItem item;
+    [SerializeField] private float pickUpLockTime;
+    private bool canPickUp = true;
 
     protected override void Start()
     {
@@ -18,10 +20,12 @@ public class ItemPickup : Interactable
         item = newItem;
         if (item.UIIcon != null)
             GetComponent<SpriteRenderer>().sprite = item.UIIcon;
+
+        StartCoroutine(LockPickUp(pickUpLockTime));
     }
     public override void Interact()
     {
-        if (InventorySystem.instance.AddItem(item))
+        if (canPickUp && InventorySystem.instance.AddItem(item))
             Destroy(gameObject);
     }
     
@@ -33,5 +37,12 @@ public class ItemPickup : Interactable
             GetComponent<SpriteRenderer>().sprite = item.UIIcon;
             name = item.Name;
         }
+    }
+
+    private IEnumerator LockPickUp(float time)
+    {
+        canPickUp = false;
+        yield return new WaitForSeconds(time);
+        canPickUp = true;
     }
 }

@@ -7,36 +7,34 @@ using TMPro;
 
 public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
 {
-    public event Action Ejecting;
+    public event Action OnEjecting;
 
     [SerializeField] private Text nameField;
     [SerializeField] private Image iconField;
     [SerializeField] private TextMeshProUGUI counterField;
     private Stack<AssetItem> items = new Stack<AssetItem>(5);
     public int counter { get; private set; }
-    bool isDragging = false;
+    private bool isDragging;
     private Transform _draggingParent;
     private Transform _originalParent;
 
     private void Update()
     {
-
-        if (Input.GetMouseButtonDown(1) && isDragging && !In((RectTransform)_draggingParent))
+        if (Input.GetMouseButtonDown(1) && isDragging && !In((RectTransform) _draggingParent))
         {
             InventorySystem.instance.DropItem(this, 1);
             counter--;
             UpdateCounter();
         }
-
     }
+
     public void Init(Transform draggingParent, AssetItem item)
     {
-      
         _draggingParent = draggingParent;
         _originalParent = transform.parent;
         nameField.text = item.Name;
         iconField.sprite = item.UIIcon;
-        Ejecting += () =>
+        OnEjecting += () =>
         {
             InventorySystem.instance.DropItem(this, items.Count);
             InventorySystem.instance.slots.Remove(this);
@@ -48,11 +46,6 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     {
         return items;
     }
-    public void Render()
-    {
-        nameField.text = items.Peek().Name;
-        iconField.sprite = items.Peek().UIIcon;
-    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -62,17 +55,15 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     public void OnDrag(PointerEventData eventData)
     {
-
         transform.position = Input.mousePosition;
     }
-
 
     public void OnEndDrag(PointerEventData eventData)
     {
         isDragging = false;
-        if (In((RectTransform)_draggingParent))
+        if (In((RectTransform) _draggingParent))
             InsertInGrid();
-        else
+        else if (eventData.button.Equals(PointerEventData.InputButton.Left))
             Eject();
     }
 
@@ -86,10 +77,11 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     private void UpdateCounter()
     {
-        if (counter == 0)
+        if (IsEmpty())
         {
             Eject();
         }
+
         if (counter < 2)
         {
             counterField.enabled = false;
@@ -103,7 +95,7 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
 
     private void Eject()
     {
-        Ejecting?.Invoke();
+        OnEjecting?.Invoke();
     }
 
     private void InsertInGrid()
