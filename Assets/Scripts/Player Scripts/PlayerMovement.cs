@@ -27,12 +27,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!IsOnGround())
+        if (!IsOnGround() && rigidbody.velocity.y > -100)
             rigidbody.velocity += gravity;
     }
 
     public void Move(float horizontalMove)
     {
+        if (Input.GetMouseButtonDown(1))
+            rigidbody.AddForce(new Vector2(100, 0), ForceMode2D.Impulse);
+
         if (stun)
         {
             prev.x = 0;
@@ -53,16 +56,21 @@ public class PlayerMovement : MonoBehaviour
                     horizontalMove *= -1;
                 velocity.y = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * horizontalMove * runSpeed;
 
-                velocity.x = Mathf.Clamp(velocity.x - rigidbody.velocity.x, -runSpeed, runSpeed);
-                velocity.y = Mathf.Clamp(velocity.y - rigidbody.velocity.y, -runSpeed, runSpeed);
+                velocity.x -=rigidbody.velocity.x;
+                velocity.y -=rigidbody.velocity.y;
             }
+
+            Debug.Log(velocity);
+            prev.x = 0;
         }
         else
         {
             if (horizontalMove != 0)
             {
-                velocity.x = Mathf.Clamp(horizontalMove * runSpeed - rigidbody.velocity.x, -maxVel, maxVel);
+                velocity.x = Mathf.Clamp(horizontalMove * runSpeed - rigidbody.velocity.x, -runSpeed, runSpeed);
                 prev.x = Mathf.Clamp(rigidbody.velocity.x, -maxVel, maxVel);
+
+                Debug.Log(velocity);
             }
             else
             {
