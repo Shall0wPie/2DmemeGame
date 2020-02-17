@@ -106,6 +106,7 @@ MonoBehaviour:
   isInvincible: 1
   punchDmg: 25
   punchForce: {x: 0, y: 0}
+  stunDuration: 1
   attackCooldown: 1
   attackRange: 25.2
   dawgPoints: []

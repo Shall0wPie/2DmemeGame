@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,44 +12,87 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Collider2D groundCollider;
     [SerializeField] private float rayLength;
+    [SerializeField] private Vector2 gravity;
 
+    private bool stun;
     private new Rigidbody2D rigidbody;
     RaycastHit2D hit;
 
+    private Vector2 prev;
 
     protected void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    private void Update()
+    {
+        if (!IsOnGround() && rigidbody.velocity.y > -100)
+            rigidbody.velocity += gravity;
+    }
+
     public void Move(float horizontalMove)
     {
-        Vector2 velocity = rigidbody.velocity;
+        if (Input.GetMouseButtonDown(1))
+            rigidbody.AddForce(new Vector2(100, 0), ForceMode2D.Impulse);
+
+        if (stun)
+        {
+            prev.x = 0;
+            return;
+        }
+
+        Vector2 velocity = Vector2.zero;
+        float maxVel = Mathf.Abs(horizontalMove * runSpeed);
+
         if (IsOnSlope())
         {
             float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
 
-            if (jumpForce > velocity.y)
+            if (jumpForce > rigidbody.velocity.y)
             {
                 velocity.x = Mathf.Cos(slopeAngle * Mathf.Deg2Rad) * horizontalMove * runSpeed;
                 if (hit.normal.x > 0)
                     horizontalMove *= -1;
                 velocity.y = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * horizontalMove * runSpeed;
+
+                velocity.x -=rigidbody.velocity.x;
+                velocity.y -=rigidbody.velocity.y;
             }
+
+            Debug.Log(velocity);
+            prev.x = 0;
         }
         else
         {
-            velocity.x = horizontalMove * runSpeed;
+            if (horizontalMove != 0)
+            {
+                velocity.x = Mathf.Clamp(horizontalMove * runSpeed - rigidbody.velocity.x, -runSpeed, runSpeed);
+                prev.x = Mathf.Clamp(rigidbody.velocity.x, -maxVel, maxVel);
+
+                Debug.Log(velocity);
+            }
+            else
+            {
+                velocity.x -= prev.x;
+                prev.x = 0;
+            }
         }
 
-        rigidbody.velocity = velocity;
+        rigidbody.velocity += velocity;
     }
 
     public void Jump()
     {
         Vector2 fumpVelocity = new Vector2(rigidbody.velocity.x, jumpForce);
         rigidbody.velocity = fumpVelocity;
+    }
+
+    public IEnumerator Stun(float time)
+    {
+        stun = true;
+        yield return new WaitForSeconds(time);
+        stun = false;
     }
 
     // Checks if player is on ground
@@ -60,10 +105,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!IsOnGround())
             return false;
-        hit = Physics2D.Raycast((Vector2) transform.position, Vector2.down, rayLength, groundLayer);
+        hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
         if (hit)
         {
-            if ((Vector2) hit.normal != Vector2.up)
+            if (hit.normal != Vector2.up)
                 return true;
         }
 

@@ -12,10 +12,11 @@ public abstract class EnemyCombat : MonoBehaviour
     public bool isInvincible = false;
     [SerializeField] protected float punchDmg = 25f;
     [SerializeField] protected Vector2 punchForce;
+    [SerializeField] protected float stunDuration;
 
     [SerializeField] protected float attackCooldown = 1f;
     [SerializeField] [Range(0f, 30f)] public float attackRange;
-    protected float attackTimeStamp = 0;
+    protected float attackTimeStamp;
 
 
     protected virtual void Start()
@@ -51,7 +52,7 @@ public abstract class EnemyCombat : MonoBehaviour
             if ((animControl.renderer.sprite.name.Equals("PashtetAttack3")) && (distance < attackRange))
             {
                 Vector2 force = new Vector2(punchForce.x * -transform.lossyScale.x, punchForce.y);
-                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, force);
+                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, force, stunDuration);
                 break;
             }
 

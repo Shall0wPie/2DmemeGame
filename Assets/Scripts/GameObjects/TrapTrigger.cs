@@ -33,7 +33,7 @@ public class TrapTrigger : MonoBehaviour
         {
             if (dmgTimeStamp <= Time.time)
             {
-                player.ApplyHit(damage, Vector2.up * 20);
+                player.ApplyHit(damage, Vector2.up * 20, 0);
                 dmgTimeStamp = Time.time + damageCooldown;
             }
         }
