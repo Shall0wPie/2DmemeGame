@@ -57,13 +57,18 @@ public class WolkCombat : EnemyCombat
         }
     }
 
+    public void Jump(Vector3 direction)
+    {
+        direction.Normalize();
+        direction.y += jumpHeight;
+        rb.velocity = direction.normalized * jumpForce;
+    }
+
     public override IEnumerator Attack()
     {
         BoxCollider2D targetCollider = target.GetComponent<PlayerStats>().bodyCollider;
         Vector2 dir = target.position - transform.position;
-        dir.Normalize();
-        dir.y += jumpHeight;
-        rb.velocity = dir.normalized * jumpForce;
+        Jump(dir);
 
         while (animControl.anim.GetBool("IsOnFly"))
         {

@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!IsOnGround())
+        if (!IsOnGround() && rigidbody.velocity.y > -100)
             rigidbody.velocity += gravity;
     }
 
