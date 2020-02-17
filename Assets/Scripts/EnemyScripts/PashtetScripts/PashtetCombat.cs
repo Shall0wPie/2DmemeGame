@@ -18,7 +18,7 @@ public class PashtetCombat : EnemyCombat
             if ((animControl.renderer.sprite.name.Equals("PashtetAttack3")) && (distance < attackRange))
             {
                 Vector2 force = new Vector2(punchForce.x * -transform.lossyScale.x, punchForce.y);
-                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, force);
+                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, force, stunDuration);
                 break;
             }
 

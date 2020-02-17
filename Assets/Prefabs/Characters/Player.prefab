@@ -53,10 +53,10 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.5
+  m_LinearDrag: 1
   m_AngularDrag: 0.5
-  m_GravityScale: 8
-  m_Material: {fileID: 6200000, guid: e71cc328ee75ddf4fb64cda0faa55894, type: 2}
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: eca5b9a44b8ca4f4996daae3b9087a02, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -74,13 +74,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpCooldown: 0.6
-  runSpeed: 25
-  jumpForce: 41
+  runSpeed: 1200
+  jumpForce: 45
   groundLayer:
     serializedVersion: 2
     m_Bits: 8448
   groundCollider: {fileID: 517518145887241092}
   rayLength: 4
+  gravity: {x: 0, y: -1.2}
 --- !u!114 &1335629947481452081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 0.62}
+  m_Size: {x: 2, y: 0.62}
   m_EdgeRadius: 0
 --- !u!114 &2194979863235661590
 MonoBehaviour:
@@ -442,6 +443,7 @@ MonoBehaviour:
   isInvincible: 0
   hp: 0
   PlayerAnim: {fileID: 6820982579937317026}
+  movement: {fileID: 0}
 --- !u!61 &6987354769803948042
 BoxCollider2D:
   m_ObjectHideFlags: 0

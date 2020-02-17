@@ -63,7 +63,7 @@ public class DimaCombat : EnemyCombat
             if (stats.bodyCollider.OverlapPoint(target.position))
             {
                 Vector2 force = new Vector2(punchForce.x * -transform.lossyScale.x, punchForce.y);
-                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, force);
+                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, force, stunDuration);
             }
             yield return null;
         }
@@ -72,26 +72,5 @@ public class DimaCombat : EnemyCombat
         //rb.velocity = Vector2.zero;
 
         animControl.anim.SetBool("IsRolling", false);
-    }
-
-    public override IEnumerator Attack()
-    {
-        float distance;
-
-        while (true)
-        {
-            //force for enemy punch
-            yield return null;
-            distance = Vector2.Distance(target.position, transform.position);
-            if ((animControl.renderer.sprite.name.Equals("PashtetAttack3")) && (distance < attackRange))
-            {
-                Vector2 force = new Vector2(punchForce.x * -transform.lossyScale.x, punchForce.y);
-                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, force);
-                break;
-            }
-
-            if (!animControl.anim.GetCurrentAnimatorStateInfo(0).IsName("PashtetAttacking"))
-                break;
-        }
     }
 }
