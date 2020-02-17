@@ -114,7 +114,7 @@ public class PlayerControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        movement.Move(horizontalMove * Time.fixedDeltaTime);
+        movement.Move(horizontalMove * Time.deltaTime);
     }
 
     void AnimateMove()

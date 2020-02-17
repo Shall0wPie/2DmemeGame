@@ -69,7 +69,7 @@ public class WolkCombat : EnemyCombat
         {
             if (stats.bodyCollider.IsTouching(targetCollider))
             {
-                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, rb.velocity);
+                target.GetComponentInChildren<PlayerCombat>().ApplyHit(punchDmg, rb.velocity, stunDuration);
                 break;
             }
             yield return null;

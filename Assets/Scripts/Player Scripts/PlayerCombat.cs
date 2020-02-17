@@ -15,6 +15,7 @@ public class PlayerCombat : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerStats stats;
     public PlayerAnimationControl PlayerAnim;
+    private PlayerMovement movement;
     private ContactFilter2D contactFilter;
     private Collider2D[] colliders;
 
@@ -22,6 +23,7 @@ public class PlayerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        movement = GetComponentInParent<PlayerMovement>();
         contactFilter = new ContactFilter2D();
         contactFilter.layerMask = enemyLayer;
         contactFilter.useLayerMask = true;
@@ -65,7 +67,7 @@ public class PlayerCombat : MonoBehaviour
         projectile.GetComponent<ProjectileAnime>().SetVelocityDirection(dir);
     }
 
-    public void ApplyHit(float dmg, Vector2 force)
+    public void ApplyHit(float dmg, Vector2 force, float stunTime)
     {
         if (!isInvincible)
         {
@@ -73,7 +75,8 @@ public class PlayerCombat : MonoBehaviour
             dmg *= (1 - stats.dmgResistance);
             force *= (1 - stats.forceResistance);
             // Applies effects
-
+            if (stunTime > 0)
+                StartCoroutine(movement.Stun(stunTime));
             rb.velocity += force;
             hp -= dmg;
             //Debug.Log("Hp: " + hp + " Dmg: " + dmg);
