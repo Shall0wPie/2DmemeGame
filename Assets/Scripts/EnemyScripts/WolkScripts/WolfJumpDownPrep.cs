@@ -30,7 +30,6 @@ public class WolfJumpDownPrep : StateMachineBehaviour
         Vector3 scale = combat.transform.parent.localScale;
         scale.x = -1;
         combat.transform.parent.localScale = scale;
-        Debug.Log(combat.transform.lossyScale);
         anim.SetBool("IsOnFly", true);
         combat.Jump(Vector3.left);
     }
