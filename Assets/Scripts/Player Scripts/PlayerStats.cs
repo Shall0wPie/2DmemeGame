@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
     [Header("World stats")]
     public Vector2 spawnPoint;
     public bool allowRespawn = false;
-    public BoxCollider2D bodyCollider;
+    public Collider2D bodyCollider;
 
     [Space]
     [Header("Combat stats")]

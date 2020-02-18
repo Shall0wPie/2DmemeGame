@@ -66,7 +66,7 @@ public class WolkCombat : EnemyCombat
 
     public override IEnumerator Attack()
     {
-        BoxCollider2D targetCollider = target.GetComponent<PlayerStats>().bodyCollider;
+        Collider2D targetCollider = target.GetComponent<PlayerStats>().bodyCollider;
         Vector2 dir = target.position - transform.position;
         Jump(dir);
 

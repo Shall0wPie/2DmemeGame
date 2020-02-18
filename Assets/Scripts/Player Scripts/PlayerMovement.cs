@@ -11,18 +11,27 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Collider2D groundCollider;
+    [SerializeField] private Collider2D groundFriction;
     [SerializeField] private float rayLength;
     [SerializeField] private Vector2 gravity;
 
+    private PhysicsMaterial2D frMat;
+    private PhysicsMaterial2D smMat;
     private bool stun;
     private new Rigidbody2D rigidbody;
-    RaycastHit2D hit;
+    private RaycastHit2D hit;
 
-    private Vector2 prev;
+    private bool haveMomentum;
 
     protected void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+
+        frMat = new PhysicsMaterial2D();
+        smMat = new PhysicsMaterial2D();
+        frMat.friction = 1;
+        smMat.friction = 0;
+        groundFriction.sharedMaterial = smMat;
     }
 
     private void Update()
@@ -33,49 +42,56 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(float horizontalMove)
     {
+        // For debug
         if (Input.GetMouseButtonDown(1))
-            rigidbody.AddForce(new Vector2(100, 0), ForceMode2D.Impulse);
+        {
+            rigidbody.AddForce(new Vector2(50, 0), ForceMode2D.Impulse);
+            StartCoroutine(Stun(0.5f));
+        }
 
         if (stun)
         {
-            prev.x = 0;
             return;
         }
 
+        hit = SurfaceCheck();
         Vector2 velocity = Vector2.zero;
         float maxVel = Mathf.Abs(horizontalMove * runSpeed);
+        float slopeAngle = Vector2.Angle(SurfaceCheck().normal, Vector2.up);
 
         if (IsOnSlope())
-        {
-            float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
-
-            if (jumpForce > rigidbody.velocity.y)
-            {
-                velocity.x = Mathf.Cos(slopeAngle * Mathf.Deg2Rad) * horizontalMove * runSpeed;
-                if (hit.normal.x > 0)
-                    horizontalMove *= -1;
-                velocity.y = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * horizontalMove * runSpeed;
-
-                velocity.x -=rigidbody.velocity.x;
-                velocity.y -=rigidbody.velocity.y;
-            }
-
-            Debug.Log(velocity);
-            prev.x = 0;
-        }
+            groundFriction.sharedMaterial = frMat;
         else
+            groundFriction.sharedMaterial = smMat;
+
+
+        if (rigidbody.velocity.y < jumpForce)
         {
             if (horizontalMove != 0)
             {
-                velocity.x = Mathf.Clamp(horizontalMove * runSpeed - rigidbody.velocity.x, -runSpeed, runSpeed);
-                prev.x = Mathf.Clamp(rigidbody.velocity.x, -maxVel, maxVel);
+                velocity.x = horizontalMove * runSpeed;
+                velocity.x *= Mathf.Cos(slopeAngle * Mathf.Deg2Rad);
+                velocity.x = Mathf.Clamp(velocity.x - rigidbody.velocity.x, -maxVel, maxVel);
 
-                Debug.Log(velocity);
+                if (IsOnGround())
+                {
+                    if (hit.normal.x > 0)
+                        horizontalMove *= -1;
+
+                    velocity.y = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * horizontalMove * runSpeed;
+                    velocity.y = Mathf.Clamp(velocity.y - rigidbody.velocity.y, -runSpeed, runSpeed);
+                }
+
+                haveMomentum = true;
             }
             else
             {
-                velocity.x -= prev.x;
-                prev.x = 0;
+                velocity.x -= Mathf.Clamp(rigidbody.velocity.x, -runSpeed, runSpeed);
+                if (haveMomentum && IsOnGround())
+                {
+                    velocity.y -= Mathf.Clamp(rigidbody.velocity.y, -runSpeed, runSpeed);
+                    haveMomentum = false;
+                }
             }
         }
 
@@ -103,15 +119,24 @@ public class PlayerMovement : MonoBehaviour
 
     bool IsOnSlope()
     {
-        if (!IsOnGround())
-            return false;
-        hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
-        if (hit)
-        {
-            if (hit.normal != Vector2.up)
-                return true;
-        }
+        // if (!IsOnGround())
+        //     return false;
+
+        hit = SurfaceCheck();
+
+        if (hit && hit.normal != Vector2.up)
+            return true;
 
         return false;
+    }
+
+    RaycastHit2D SurfaceCheck()
+    {
+        return Physics2D.Raycast(transform.position, Vector2.down, rayLength, groundLayer);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(transform.position, Vector3.down * rayLength);
     }
 }
