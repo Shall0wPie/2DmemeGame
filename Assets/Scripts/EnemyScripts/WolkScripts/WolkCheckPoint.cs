@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class WolkCheckPoint : MonoBehaviour
 {
     private Animator wolkAnim;
+    [SerializeField] private GameObject door;
     
     private void Start()
     {
@@ -27,6 +29,7 @@ public class WolkCheckPoint : MonoBehaviour
                 wolkAnim.SetInteger("Stage", 20);
                 break;
             case 3:
+                door.SetActive(true);
                 wolkAnim.SetInteger("Stage", 10);
                 break;
         }

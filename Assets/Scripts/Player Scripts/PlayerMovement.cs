@@ -21,12 +21,12 @@ public class PlayerMovement : MonoBehaviour
     private new Rigidbody2D rigidbody;
     private RaycastHit2D hit;
 
-    private Vector2 prev;
+    private bool haveMomentum;
 
     protected void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        
+
         frMat = new PhysicsMaterial2D();
         smMat = new PhysicsMaterial2D();
         frMat.friction = 1;
@@ -42,15 +42,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(float horizontalMove)
     {
-        // if (Input.GetMouseButtonDown(1))
-        // { 
-        //     rigidbody.AddForce(new Vector2(100, 0), ForceMode2D.Impulse);
-        //     StartCoroutine(Stun(0.5f));
-        // }
+        // For debug
+        if (Input.GetMouseButtonDown(1))
+        {
+            rigidbody.AddForce(new Vector2(50, 0), ForceMode2D.Impulse);
+            StartCoroutine(Stun(0.5f));
+        }
 
         if (stun)
         {
-            prev = Vector2.zero;
             return;
         }
 
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 velocity = Vector2.zero;
         float maxVel = Mathf.Abs(horizontalMove * runSpeed);
         float slopeAngle = Vector2.Angle(SurfaceCheck().normal, Vector2.up);
-        
+
         if (IsOnSlope())
             groundFriction.sharedMaterial = frMat;
         else
@@ -72,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
                 velocity.x = horizontalMove * runSpeed;
                 velocity.x *= Mathf.Cos(slopeAngle * Mathf.Deg2Rad);
                 velocity.x = Mathf.Clamp(velocity.x - rigidbody.velocity.x, -maxVel, maxVel);
-                prev.x = Mathf.Clamp(rigidbody.velocity.x, -maxVel, maxVel);
 
                 if (IsOnGround())
                 {
@@ -81,16 +80,21 @@ public class PlayerMovement : MonoBehaviour
 
                     velocity.y = Mathf.Sin(slopeAngle * Mathf.Deg2Rad) * horizontalMove * runSpeed;
                     velocity.y = Mathf.Clamp(velocity.y - rigidbody.velocity.y, -runSpeed, runSpeed);
-                    prev.y = Mathf.Clamp(rigidbody.velocity.y, -maxVel, maxVel);
                 }
+
+                haveMomentum = true;
             }
             else
             {
-                velocity -= prev;
-                prev = Vector2.zero;
+                velocity.x -= Mathf.Clamp(rigidbody.velocity.x, -runSpeed, runSpeed);
+                if (haveMomentum && IsOnGround())
+                {
+                    velocity.y -= Mathf.Clamp(rigidbody.velocity.y, -runSpeed, runSpeed);
+                    haveMomentum = false;
+                }
             }
         }
-        
+
         rigidbody.velocity += velocity;
     }
 
