@@ -37,9 +37,14 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         OnEjecting += () =>
         {
             InventorySystem.instance.DropItem(this, items.Count);
-            InventorySystem.instance.slots.Remove(this);
-            Destroy(gameObject);
+            DestroySlot();
         };
+    }
+
+    public void DestroySlot()
+    {
+        InventorySystem.instance.slots.Remove(this);
+        Destroy(gameObject);
     }
 
     public Stack<AssetItem> GetItem()
