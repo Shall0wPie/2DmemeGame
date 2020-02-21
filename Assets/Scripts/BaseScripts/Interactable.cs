@@ -8,11 +8,6 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField] private CircleCollider2D interactCollider;
 
     [Range(0f, 5f)] public float interactionRadius = 1f;
-    // Start is called before the first frame update
-
-    protected virtual void Start()
-    {
-    }
 
     public abstract void Interact(Transform target);
 

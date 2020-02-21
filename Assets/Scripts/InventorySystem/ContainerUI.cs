@@ -4,11 +4,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+// Visualise container slots and contains them 
 public class ContainerUI : MonoBehaviour
 {
-    public Container itemContainer;
-    public Transform content;
-    public Transform inventoryWindow;
+    public Container itemContainer; // Contaner to which it is attached
+    public Transform content; // UI parent of InventorySlots
+    public Transform inventoryWindow; // Whole inventory panel
     
     [Space][Header("Templates")]
     [SerializeField] private InventorySlot inventorySlotTemplate;
@@ -21,7 +22,8 @@ public class ContainerUI : MonoBehaviour
         itemContainer.OnAdd += AddNewSlot;
     }
 
-    public void Refresh()
+    // If item was added to Container and there was free slot then recalculate slots' counters
+    private void Refresh()
     {
         inventorySlots = content.GetComponentsInChildren<InventorySlot>();
         
@@ -31,19 +33,10 @@ public class ContainerUI : MonoBehaviour
         }
     }
 
-    public void AddNewSlot()
+    // If their wasn't free slot then creates new
+    private void AddNewSlot()
     {
         InventorySlot cell = Instantiate(inventorySlotTemplate, content);
         cell.Init(this, itemContainer.itemSlots.Last());
-    }
-
-    public void ReArrange()
-    {
-        itemContainer.itemSlots.Clear();
-        inventorySlots = content.GetComponentsInChildren<InventorySlot>();
-        foreach (InventorySlot slot in inventorySlots)
-        {
-            itemContainer.itemSlots.Add(slot.itemSlot);
-        }
     }
 }

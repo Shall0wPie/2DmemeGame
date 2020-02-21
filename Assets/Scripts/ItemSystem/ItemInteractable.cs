@@ -5,9 +5,8 @@ using UnityEngine;
 public class ItemInteractable : Interactable
 {
     public Item item;
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         if (item.icon != null)
             GetComponent<SpriteRenderer>().sprite = item.icon;
     }

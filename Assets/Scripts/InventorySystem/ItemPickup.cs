@@ -8,9 +8,8 @@ public class ItemPickup : Interactable
     [SerializeField] private float pickUpLockTime;
     private bool canPickUp = true;
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         if (item.UIIcon != null)
             GetComponentInParent<SpriteRenderer>().sprite = item.UIIcon;
         if (item.Name != null)
@@ -25,14 +24,16 @@ public class ItemPickup : Interactable
 
         StartCoroutine(LockPickUp(pickUpLockTime));
     }
+    
+    // Calls this method when interaction happens
     public override void Interact(Transform target)
     {
         Inventory inv = target.GetComponentInChildren<Inventory>();
         if (canPickUp && inv != null && inv.AddItem(item))
             Destroy(transform.parent.gameObject);
     }
-    
 
+    // Disables interaction for given amount of time
     private IEnumerator LockPickUp(float time)
     {
         canPickUp = false;

@@ -32,7 +32,7 @@ public class SaveManager : MonoBehaviour
     public int checkPoint { get; private set; }
 
 
-    [SerializeField] private InventorySystem inventory;
+    [SerializeField] private Inventory inventory;
     private Save save;
     private string saveString;
 
@@ -98,15 +98,15 @@ public class SaveManager : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = save.pos;
         player.GetComponentInChildren<PlayerCombat>().hp = save.hp;
-        foreach (InventorySlot slot in inventory.slots)
-        {
-            // slot.DestroySlot();
-        }
+        // foreach (InventorySlot slot in inventory.slots)
+        // {
+        //     slot.DestroySlot();
+        // }
+
         // foreach (InventorySlot slot in save.slots)
         // {
         //     inventory.slots.Add(slot);
         // }
-        
     }
 
     #endregion

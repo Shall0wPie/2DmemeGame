@@ -5,11 +5,10 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private List<Container> containers;
 
-    [Space] [Header("Templates")] [SerializeField]
-    private InventorySlot inventorySlotTemplate;
-
+    [Space] [Header("Templates")]
     [SerializeField] private GameObject SceneItemTemplate;
 
+    // Finds free scpace in all containers and adds item to it 
     public bool AddItem(AssetItem item)
     {
         foreach (Container container in containers)
@@ -23,6 +22,7 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
+    // Drops items on the ground launched with given velocity
     public void DropItem(AssetItem item, int dropAmount, Vector2 velocity)
     {
         for (int i = 0; i < dropAmount; i++)
