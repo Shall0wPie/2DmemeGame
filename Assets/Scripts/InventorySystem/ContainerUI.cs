@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ContainerUI : MonoBehaviour
 {
-    [SerializeField] private Container itemContainer;
+    public Container itemContainer;
     public Transform content;
     public Transform inventoryWindow;
     
@@ -18,28 +19,34 @@ public class ContainerUI : MonoBehaviour
     private void Start()
     {
         itemContainer.OnChange += Refresh;
+        itemContainer.OnAdd += AddNewSlot;
     }
 
     public void Refresh()
     {
-        foreach (Transform child in content)
-            Destroy(child.gameObject);
+        inventorySlots = content.GetComponentsInChildren<InventorySlot>();
+        // foreach (Transform child in content)
+        //     Destroy(child.gameObject);
         
-        foreach (ItemSlot slot in itemContainer.itemSlots)
+        foreach (InventorySlot slot in inventorySlots)
         {
-            InventorySlot cell = Instantiate(inventorySlotTemplate, content);
-            cell.Init(transform.parent, slot);
+            slot.UpdateCounter();
         }
+    }
+
+    public void AddNewSlot()
+    {
+        InventorySlot cell = Instantiate(inventorySlotTemplate, content);
+        cell.Init(this, itemContainer.itemSlots.Last());
     }
 
     public void ReArrange()
     {
         itemContainer.itemSlots.Clear();
         inventorySlots = content.GetComponentsInChildren<InventorySlot>();
-        Debug.Log(inventorySlots.Length);
         foreach (InventorySlot slot in inventorySlots)
         {
-            itemContainer.itemSlots.Add(slot.ItemSlot);
+            itemContainer.itemSlots.Add(slot.itemSlot);
         }
     }
 }

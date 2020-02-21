@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
+    public static ItemSlot dragingSlot;
     public ContainerUI mainContainer;
     public ContainerUI quickContainer;
     

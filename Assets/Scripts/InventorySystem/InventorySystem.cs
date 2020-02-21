@@ -43,8 +43,7 @@ public class InventorySystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
             _draggingParent.gameObject.active = _draggingParent.gameObject.active ? false : true;
-        
-        
+
 
         if (Input.GetKeyDown(KeyCode.H))
         {
@@ -71,21 +70,14 @@ public class InventorySystem : MonoBehaviour
         return true;
     }
 
-    public void DropItem(InventorySlot slot, int dropAmount)
+    public void DropItem(AssetItem item)
     {
-        if (slot != null)
-        {
-            Vector2 position = new Vector2(player.position.x, player.position.y);
-            Vector2 velocity = new Vector2(Random.Range(20f, 25f) * player.lossyScale.x, 0);
+        Vector2 position = new Vector2(player.position.x, player.position.y);
+        Vector2 velocity = new Vector2(Random.Range(20f, 25f) * player.lossyScale.x, 0);
 
-            // Stack<AssetItem> item = slot.GetItem();
-            // for (int i = dropAmount; i > 0 && item.Count > 0; i--)
-            // {
-            //     ItemPickup newItem = Instantiate(SceneItemTemplate, position, Quaternion.identity);
-            //     newItem.Init(item.Pop());
-            //     newItem.GetComponent<Rigidbody2D>().velocity = velocity;
-            // }
-        }
+
+        ItemPickup newItem = Instantiate(SceneItemTemplate, position, Quaternion.identity);
+        newItem.Init(item);
+        newItem.GetComponent<Rigidbody2D>().velocity = velocity;
     }
 }
-
