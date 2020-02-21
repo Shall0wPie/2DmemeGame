@@ -86,11 +86,11 @@ public class SaveManager : MonoBehaviour
         save.pos = player.transform.position;
         save.hp = player.GetComponentInChildren<PlayerCombat>().hp;
         //save.slots = inventory.slots;
-        save.slots = new List<InventorySlot>();
-        foreach (InventorySlot slot in inventory.slots)
-        {
-            save.slots.Add(slot);
-        }
+        save.slots = new List<AssetItem>();
+        // foreach (AssetItem slot in inventory.slots[0].GetItem())
+        // {
+        //     save.slots.Add(slot);
+        // }
     }
 
     public void LoadGame()
@@ -102,10 +102,10 @@ public class SaveManager : MonoBehaviour
         {
             slot.DestroySlot();
         }
-        foreach (InventorySlot slot in save.slots)
-        {
-            inventory.slots.Add(slot);
-        }
+        // foreach (InventorySlot slot in save.slots)
+        // {
+        //     inventory.slots.Add(slot);
+        // }
         
     }
 
@@ -117,7 +117,7 @@ public class Save
 {
     public Vector3 pos;
     public float hp;
-    public List<InventorySlot> slots;
+    public List<AssetItem> slots;
 }
 
 [Serializable]

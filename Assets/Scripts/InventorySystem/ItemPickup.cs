@@ -12,7 +12,9 @@ public class ItemPickup : Interactable
     {
         base.Start();
         if (item.UIIcon != null)
-            GetComponent<SpriteRenderer>().sprite = item.UIIcon;
+            GetComponentInParent<SpriteRenderer>().sprite = item.UIIcon;
+        if (item.Name != null)
+            transform.parent.name = item.Name;
     }
 
     public void Init(AssetItem newItem)
@@ -23,21 +25,13 @@ public class ItemPickup : Interactable
 
         StartCoroutine(LockPickUp(pickUpLockTime));
     }
-    public override void Interact()
+    public override void Interact(Transform target)
     {
-        if (canPickUp && InventorySystem.instance.AddItem(item))
-            Destroy(gameObject);
+        InventoryN inv = target.GetComponentInChildren<InventoryN>();
+        if (canPickUp && inv != null && inv.AddItem(item))
+            Destroy(transform.parent.gameObject);
     }
     
-    protected override void OnDrawGizmos()
-    {
-        base.OnDrawGizmos();
-        if (item.UIIcon != null && item.Name != null)
-        {
-            GetComponent<SpriteRenderer>().sprite = item.UIIcon;
-            name = item.Name;
-        }
-    }
 
     private IEnumerator LockPickUp(float time)
     {

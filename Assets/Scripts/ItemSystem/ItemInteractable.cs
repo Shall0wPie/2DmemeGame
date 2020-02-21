@@ -11,7 +11,7 @@ public class ItemInteractable : Interactable
         if (item.icon != null)
             GetComponent<SpriteRenderer>().sprite = item.icon;
     }
-    public override void Interact()
+    public override void Interact(Transform target)
     {
         if (Inventory.instance.AddItem(item))
             Destroy(gameObject);

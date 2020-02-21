@@ -1,33 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    protected Transform player;
+    [SerializeField] private CircleCollider2D interactCollider;
+
     [Range(0f, 5f)] public float interactionRadius = 1f;
     // Start is called before the first frame update
 
     protected virtual void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    public abstract void Interact();
+    public abstract void Interact(Transform target);
 
-    // Update is called once per frame
-    void FixedUpdate()
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        float distance = Vector2.Distance(transform.position, player.position);
-
-        if (distance < interactionRadius)
-        {
-            Interact();
-        }
+        if (other.transform.CompareTag("Interactor"))
+            Interact(other.transform);
     }
 
     protected virtual void OnDrawGizmos()
     {
+        interactCollider.radius = interactionRadius;
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, interactionRadius);
     }

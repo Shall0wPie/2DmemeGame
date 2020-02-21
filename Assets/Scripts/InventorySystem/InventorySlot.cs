@@ -3,24 +3,26 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using TMPro;
 
-public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
+public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public event Action OnEjecting;
 
     [SerializeField] private Text nameField;
     [SerializeField] private Image iconField;
     [SerializeField] private TextMeshProUGUI counterField;
-    private Stack<AssetItem> items = new Stack<AssetItem>(5);
+    public ItemSlot ItemSlot;
     public int counter { get; private set; }
     private bool isDragging;
-    private Transform _draggingParent;
-    private Transform _originalParent;
+    private Transform draggingParent;
+    private Transform originalParent;
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1) && isDragging && !In((RectTransform) _draggingParent))
+        if (Input.GetMouseButtonDown(1) && isDragging && In() == null)
         {
             InventorySystem.instance.DropItem(this, 1);
             counter--;
@@ -28,17 +30,18 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         }
     }
 
-    public void Init(Transform draggingParent, AssetItem item)
+    public void Init(Transform draggingParent, ItemSlot slot)
     {
-        _draggingParent = draggingParent;
-        _originalParent = transform.parent;
-        nameField.text = item.Name;
-        iconField.sprite = item.UIIcon;
-        OnEjecting += () =>
-        {
-            InventorySystem.instance.DropItem(this, items.Count);
-            DestroySlot();
-        };
+        this.draggingParent = draggingParent;
+        originalParent = transform.parent;
+        nameField.text = slot.item.Name;
+        iconField.sprite = slot.item.UIIcon;
+        ItemSlot = slot;
+        // OnEjecting += () =>
+        // {
+        //     InventorySystem.instance.DropItem(this, items.Count);
+        //     DestroySlot();
+        // };
     }
 
     public void DestroySlot()
@@ -47,15 +50,11 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         Destroy(gameObject);
     }
 
-    public Stack<AssetItem> GetItem()
-    {
-        return items;
-    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         isDragging = true;
-        transform.parent = _draggingParent;
+        transform.parent = draggingParent;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -66,8 +65,10 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     public void OnEndDrag(PointerEventData eventData)
     {
         isDragging = false;
-        if (In((RectTransform) _draggingParent))
-            InsertInGrid();
+
+        ContainerUI targetContainer = In();
+        if (targetContainer != null)
+            InsertInGrid(targetContainer);
         else if (eventData.button.Equals(PointerEventData.InputButton.Left))
             Eject();
     }
@@ -75,22 +76,19 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
     public void PushItem(AssetItem newItem)
     {
         counter++;
-        items.Push(newItem);
         //icon.enabled = true;
         UpdateCounter();
     }
 
     private void UpdateCounter()
     {
-        if (IsEmpty())
+        if (counter <= 0)
         {
             Eject();
         }
 
         if (counter < 2)
-        {
             counterField.enabled = false;
-        }
         else
         {
             counterField.enabled = true;
@@ -103,35 +101,41 @@ public class InventorySlot : MonoBehaviour, IDragHandler, IEndDragHandler, IBegi
         OnEjecting?.Invoke();
     }
 
-    private void InsertInGrid()
+    private void InsertInGrid(ContainerUI targetContainer)
     {
-        int closestIndex = 0;
+        // int closestIndex = 0;
+        //
+        // for (int i = 0; i < targetContainer.content.transform.childCount; i++)
+        // {
+        //     if (Vector3.Distance(transform.position, targetContainer.content.transform.GetChild(i).position) <
+        //         Vector3.Distance(transform.position, targetContainer.content.transform.GetChild(closestIndex).position))
+        //     {
+        //         closestIndex = i;
+        //     }
+        // }
 
-        for (int i = 0; i < _originalParent.transform.childCount; i++)
+        transform.parent = targetContainer.content.transform;
+        targetContainer.ReArrange();
+        //transform.SetSiblingIndex(closestIndex);
+    }
+
+    private ContainerUI In()
+    {
+        List<RaycastResult> hited = new List<RaycastResult>();
+        PointerEventData pointer = new PointerEventData(EventSystem.current);
+        pointer.position = Input.mousePosition;
+        
+        
+        EventSystem.current.RaycastAll(pointer, hited);
+
+        foreach (RaycastResult hit in hited)
         {
-            if (Vector3.Distance(transform.position, _originalParent.GetChild(i).position) <
-                Vector3.Distance(transform.position, _originalParent.GetChild(closestIndex).position))
+            if (hit.gameObject.CompareTag("Container"))
             {
-                closestIndex = i;
+                return hit.gameObject.GetComponentInParent<ContainerUI>();
             }
         }
 
-        transform.parent = _originalParent;
-        transform.SetSiblingIndex(closestIndex);
-    }
-
-    private bool In(RectTransform draggingParent)
-    {
-        return draggingParent.rect.Contains(transform.localPosition);
-    }
-
-    public bool Contains(AssetItem item)
-    {
-        return items.Contains(item);
-    }
-
-    public bool IsEmpty()
-    {
-        return items.Count == 0;
+        return null;
     }
 }
