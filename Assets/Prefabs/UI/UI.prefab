@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e891315cd6ab4a0a96e71175e4a4cbc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainContainer: {fileID: 0}
+  mainContainer: {fileID: 5902140501812905371}
   quickContainer: {fileID: 0}
 --- !u!1 &1014866288285135115
 GameObject:
@@ -594,7 +594,6 @@ MonoBehaviour:
   inventoryWindow: {fileID: 3760372465928659312}
   inventorySlotTemplate: {fileID: 2325919458768797020, guid: a85d674f4a95e614888c9d2604451e5d,
     type: 3}
-  SceneItemTemplate: {fileID: 0}
 --- !u!1 &1576775175159989408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1016,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1078,6 +1077,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4139410292057963611}
+  - component: {fileID: 5902140501812905371}
   m_Layer: 5
   m_Name: MainContainerUI
   m_TagString: Untagged
@@ -1105,6 +1105,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030517578, y: 0.000015258789}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5902140501812905371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3651756894450071121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cce20e60ae346ec84cde1b0d217227e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemContainer: {fileID: 0}
+  content: {fileID: 1886633005937642386}
+  inventoryWindow: {fileID: 1780788986146966510}
+  inventorySlotTemplate: {fileID: 2325919458768797020, guid: a85d674f4a95e614888c9d2604451e5d,
+    type: 3}
 --- !u!1 &3718622637172900887
 GameObject:
   m_ObjectHideFlags: 0

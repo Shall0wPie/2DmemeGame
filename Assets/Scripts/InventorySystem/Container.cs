@@ -30,8 +30,6 @@ public class Container : MonoBehaviour
 
     public void RemoveFromContainer(ItemSlot slot)
     {
-        Debug.Log(itemSlots.Count);
         itemSlots.Remove(slot);
-        Debug.Log(itemSlots.Count);
     }
 }

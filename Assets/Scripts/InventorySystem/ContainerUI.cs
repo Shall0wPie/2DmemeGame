@@ -12,7 +12,6 @@ public class ContainerUI : MonoBehaviour
     
     [Space][Header("Templates")]
     [SerializeField] private InventorySlot inventorySlotTemplate;
-    [SerializeField] private GameObject SceneItemTemplate;
 
     private InventorySlot[] inventorySlots;
 
@@ -25,8 +24,6 @@ public class ContainerUI : MonoBehaviour
     public void Refresh()
     {
         inventorySlots = content.GetComponentsInChildren<InventorySlot>();
-        // foreach (Transform child in content)
-        //     Destroy(child.gameObject);
         
         foreach (InventorySlot slot in inventorySlots)
         {

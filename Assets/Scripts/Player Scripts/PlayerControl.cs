@@ -53,22 +53,22 @@ public class PlayerControl : MonoBehaviour
             if (Input.mouseScrollDelta.y > 0)
             {
                 selector++;
-                if (Inventory.instance.slotsCount - 1 < selector)
-                    selector = Inventory.instance.slotsCount - 1;
-                Inventory.instance.SelectSlot(selector);
+                if (InventoryOld.instance.slotsCount - 1 < selector)
+                    selector = InventoryOld.instance.slotsCount - 1;
+                InventoryOld.instance.SelectSlot(selector);
             }
             else if (Input.mouseScrollDelta.y < 0)
             {
                 selector--;
                 if (selector < 0)
                     selector = 0;
-                Inventory.instance.SelectSlot(selector);
+                InventoryOld.instance.SelectSlot(selector);
             }
 
             if (Input.GetKeyDown(KeyCode.G))
-                Inventory.instance.DropItem();
+                InventoryOld.instance.DropItem();
             if (Input.GetKeyDown(KeyCode.Q))
-                Inventory.instance.UseItem();
+                InventoryOld.instance.UseItem();
         }
         else
         {
@@ -78,25 +78,25 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             selector = 0;
-            Inventory.instance.SelectSlot(selector);
+            InventoryOld.instance.SelectSlot(selector);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             selector = 1;
-            Inventory.instance.SelectSlot(selector);
+            InventoryOld.instance.SelectSlot(selector);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             selector = 2;
-            Inventory.instance.SelectSlot(selector);
+            InventoryOld.instance.SelectSlot(selector);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             selector = 3;
-            Inventory.instance.SelectSlot(selector);
+            InventoryOld.instance.SelectSlot(selector);
         }
 
         // DELETE THIS

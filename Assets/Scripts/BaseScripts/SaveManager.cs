@@ -100,7 +100,7 @@ public class SaveManager : MonoBehaviour
         player.GetComponentInChildren<PlayerCombat>().hp = save.hp;
         foreach (InventorySlot slot in inventory.slots)
         {
-            slot.DestroySlot();
+            // slot.DestroySlot();
         }
         // foreach (InventorySlot slot in save.slots)
         // {

@@ -13,7 +13,7 @@ public class ItemInteractable : Interactable
     }
     public override void Interact(Transform target)
     {
-        if (Inventory.instance.AddItem(item))
+        if (InventoryOld.instance.AddItem(item))
             Destroy(gameObject);
     }
 }

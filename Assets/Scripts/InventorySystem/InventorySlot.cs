@@ -6,11 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public event Action OnEjecting;
-
     [SerializeField] private Text nameField;
     [SerializeField] private Image iconField;
     [SerializeField] private TextMeshProUGUI counterField;
@@ -23,10 +22,10 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (Input.GetMouseButtonDown(1) && isDragging)
         {
-            ContainerUI targetContainer = In();
+            ContainerUI targetContainer = OverlapContainer();
             if (targetContainer == null)
             {
-                InventorySystem.instance.DropItem(itemSlot.item);
+                DropItems(1);
                 itemSlot.TakeItem();
             }
             else
@@ -53,14 +52,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         //     DestroySlot();
         // };
     }
-
-    public void DestroySlot()
-    {
-        InventorySystem.instance.slots.Remove(this);
-        Destroy(gameObject);
-    }
-
-
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
         InventoryUI.dragingSlot = itemSlot;
@@ -78,11 +70,14 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         InventoryUI.dragingSlot = null;
         isDragging = false;
 
-        ContainerUI targetContainer = In();
+        ContainerUI targetContainer = OverlapContainer();
         if (targetContainer != null)
             InsertInGrid(targetContainer);
         else if (eventData.button.Equals(PointerEventData.InputButton.Left))
-            Eject();
+        {
+            DropItems(itemSlot.count);
+            DestroySlot();
+        }
     }
 
     public void PushItem(AssetItem newItem)
@@ -95,8 +90,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (itemSlot.count <= 0)
         {
-            parentContainerUI.itemContainer.RemoveFromContainer(itemSlot);
-            Destroy(gameObject);
+            DestroySlot();
         }
 
         if (itemSlot.count < 2)
@@ -108,9 +102,17 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
-    private void Eject()
+    private void DropItems(int count)
     {
-        OnEjecting?.Invoke();
+        Inventory caster = parentContainerUI.itemContainer.GetComponentInParent<Inventory>();
+        Vector2 velocity = new Vector2(Random.Range(20f, 25f) * caster.transform.parent.lossyScale.x, 0);
+        caster.DropItem(itemSlot.item, count, velocity);
+    }
+
+    private void DestroySlot()
+    {
+        parentContainerUI.itemContainer.RemoveFromContainer(itemSlot);
+        Destroy(gameObject);
     }
 
     private void InsertInGrid(ContainerUI targetContainer)
@@ -132,7 +134,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         //transform.SetSiblingIndex(closestIndex);
     }
 
-    private ContainerUI In()
+    private ContainerUI OverlapContainer()
     {
         List<RaycastResult> hited = new List<RaycastResult>();
         PointerEventData pointer = new PointerEventData(EventSystem.current);

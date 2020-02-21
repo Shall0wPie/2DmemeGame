@@ -21,13 +21,13 @@ public class ItemPickup : Interactable
     {
         item = newItem;
         if (item.UIIcon != null)
-            GetComponent<SpriteRenderer>().sprite = item.UIIcon;
+            GetComponentInParent<SpriteRenderer>().sprite = item.UIIcon;
 
         StartCoroutine(LockPickUp(pickUpLockTime));
     }
     public override void Interact(Transform target)
     {
-        InventoryN inv = target.GetComponentInChildren<InventoryN>();
+        Inventory inv = target.GetComponentInChildren<Inventory>();
         if (canPickUp && inv != null && inv.AddItem(item))
             Destroy(transform.parent.gameObject);
     }

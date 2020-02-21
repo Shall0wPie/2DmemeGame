@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703b486c26bef9469566c2111f9bb9d, type: 3}
   m_Name: Cigarettes
   m_EditorClassIdentifier: 
-  _stackSize: 0
+  _stackSize: 1
   _name: Cigarettes
   _uiIcon: {fileID: 21300000, guid: bdce2a9cb3d0242958c2593a3b8d8742, type: 3}

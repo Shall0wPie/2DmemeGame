@@ -1,10 +1,10 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class InventoryOld : MonoBehaviour
 {
     #region Singleton
-    public static Inventory instance { get; private set; }
+    public static InventoryOld instance { get; private set; }
     private void Start()
     {
         if (instance != null)
