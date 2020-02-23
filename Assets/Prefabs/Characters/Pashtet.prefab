@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animControl: {fileID: 7865027945398089276}
+  isInvincible: 0
   punchDmg: 60
   punchForce: {x: 30, y: 30}
+  stunDuration: 0
   attackCooldown: 1
   attackRange: 6
 --- !u!1001 &6681521329153200419
@@ -119,6 +121,18 @@ PrefabInstance:
       propertyPath: loot.Array.data[0].dropChance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7106080597651081633, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: loot.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d7333d8de744ae4d831fee264463034,
+        type: 2}
+    - target: {fileID: 7106080597651081633, guid: eefa64718390fd64e896d529e7c93cfc,
+        type: 3}
+      propertyPath: loot.Array.data[1].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 375ca5823aac002408b1238586f41772,
+        type: 2}
     - target: {fileID: 8735393309590223288, guid: eefa64718390fd64e896d529e7c93cfc,
         type: 3}
       propertyPath: maxHP

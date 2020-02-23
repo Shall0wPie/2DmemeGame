@@ -10,6 +10,8 @@ TagManager:
   - gameManager
   - CanvasMaxim
   - ItemSpell
+  - Container
+  - Interactor
   layers:
   - Default
   - TransparentFX

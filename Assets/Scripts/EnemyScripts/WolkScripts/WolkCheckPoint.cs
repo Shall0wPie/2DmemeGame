@@ -11,7 +11,7 @@ public class WolkCheckPoint : MonoBehaviour
     
     private void Start()
     {
-        CheckPoint.onSave += TriggerWolk;
+        SaveManager.OnSaveEvent += TriggerWolk;
         wolkAnim = GetComponentInChildren<Animator>();
     }
 
@@ -37,6 +37,6 @@ public class WolkCheckPoint : MonoBehaviour
 
     private void OnDestroy()
     {
-        CheckPoint.onSave -= TriggerWolk;
+        SaveManager.OnSaveEvent -= TriggerWolk;
     }
 }

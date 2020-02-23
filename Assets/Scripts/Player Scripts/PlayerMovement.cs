@@ -43,11 +43,11 @@ public class PlayerMovement : MonoBehaviour
     public void Move(float horizontalMove)
     {
         // For debug
-        if (Input.GetMouseButtonDown(1))
-        {
-            rigidbody.AddForce(new Vector2(50, 0), ForceMode2D.Impulse);
-            StartCoroutine(Stun(0.5f));
-        }
+        // if (Input.GetMouseButtonDown(1))
+        // {
+        //     rigidbody.AddForce(new Vector2(50, 0), ForceMode2D.Impulse);
+        //     StartCoroutine(Stun(0.5f));
+        // }
 
         if (stun)
         {

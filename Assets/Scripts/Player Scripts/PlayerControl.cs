@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
@@ -13,7 +14,6 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private bool isOnGround = true;
     private float punchTimeStamp = 0;
     private float jumpTimeStamp = 0;
-    private int selector;
 
     private void Start()
     {
@@ -22,11 +22,8 @@ public class PlayerControl : MonoBehaviour
         anim = GetComponentInChildren<PlayerAnimationControl>();
         stats = GetComponent<PlayerStats>();
         dialogues = GetComponent<DialogueControl>();
-
-        dialogues.TriggerDialogue("HochuSkazt");
-
-        if (SaveManager.instance != null && SaveManager.instance.lastPosition != Vector2.zero)
-            transform.position = SaveManager.instance.lastPosition;
+        
+        SaveManager.LoadGame();
     }
 
     private void Update()
@@ -50,54 +47,14 @@ public class PlayerControl : MonoBehaviour
                 punchTimeStamp = Time.time + combat.punchCooldown;
             }
 
-            if (Input.mouseScrollDelta.y > 0)
-            {
-                selector++;
-                if (Inventory.instance.slotsCount - 1 < selector)
-                    selector = Inventory.instance.slotsCount - 1;
-                Inventory.instance.SelectSlot(selector);
-            }
-            else if (Input.mouseScrollDelta.y < 0)
-            {
-                selector--;
-                if (selector < 0)
-                    selector = 0;
-                Inventory.instance.SelectSlot(selector);
-            }
-
-            if (Input.GetKeyDown(KeyCode.G))
-                Inventory.instance.DropItem();
-            if (Input.GetKeyDown(KeyCode.Q))
-                Inventory.instance.UseItem();
+            
         }
         else
         {
             horizontalMove = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            selector = 0;
-            Inventory.instance.SelectSlot(selector);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            selector = 1;
-            Inventory.instance.SelectSlot(selector);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            selector = 2;
-            Inventory.instance.SelectSlot(selector);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            selector = 3;
-            Inventory.instance.SelectSlot(selector);
-        }
+        
 
         // DELETE THIS
         //if (Input.GetKey(KeyCode.Q))

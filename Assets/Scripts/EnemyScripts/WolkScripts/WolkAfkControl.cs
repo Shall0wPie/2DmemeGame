@@ -46,7 +46,7 @@ public class WolkAfkControl : StateMachineBehaviour
                 break;
         }
 
-        if (anim.GetInteger("Stage") == 0 && SaveManager.instance.checkPoint == 3 && !DialogManager.instance.isInDialogue)
+        if (anim.GetInteger("Stage") == 0 && SaveManager.checkPoint == 3 && !DialogManager.instance.isInDialogue)
         {
             anim.SetInteger("Stage", 1);
         }

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -103,7 +102,7 @@ public class PlayerCombat : MonoBehaviour
 
         if (stats.allowRespawn)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            LevelLoader.ReloadScene();
             PlayerAnim.PlayRespawn();
             GetComponentInParent<PlayerControl>().enabled = true;
             GetComponentInParent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
