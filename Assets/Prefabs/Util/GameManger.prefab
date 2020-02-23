@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03583b8a20948d4aa9b4333b20088d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 3802972731841279908, guid: e85dae0489237e1408ad66d4f4986c33, type: 3}
+  item: {fileID: 4497795207063403347, guid: 4fd4d86589fba5346963772205d2af62, type: 3}
   point: {fileID: 921397493930275662, guid: e106440b813c92f4daf0f658dd2b04ab, type: 3}
   projectileAnime: {fileID: 283745188614811727, guid: a71fde1f5dda1c24badfc2efade50b73,
     type: 3}

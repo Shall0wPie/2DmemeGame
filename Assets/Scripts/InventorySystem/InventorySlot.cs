@@ -29,8 +29,8 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             }
             else // Adds to container
             {
-                targetContainer.itemContainer.AddToContainer(itemSlot.item);
-                itemSlot.TakeItem();
+                if (targetContainer.itemContainer.AddToContainer(itemSlot.item))
+                    itemSlot.TakeItem();
             }
 
             UpdateCounter();
@@ -49,6 +49,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        InventoryUI.draggableSlot = itemSlot;
         InventoryUI.draggableSlot = itemSlot;
         isDragging = true;
         prevParent = transform.parent;
@@ -98,9 +99,9 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private void DropItems(int count) // Ground drop method
     {
-        Inventory caster = parentContainerUI.itemContainer.GetComponentInParent<Inventory>();
-        Vector2 velocity = new Vector2(Random.Range(20f, 25f) * caster.transform.parent.lossyScale.x, 0);
-        caster.DropItem(itemSlot.item, count, velocity);
+        Inventory inventory = parentContainerUI.itemContainer.GetComponentInParent<Inventory>();
+        Vector2 velocity = new Vector2(Random.Range(20f, 25f) * inventory.transform.parent.lossyScale.x, 0);
+        inventory.DropItem(itemSlot.item, count, velocity);
     }
 
     private void InsertInGrid(ContainerUI targetContainer) // Container insertion method

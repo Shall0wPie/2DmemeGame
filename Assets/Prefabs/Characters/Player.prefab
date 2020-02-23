@@ -30,6 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1637186203574973534}
+  - {fileID: 8882916913691882932}
   m_Father: {fileID: 1335629947481452084}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46,9 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containers:
+  - {fileID: 3075894689992986006}
   - {fileID: 4192489943846735448}
-  inventorySlotTemplate: {fileID: 2325919458768797020, guid: a85d674f4a95e614888c9d2604451e5d,
-    type: 3}
   SceneItemTemplate: {fileID: 4983296671968934083, guid: 4fd4d86589fba5346963772205d2af62,
     type: 3}
 --- !u!70 &5573165756574465806
@@ -67,6 +67,51 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.5}
   m_Size: {x: 2.5, y: 5}
   m_Direction: 0
+--- !u!1 &73267198683699654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8882916913691882932}
+  - component: {fileID: 3075894689992986006}
+  m_Layer: 11
+  m_Name: QuickContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8882916913691882932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73267198683699654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6828364636792531264}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3075894689992986006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73267198683699654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64acfef2312e4deaad1de53c65be01a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSlots: []
+  _containerSize: 4
 --- !u!1 &1335629947481452073
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,3 +634,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSlots: []
+  _containerSize: 0

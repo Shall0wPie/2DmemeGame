@@ -13,7 +13,6 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private bool isOnGround = true;
     private float punchTimeStamp = 0;
     private float jumpTimeStamp = 0;
-    private int selector;
 
     private void Start()
     {
@@ -50,54 +49,14 @@ public class PlayerControl : MonoBehaviour
                 punchTimeStamp = Time.time + combat.punchCooldown;
             }
 
-            if (Input.mouseScrollDelta.y > 0)
-            {
-                selector++;
-                if (InventoryOld.instance.slotsCount - 1 < selector)
-                    selector = InventoryOld.instance.slotsCount - 1;
-                InventoryOld.instance.SelectSlot(selector);
-            }
-            else if (Input.mouseScrollDelta.y < 0)
-            {
-                selector--;
-                if (selector < 0)
-                    selector = 0;
-                InventoryOld.instance.SelectSlot(selector);
-            }
-
-            if (Input.GetKeyDown(KeyCode.G))
-                InventoryOld.instance.DropItem();
-            if (Input.GetKeyDown(KeyCode.Q))
-                InventoryOld.instance.UseItem();
+            
         }
         else
         {
             horizontalMove = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            selector = 0;
-            InventoryOld.instance.SelectSlot(selector);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            selector = 1;
-            InventoryOld.instance.SelectSlot(selector);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            selector = 2;
-            InventoryOld.instance.SelectSlot(selector);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            selector = 3;
-            InventoryOld.instance.SelectSlot(selector);
-        }
+        
 
         // DELETE THIS
         //if (Input.GetKey(KeyCode.Q))

@@ -5,9 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class Loot
 {
-    [SerializeField] private Item item;
+    [SerializeField] private AssetItem item;
     [SerializeField] private float dropChance;
 
-    public Item Item { get => item; }
+    public AssetItem Item { get => item; }
     public float DropChance { get => dropChance; }
 }
