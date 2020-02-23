@@ -26,7 +26,7 @@ public class Container : MonoBehaviour
     }
 
     // Adds item to the existing slot or creates new if there's no free slots
-    public bool AddToContainer(AssetItem item)
+    public bool AddToContainer(Item item)
     {
         if (item.stackSize > 1) // Stacks items only if they can be stacked
             foreach (ItemSlot slot in itemSlots)

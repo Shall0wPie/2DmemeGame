@@ -4,10 +4,10 @@ using System;
 [Serializable]
 public class ItemSlot
 {
-    public AssetItem item;
+    public Item item;
     public int count;
 
-    public ItemSlot(AssetItem item)
+    public ItemSlot(Item item)
     {
         this.item = item;
         count = 1;
@@ -18,8 +18,8 @@ public class ItemSlot
         count++;
     }
 
-    public void TakeItem()
+    public void TakeItem(int quantity)
     {
-        count--;
+        count -= quantity;
     }
 }

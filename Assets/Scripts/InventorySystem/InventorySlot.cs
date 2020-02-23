@@ -25,12 +25,11 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             if (targetContainer == null) // Drops
             {
                 DropItems(1);
-                itemSlot.TakeItem();
             }
             else // Adds to container
             {
                 if (targetContainer.itemContainer.AddToContainer(itemSlot.item))
-                    itemSlot.TakeItem();
+                    itemSlot.TakeItem(1);
             }
 
             UpdateCounter();
@@ -41,8 +40,8 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void Init(ContainerUI draggingParent, ItemSlot slot)
     {
         parentContainerUI = draggingParent;
-        nameField.text = slot.item.Name;
-        iconField.sprite = slot.item.UIIcon;
+        nameField.text = slot.item.name;
+        iconField.sprite = slot.item.uiIcon;
         itemSlot = slot;
         UpdateCounter();
     }
@@ -73,7 +72,6 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             else // To the ground
             {
                 DropItems(itemSlot.count);
-                DestroySlot();
             }
 
             InventoryUI.draggableSlot = null;
@@ -97,11 +95,23 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
-    private void DropItems(int count) // Ground drop method
+    public void DropItems(int count) // Ground drop method
     {
         Inventory inventory = parentContainerUI.itemContainer.GetComponentInParent<Inventory>();
         Vector2 velocity = new Vector2(Random.Range(20f, 25f) * inventory.transform.parent.lossyScale.x, 0);
         inventory.DropItem(itemSlot.item, count, velocity);
+        itemSlot.TakeItem(count);
+        UpdateCounter();
+    }
+
+    public void UseItem(Transform target)
+    {
+        if (itemSlot.item is IUsable usable)
+        {
+            usable.Use(target);
+            itemSlot.TakeItem(1);
+            UpdateCounter();
+        }
     }
 
     private void InsertInGrid(ContainerUI targetContainer) // Container insertion method
@@ -125,7 +135,7 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             {
                 if (targetContainer.itemContainer.AddToContainer(itemSlot.item)) // Inserts items to the new container 
                 {
-                    itemSlot.TakeItem();
+                    itemSlot.TakeItem(1);
                     UpdateCounter();
                 }
                 else // If there is no free space in target container returns the rest of items to previous container

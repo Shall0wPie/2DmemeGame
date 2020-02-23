@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject SceneItemTemplate;
 
     // Finds free scpace in all containers and adds item to it 
-    public bool AddItem(AssetItem item)
+    public bool AddItem(Item item)
     {
         foreach (Container container in containers)
         {
@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
     }
 
     // Drops items on the ground launched with given velocity
-    public void DropItem(AssetItem item, int dropAmount, Vector2 velocity)
+    public void DropItem(Item item, int dropAmount, Vector2 velocity)
     {
         for (int i = 0; i < dropAmount; i++)
         {

@@ -12,7 +12,7 @@ public abstract class Interactable : MonoBehaviour
     public abstract void Interact(Transform target);
 
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.transform.CompareTag("Interactor"))
             Interact(other.transform);

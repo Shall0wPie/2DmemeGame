@@ -199,6 +199,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91469d948245e2e4b90f4e23e67f1fa4, type: 3}
+--- !u!1001 &162956200
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2278960296100626380, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_Name
+      value: AnimeDefka (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365604476800218029, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 4d7333d8de744ae4d831fee264463034,
+        type: 2}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 128.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 70.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269697457320377436, guid: 91469d948245e2e4b90f4e23e67f1fa4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 91469d948245e2e4b90f4e23e67f1fa4, type: 3}
 --- !u!95 &163181118 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5150565898509543410, guid: 4d4e11f138130b145b5290272cb0ab26,
@@ -2391,12 +2466,12 @@ PrefabInstance:
     - target: {fileID: 1335629947481452084, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 126
+      value: 121.37
       objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452084, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 71
+      value: 70.21
       objectReference: {fileID: 0}
     - target: {fileID: 1335629947481452084, guid: 0ce8b516cd808b346b0abfe557eed63c,
         type: 3}
@@ -39590,7 +39665,7 @@ PrefabInstance:
     - target: {fileID: 1886633005937642386, guid: 4d4e11f138130b145b5290272cb0ab26,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000045776367
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 1923669836793869463, guid: 4d4e11f138130b145b5290272cb0ab26,
         type: 3}

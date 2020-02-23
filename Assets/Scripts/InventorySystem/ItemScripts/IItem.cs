@@ -2,8 +2,8 @@
 
 public interface IItem
 {
-    string Name { get; }
-    Sprite UIIcon { get; }
+    string name { get; }
+    Sprite uiIcon { get; }
     int stackSize { get; }
 
 }

@@ -86,7 +86,7 @@ public class SaveManager : MonoBehaviour
         save.pos = player.transform.position;
         save.hp = player.GetComponentInChildren<PlayerCombat>().hp;
         //save.slots = inventory.slots;
-        save.slots = new List<AssetItem>();
+        save.slots = new List<Item>();
         // foreach (AssetItem slot in inventory.slots[0].GetItem())
         // {
         //     save.slots.Add(slot);
@@ -117,7 +117,7 @@ public class Save
 {
     public Vector3 pos;
     public float hp;
-    public List<AssetItem> slots;
+    public List<Item> slots;
 }
 
 [Serializable]

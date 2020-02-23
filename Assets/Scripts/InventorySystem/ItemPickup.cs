@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class ItemPickup : Interactable
 {
-    [SerializeField] private AssetItem item;
+    [SerializeField] private Item item;
     [SerializeField] private float pickUpLockTime;
     private bool canPickUp = true;
 
     private void Start()
     {
-        if (item.UIIcon != null)
-            GetComponentInParent<SpriteRenderer>().sprite = item.UIIcon;
-        if (item.Name != null)
-            transform.parent.name = item.Name;
+        if (item.uiIcon != null)
+            GetComponentInParent<SpriteRenderer>().sprite = item.uiIcon;
+        if (item.name != null)
+            transform.parent.name = item.name;
     }
 
-    public void Init(AssetItem newItem)
+    public void Init(Item newItem)
     {
         item = newItem;
-        if (item.UIIcon != null)
-            GetComponentInParent<SpriteRenderer>().sprite = item.UIIcon;
+        if (item.uiIcon != null)
+            GetComponentInParent<SpriteRenderer>().sprite = item.uiIcon;
 
         StartCoroutine(LockPickUp(pickUpLockTime));
     }

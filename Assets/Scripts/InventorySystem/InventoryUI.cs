@@ -40,10 +40,10 @@ public class InventoryUI : MonoBehaviour
                 SelectSlot(selector);
             }
             
-            // if (Input.GetKeyDown(KeyCode.G))
-            //     InventoryOld.instance.DropItem();
-            // if (Input.GetKeyDown(KeyCode.Q))
-            //     InventoryOld.instance.UseItem();
+            if (Input.GetKeyDown(KeyCode.G))
+                quickContainerUI.DropFromSlot(selector, 1);
+            if (Input.GetKeyDown(KeyCode.Q))
+                quickContainerUI.UseFromSlot(selector);
             
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {

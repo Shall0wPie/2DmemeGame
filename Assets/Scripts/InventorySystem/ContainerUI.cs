@@ -10,9 +10,9 @@ public class ContainerUI : MonoBehaviour
     public Container itemContainer; // Contaner to which it is attached
     public Transform content; // UI parent of InventorySlots
     public Transform inventoryWindow; // Whole inventory panel
-    
-    [Space][Header("Templates")]
-    [SerializeField] private InventorySlot inventorySlotTemplate;
+
+    [Space] [Header("Templates")] [SerializeField]
+    private InventorySlot inventorySlotTemplate;
 
     private InventorySlot[] inventorySlots;
 
@@ -26,7 +26,7 @@ public class ContainerUI : MonoBehaviour
     private void Refresh()
     {
         inventorySlots = content.GetComponentsInChildren<InventorySlot>();
-        
+
         foreach (InventorySlot slot in inventorySlots)
         {
             slot.UpdateCounter();
@@ -38,5 +38,24 @@ public class ContainerUI : MonoBehaviour
     {
         InventorySlot cell = Instantiate(inventorySlotTemplate, content);
         cell.Init(this, itemContainer.itemSlots.Last());
+    }
+
+    public void DropFromSlot(int index, int quantity)
+    {
+        inventorySlots = content.GetComponentsInChildren<InventorySlot>();
+        if (index >= inventorySlots.Length)
+            return;
+
+        inventorySlots[index].DropItems(quantity);
+    }
+
+    public void UseFromSlot(int index)
+    {
+        inventorySlots = content.GetComponentsInChildren<InventorySlot>();
+        if (index >= inventorySlots.Length)
+            return;
+
+        Transform target = GameObject.FindGameObjectWithTag("Player").transform;
+        inventorySlots[index].UseItem(target);
     }
 }
