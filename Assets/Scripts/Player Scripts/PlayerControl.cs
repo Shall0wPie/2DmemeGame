@@ -22,9 +22,6 @@ public class PlayerControl : MonoBehaviour
         anim = GetComponentInChildren<PlayerAnimationControl>();
         stats = GetComponent<PlayerStats>();
         dialogues = GetComponent<DialogueControl>();
-
-        if (SaveManager.instance != null && SaveManager.instance.lastPosition != Vector2.zero)
-            transform.position = SaveManager.instance.lastPosition;
         
         SaveManager.LoadGame();
     }

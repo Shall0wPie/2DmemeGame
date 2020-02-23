@@ -32,7 +32,7 @@ public class AuidioManger : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").transform;
 
 
-        if (SaveManager.instance.checkPoint == 3)
+        if (SaveManager.checkPoint == 3)
         {
             if (source.clip != moskvinTheme)
             {

@@ -25,12 +25,12 @@ public class MoskvinCombat : EnemyCombat
     protected override void Update()
     {
         distance = Vector2.Distance(target.position, transform.position);
-        if (distance < tamponRange && SaveManager.instance.checkPoint != 3)
+        if (distance < tamponRange && SaveManager.checkPoint != 3)
         {
             GetComponentInParent<DialogueControl>().TriggerDialogue("MoskvinEngage");
-            SaveManager.instance.SavePosition(3);
+            SaveManager.SaveGame(3);
         }
-        if (SaveManager.instance.checkPoint == 3)
+        if (SaveManager.checkPoint == 3)
         {
             door.SetActive(true);
         }

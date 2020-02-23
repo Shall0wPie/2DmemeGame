@@ -88,8 +88,8 @@ GameObject:
   - component: {fileID: 2406524698626232098}
   - component: {fileID: 2406524698626232099}
   - component: {fileID: 1649863400229674757}
-  - component: {fileID: 4098659765990521128}
   - component: {fileID: 6977449978390905778}
+  - component: {fileID: 6683698140006520852}
   m_Layer: 0
   m_Name: GameManger
   m_TagString: gameManager
@@ -148,19 +148,6 @@ MonoBehaviour:
   nameText: {fileID: 2837609403670761656}
   dialogueText: {fileID: 7065241272820154803}
   anim: {fileID: 1404283731522745229}
---- !u!114 &4098659765990521128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2406524698626232108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce08ba7505df3c42ac77f29ac2fd3af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
 --- !u!114 &6977449978390905778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +161,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPopup: {fileID: 1023622750108853689}
+--- !u!114 &6683698140006520852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2406524698626232108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce08ba7505df3c42ac77f29ac2fd3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3494604249790256456
 GameObject:
   m_ObjectHideFlags: 0

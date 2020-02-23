@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactCollider: {fileID: 1429556158337685111}
   interactionRadius: 2
-  item: {fileID: 11400000, guid: 72206fadf358a634bad98f8664076c4e, type: 2}
+  item: {fileID: 11400000, guid: c6f8d56a5d6809b4d83c9db23294329c, type: 2}
   pickUpLockTime: 0.5
 --- !u!58 &1429556158337685111
 CircleCollider2D:
