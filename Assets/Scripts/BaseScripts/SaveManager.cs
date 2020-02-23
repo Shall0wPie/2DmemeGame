@@ -14,14 +14,16 @@ public class SaveManager : MonoBehaviour
     {
         if (instance != null)
         {
-            //Debug.Log("Save manager alredy exists");
+            Debug.Log("Save manager alredy exists");
             Destroy(gameObject);
         }
         else
         {
+            save = new Save();
             checkPoint = -1;
             instance = this;
             DontDestroyOnLoad(gameObject);
+            SaveGame();
         }
     }
 
@@ -32,19 +34,12 @@ public class SaveManager : MonoBehaviour
     public int checkPoint { get; private set; }
 
 
-    [SerializeField] private Inventory inventory;
-    private Save save;
-    private string saveString;
-
-    private void OnLevelWasLoaded(int level)
-    {
-        if (level == 3)
-            Destroy(gameObject);
-    }
+    private static Save save;
+    private static string saveString;
 
     private void Awake()
     {
-        save = new Save();
+        
     }
 
     private void Update()
@@ -52,13 +47,10 @@ public class SaveManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             SaveGame();
-            saveString = JsonUtility.ToJson(save);
-            Debug.Log(saveString);
         }
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            JsonUtility.FromJsonOverwrite(saveString, save);
             LoadGame();
         }
     }
@@ -80,33 +72,61 @@ public class SaveManager : MonoBehaviour
 
     #region NewSaveSystem
 
-    public void SaveGame()
+    public static void SaveGame()
     {
+        Debug.Log("SaveGame");
+        save = new Save();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         save.pos = player.transform.position;
         save.hp = player.GetComponentInChildren<PlayerCombat>().hp;
-        //save.slots = inventory.slots;
-        save.slots = new List<Item>();
-        // foreach (AssetItem slot in inventory.slots[0].GetItem())
-        // {
-        //     save.slots.Add(slot);
-        // }
+
+        List<Container> containers = player.GetComponentInChildren<Inventory>().containers;
+
+        save.quickContainer = new List<ItemSlot>();
+        foreach (ItemSlot slot in containers[0].itemSlots)
+        {
+            save.quickContainer.Add(slot);
+        }
+
+        save.mainContainer = new List<ItemSlot>();
+        foreach (ItemSlot slot in containers[1].itemSlots)
+        {
+            save.mainContainer.Add(slot);
+        }
+
+
+        saveString = JsonUtility.ToJson(save);
     }
 
-    public void LoadGame()
+    public static void LoadGame()
     {
+        Debug.Log("LoadGame");
+        Debug.Log(saveString);
+        if (saveString == null)
+            return;
+        JsonUtility.FromJsonOverwrite(saveString, save);
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = save.pos;
         player.GetComponentInChildren<PlayerCombat>().hp = save.hp;
-        // foreach (InventorySlot slot in inventory.slots)
-        // {
-        //     slot.DestroySlot();
-        // }
 
-        // foreach (InventorySlot slot in save.slots)
-        // {
-        //     inventory.slots.Add(slot);
-        // }
+        List<Container> containers = player.GetComponentInChildren<Inventory>().containers;
+
+        foreach (ItemSlot slot in save.quickContainer)
+        {
+            for (int i = 0; i < slot.count; i++)
+            {
+                containers[0].AddToContainer(slot.item);
+            }
+        }
+
+        foreach (ItemSlot slot in save.mainContainer)
+        {
+            for (int i = 0; i < slot.count; i++)
+            {
+                containers[1].AddToContainer(slot.item);
+            }
+        }
     }
 
     #endregion
@@ -117,7 +137,8 @@ public class Save
 {
     public Vector3 pos;
     public float hp;
-    public List<Item> slots;
+    public List<ItemSlot> mainContainer;
+    public List<ItemSlot> quickContainer;
 }
 
 [Serializable]

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private List<Container> containers;
+    [SerializeField] public List<Container> containers;
 
     [Space] [Header("Templates")]
     [SerializeField] private GameObject SceneItemTemplate;
@@ -27,9 +27,7 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < dropAmount; i++)
         {
-            GameObject newItem = Instantiate(SceneItemTemplate, transform.position, Quaternion.identity);
-            newItem.GetComponentInChildren<ItemPickup>().Init(item);
-            newItem.GetComponent<Rigidbody2D>().velocity = velocity;
+            Item.SpawnItem(item, transform.position, velocity);
         }
     }
 }

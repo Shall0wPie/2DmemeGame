@@ -97,13 +97,17 @@ public class InventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void DropItems(int count) // Ground drop method
     {
-        Inventory inventory = parentContainerUI.itemContainer.GetComponentInParent<Inventory>();
+        Transform inventory = parentContainerUI.itemContainer.transform;
         Vector2 velocity = new Vector2(Random.Range(20f, 25f) * inventory.transform.parent.lossyScale.x, 0);
-        inventory.DropItem(itemSlot.item, count, velocity);
+        for (int i = 0; i < count; i++)
+        {
+            Item.SpawnItem(itemSlot.item, inventory.position, velocity);
+        }
         itemSlot.TakeItem(count);
         UpdateCounter();
     }
-
+    
+    // Uses item if it's usable
     public void UseItem(Transform target)
     {
         if (itemSlot.item is IUsable usable)

@@ -14,9 +14,8 @@ public class LootTable : MonoBehaviour
 
             if (roll <= item.DropChance)
             {
-                // Transform newTr = Item.SpawnItem(item.Item, transform.position);
-                // Vector2 vel = new Vector2(Random.Range(-10, 10), Random.Range(0, 5));
-                // newTr.GetComponent<Rigidbody2D>().velocity = vel;
+                Vector2 vel = new Vector2(Random.Range(-10, 10), Random.Range(0, 5));
+                Item.SpawnItem(item.Item, transform.position, vel);
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
@@ -22,10 +23,10 @@ public class PlayerControl : MonoBehaviour
         stats = GetComponent<PlayerStats>();
         dialogues = GetComponent<DialogueControl>();
 
-        dialogues.TriggerDialogue("HochuSkazt");
-
         if (SaveManager.instance != null && SaveManager.instance.lastPosition != Vector2.zero)
             transform.position = SaveManager.instance.lastPosition;
+        
+        SaveManager.LoadGame();
     }
 
     private void Update()
