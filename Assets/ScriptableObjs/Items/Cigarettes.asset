@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebe58a913674f39895477ef707c3912, type: 3}
   m_Name: Cigarettes
   m_EditorClassIdentifier: 
-  _stackSize: 1
+  _stackSize: 5
   _name: Cigarettes
   _uiIcon: {fileID: 21300000, guid: bdce2a9cb3d0242958c2593a3b8d8742, type: 3}
   effects:

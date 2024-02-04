@@ -100,8 +100,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        Vector2 fumpVelocity = new Vector2(rigidbody.velocity.x, jumpForce);
-        rigidbody.velocity = fumpVelocity;
+        Vector2 jumpVelocity = new Vector2(rigidbody.velocity.x, jumpForce);
+        rigidbody.velocity += jumpVelocity;
     }
 
     public IEnumerator Stun(float time)
